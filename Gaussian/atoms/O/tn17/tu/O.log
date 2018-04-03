@@ -1,0 +1,2694 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /home1/apps/gaussian/16rA.03/g16/l1.exe "/tmp/Gau-51980.inp" -scrdir="/tmp/"
+ Entering Link 1 = /home1/apps/gaussian/16rA.03/g16/l1.exe PID=     51981.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2016,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision A.03,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2016.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevA.03 25-Dec-2016
+                21-Feb-2018 
+ ******************************************
+ %mem=64GB
+ %cpu=0-16
+ SetSPE:  set environment variable "MP_BIND" = "yes"
+ SetSPE:  set environment variable "MP_BLIST" = "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16"
+ Will use up to   17 processors via shared memory.
+ %chk=O
+ %rwf=/scratch/04843/aannabe/gaussian/
+ ----------------------------------------------------------------------
+ #P ROCCSD(T)=(maxcyc=150, Full)/Gen 5d 7f SCF=(maxcycles=300) MaxDisk=
+ 500GB Pop=Regular Pseudo=Read Guess=Read
+ ----------------------------------------------------------------------
+ 1/38=1,172=1/1;
+ 2/12=2,17=6,18=5,40=1/2;
+ 3/5=7,8=11,11=2,16=1,17=8,25=1,30=1,116=101/1,2,3;
+ 4/5=1/1;
+ 5/5=2,7=300,38=6/2;
+ 8/5=-1,6=4,9=120000,10=90/1,4;
+ 9/5=7,6=150,14=2/13;
+ 6//1;
+ 99/5=1,9=1/99;
+ Leave Link    1 at Wed Feb 21 16:17:18 2018, MaxMem=  8589934592 cpu:               1.2 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l101.exe)
+ -
+ O
+ -
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 3
+ O                     0.        0.        0. 
+ 
+ ITRead=  0
+ MicOpt= -1
+ NAtoms=      1 NQM=        1 NQMF=       0 NMMI=      0 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1
+ IAtWgt=          16
+ AtmWgt=  15.9949146
+ NucSpn=           0
+ AtZEff=  -0.0000000
+ NQMom=    0.0000000
+ NMagM=    0.0000000
+ AtZNuc=   8.0000000
+ Leave Link  101 at Wed Feb 21 16:17:19 2018, MaxMem=  8589934592 cpu:               1.5 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l202.exe)
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8           0        0.000000    0.000000    0.000000
+ ---------------------------------------------------------------------
+ Stoichiometry    O(3)
+ Framework group  OH[O(O)]
+ Deg. of freedom     0
+ Full point group                 OH      NOp  48
+ Largest Abelian subgroup         D2H     NOp   8
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8           0        0.000000    0.000000    0.000000
+ ---------------------------------------------------------------------
+ Leave Link  202 at Wed Feb 21 16:17:19 2018, MaxMem=  8589934592 cpu:               0.6 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l301.exe)
+ General basis read from cards:  (5D, 7F)
+ Centers:       1
+ S 1 1.00
+     Exponent=  1.5330000000D+04 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.2990000000D+03 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  5.2240000000D+02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.4730000000D+02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  4.7550000000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.6760000000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  6.2070000000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  6.8820000000D-01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.7520000000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.3840000000D-01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  7.8450000000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.1032000000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  7.3760000000D-02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  3.4460000000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  7.7490000000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.2800000000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  7.1560000000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.1400000000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.5159000000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  5.7437000000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  5.9740000000D-02 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  2.3140000000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  6.4500000000D-01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  1.5858000000D+01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  2.1400000000D-01 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  1.4280000000D+00 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  5.0000000000D-01 Coefficients=  1.0000000000D+00
+ ****
+ ======================================================================================================
+                                       Pseudopotential Parameters
+ ======================================================================================================
+  Center     Atomic      Valence      Angular      Power
+  Number     Number     Electrons     Momentum     of R      Exponent        Coefficient   SO-Coeffient
+ ======================================================================================================
+    1          8            6
+                                      D and up 
+                                                     1       10.2771775        6.00000000    0.00000000
+                                                     2       15.9956675     1232.50197768    0.00000000
+                                                     2       10.4690178     -696.47008301    0.00000000
+                                                     2       14.6384801    -2654.22657081    0.00000000
+                                                     2       12.5759118     2101.67732548    0.00000000
+                                                     3        7.7773910       61.66306486    0.00000000
+                                      S - D
+                                                     2       12.3942607    **************    0.00000000
+                                                     2       12.3812617    **************    0.00000000
+                                                     2        8.5767103      511.50098405    0.00000000
+                                                     2        9.8925651    -2579.54665641    0.00000000
+                                                     2       28.0564160      -57.68129584    0.00000000
+                                                     2       17.2475361      970.30940152    0.00000000
+                                      P - D
+                                                     2       14.7891891    **************    0.00000000
+                                                     2       14.8201402    **************    0.00000000
+                                                     2       22.8962222    -1300.20069256    0.00000000
+                                                     2        8.5133189     -181.96869573    0.00000000
+                                                     2       11.4860976     2194.87589959    0.00000000
+                                                     2       27.2201752      451.19906206    0.00000000
+ ======================================================================================================
+ Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
+ There are    25 symmetry adapted cartesian basis functions of AG  symmetry.
+ There are     4 symmetry adapted cartesian basis functions of B1G symmetry.
+ There are     4 symmetry adapted cartesian basis functions of B2G symmetry.
+ There are     4 symmetry adapted cartesian basis functions of B3G symmetry.
+ There are     2 symmetry adapted cartesian basis functions of AU  symmetry.
+ There are    14 symmetry adapted cartesian basis functions of B1U symmetry.
+ There are    14 symmetry adapted cartesian basis functions of B2U symmetry.
+ There are    14 symmetry adapted cartesian basis functions of B3U symmetry.
+ There are    21 symmetry adapted basis functions of AG  symmetry.
+ There are     4 symmetry adapted basis functions of B1G symmetry.
+ There are     4 symmetry adapted basis functions of B2G symmetry.
+ There are     4 symmetry adapted basis functions of B3G symmetry.
+ There are     2 symmetry adapted basis functions of AU  symmetry.
+ There are    12 symmetry adapted basis functions of B1U symmetry.
+ There are    12 symmetry adapted basis functions of B2U symmetry.
+ There are    12 symmetry adapted basis functions of B3U symmetry.
+    71 basis functions,    81 primitive gaussians,    81 cartesian basis functions
+     4 alpha electrons        2 beta electrons
+       nuclear repulsion energy         0.0000000000 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=    1 NActive=    1 NUniq=    1 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned on.
+ Leave Link  301 at Wed Feb 21 16:17:19 2018, MaxMem=  8589934592 cpu:               1.7 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l302.exe)
+ NPDir=0 NMtPBC=     1 NCelOv=     1 NCel=       1 NClECP=     1 NCelD=      1
+         NCelK=      1 NCelE2=     1 NClLst=     1 CellRange=     0.0.
+ One-electron integrals computed using PRISM.
+ One-electron integral symmetry used in STVInt
+  48 Symmetry operations used in ECPInt.
+ ECPInt:  NShTT=     378 NPrTT=     378 LenC2=     379 LenP2D=     378.
+ LDataN:  DoStor=T MaxTD1= 6 Len=  172
+ NBasis=    71 RedAO= T EigKep=  2.67D-05  NBF=    21     4     4     4     2    12    12    12
+ NBsUse=    71 1.00D-06 EigRej= -1.00D+00 NBFU=    21     4     4     4     2    12    12    12
+ Leave Link  302 at Wed Feb 21 16:17:19 2018, MaxMem=  8589934592 cpu:               2.6 elap:               0.2
+ (Enter /home1/apps/gaussian/16rA.03/g16/l303.exe)
+ DipDrv:  MaxL=1.
+ Leave Link  303 at Wed Feb 21 16:17:19 2018, MaxMem=  8589934592 cpu:               0.8 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l401.exe)
+ Initial guess from the checkpoint file:  "O.chk"
+ B after Tr=     0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Guess basis will be translated and rotated to current coordinates.
+ JPrj=2 DoOrth=T DoCkMO=T.
+ Initial guess orbital symmetries:
+       Occupied  (A1G) (?A) (?A) (?A)
+       Virtual   (?A) (?A) (?A) (?B) (?B) (T2G) (T2G) (T2G) (?B)
+                 (?A) (?A) (?A) (?B) (?A) (?A) (?A) (A2U) (?A)
+                 (?A) (?A) (?B) (T2G) (T2G) (T2G) (?B) (?A) (?A)
+                 (?A) (T2G) (T2G) (T2G) (T2G) (T2G) (T2G) (?A)
+                 (?A) (?A) (A2U) (?A) (?A) (A1G) (A1G) (A1G) (T2G)
+                 (T2G) (A1G) (A1G) (T2G) (A1G) (A1G) (A1G) (T2G)
+                 (T2G) (T2G) (T1U) (?A) (T1U) (T1U) (T1U) (?A)
+                 (T1U) (T1U) (T1U) (?A) (?A) (T1U) (T1U)
+ Leave Link  401 at Wed Feb 21 16:17:20 2018, MaxMem=  8589934592 cpu:               2.1 elap:               0.2
+ (Enter /home1/apps/gaussian/16rA.03/g16/l502.exe)
+ Keep R1 and R2 ints in memory in symmetry-blocked form, NReq=11061128.
+ FoFCou: FMM=F IPFlag=           0 FMFlag=           0 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=       600 IOpCl=  0 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=   2556 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Restricted open shell SCF:
+ Using DIIS extrapolation, IDIIS=  1040.
+ NGot=  8589934592 LenX=  8589023690 LenY=  8589016688
+ Requested convergence on RMS density matrix=1.00D-08 within 300 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+
+ Cycle   1  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.5924078144048    
+ DIIS: error= 2.63D-01 at cycle   1 NSaved=   1.
+ NSaved= 1 IEnMin= 1 EnMin= -15.5924078144048     IErMin= 1 ErrMin= 2.63D-01
+ ErrMax= 2.63D-01  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.71D+00 BMatP= 2.71D+00
+ IDIUse=3 WtCom= 0.00D+00 WtEn= 1.00D+00
+ Coeff-Com:  0.100D+01
+ Coeff-En:   0.100D+01
+ Coeff:      0.100D+01
+ Gap=     0.505 Goal=   None    Shift=    0.000
+ GapD=    0.505 DampG=2.000 DampE=0.250 DampFc=0.5000 IDamp=-1.
+ Damping current iteration by 5.00D-01
+ RMSDP=4.29D-03 MaxDP=1.31D-01              OVMax= 2.03D-02
+
+ Cycle   2  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6209375272877     Delta-E=       -0.028529712883 Rises=F Damp=T
+ DIIS: error= 1.34D-01 at cycle   2 NSaved=   2.
+ NSaved= 2 IEnMin= 2 EnMin= -15.6209375272877     IErMin= 2 ErrMin= 1.34D-01
+ ErrMax= 1.34D-01  0.00D+00 EMaxC= 1.00D-01 BMatC= 6.87D-01 BMatP= 2.71D+00
+ IDIUse=3 WtCom= 0.00D+00 WtEn= 1.00D+00
+ Coeff-Com: -0.101D+01 0.201D+01
+ Coeff-En:   0.000D+00 0.100D+01
+ Coeff:      0.000D+00 0.100D+01
+ Gap=     0.334 Goal=   None    Shift=    0.000
+ RMSDP=2.14D-03 MaxDP=6.56D-02 DE=-2.85D-02 OVMax= 2.64D-03
+
+ Cycle   3  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499829789916     Delta-E=       -0.029045451704 Rises=F Damp=F
+ DIIS: error= 3.27D-03 at cycle   3 NSaved=   3.
+ NSaved= 3 IEnMin= 3 EnMin= -15.6499829789916     IErMin= 3 ErrMin= 3.27D-03
+ ErrMax= 3.27D-03  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.42D-04 BMatP= 6.87D-01
+ IDIUse=3 WtCom= 9.67D-01 WtEn= 3.27D-02
+ Coeff-Com:  0.160D+00-0.331D+00 0.117D+01
+ Coeff-En:   0.000D+00 0.000D+00 0.100D+01
+ Coeff:      0.154D+00-0.321D+00 0.117D+01
+ Gap=     0.334 Goal=   None    Shift=    0.000
+ RMSDP=4.31D-05 MaxDP=1.31D-03 DE=-2.90D-02 OVMax= 1.25D-03
+
+ Cycle   4  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499893051361     Delta-E=       -0.000006326144 Rises=F Damp=F
+ DIIS: error= 3.46D-04 at cycle   4 NSaved=   4.
+ NSaved= 4 IEnMin= 4 EnMin= -15.6499893051361     IErMin= 4 ErrMin= 3.46D-04
+ ErrMax= 3.46D-04  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.70D-06 BMatP= 1.42D-04
+ IDIUse=3 WtCom= 9.97D-01 WtEn= 3.46D-03
+ Coeff-Com:  0.107D+00-0.214D+00 0.193D+00 0.914D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.100D+01
+ Coeff:      0.107D+00-0.213D+00 0.192D+00 0.915D+00
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=1.08D-05 MaxDP=3.20D-04 DE=-6.33D-06 OVMax= 7.34D-04
+
+ Cycle   5  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499905505429     Delta-E=       -0.000001245407 Rises=F Damp=F
+ DIIS: error= 9.40D-05 at cycle   5 NSaved=   5.
+ NSaved= 5 IEnMin= 5 EnMin= -15.6499905505429     IErMin= 5 ErrMin= 9.40D-05
+ ErrMax= 9.40D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 5.31D-07 BMatP= 2.70D-06
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.636D-01-0.127D+00 0.116D+00 0.401D+00 0.547D+00
+ Coeff:      0.636D-01-0.127D+00 0.116D+00 0.401D+00 0.547D+00
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=6.05D-06 MaxDP=1.95D-04 DE=-1.25D-06 OVMax= 2.97D-04
+
+ Cycle   6  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499906703638     Delta-E=       -0.000000119821 Rises=F Damp=F
+ DIIS: error= 8.26D-05 at cycle   6 NSaved=   6.
+ NSaved= 6 IEnMin= 6 EnMin= -15.6499906703638     IErMin= 6 ErrMin= 8.26D-05
+ ErrMax= 8.26D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.70D-07 BMatP= 5.31D-07
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.376D-01-0.751D-01 0.699D-01 0.144D+00 0.739D-01 0.750D+00
+ Coeff:      0.376D-01-0.751D-01 0.699D-01 0.144D+00 0.739D-01 0.750D+00
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=1.26D-06 MaxDP=4.54D-05 DE=-1.20D-07 OVMax= 8.83D-05
+
+ Cycle   7  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499906932615     Delta-E=       -0.000000022898 Rises=F Damp=F
+ DIIS: error= 4.70D-05 at cycle   7 NSaved=   7.
+ NSaved= 7 IEnMin= 7 EnMin= -15.6499906932615     IErMin= 7 ErrMin= 4.70D-05
+ ErrMax= 4.70D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 6.19D-08 BMatP= 1.70D-07
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.118D-01-0.236D-01 0.223D-01 0.109D-01-0.188D+00-0.792D-01
+ Coeff-Com:  0.125D+01
+ Coeff:      0.118D-01-0.236D-01 0.223D-01 0.109D-01-0.188D+00-0.792D-01
+ Coeff:      0.125D+01
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=1.64D-06 MaxDP=5.52D-05 DE=-2.29D-08 OVMax= 5.39D-05
+
+ Cycle   8  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499907065897     Delta-E=       -0.000000013328 Rises=F Damp=F
+ DIIS: error= 1.61D-05 at cycle   8 NSaved=   8.
+ NSaved= 8 IEnMin= 8 EnMin= -15.6499907065897     IErMin= 8 ErrMin= 1.61D-05
+ ErrMax= 1.61D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 6.08D-09 BMatP= 6.19D-08
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.277D-02-0.554D-02 0.499D-02 0.204D-01 0.604D-01-0.538D-01
+ Coeff-Com: -0.480D+00 0.145D+01
+ Coeff:      0.277D-02-0.554D-02 0.499D-02 0.204D-01 0.604D-01-0.538D-01
+ Coeff:     -0.480D+00 0.145D+01
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=4.85D-07 MaxDP=1.82D-05 DE=-1.33D-08 OVMax= 1.89D-05
+
+ Cycle   9  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499907080166     Delta-E=       -0.000000001427 Rises=F Damp=F
+ DIIS: error= 3.81D-06 at cycle   9 NSaved=   9.
+ NSaved= 9 IEnMin= 9 EnMin= -15.6499907080166     IErMin= 9 ErrMin= 3.81D-06
+ ErrMax= 3.81D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 3.38D-10 BMatP= 6.08D-09
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.255D-03-0.509D-03 0.472D-03 0.456D-03-0.342D-02 0.147D-01
+ Coeff-Com:  0.301D-01-0.433D+00 0.139D+01
+ Coeff:      0.255D-03-0.509D-03 0.472D-03 0.456D-03-0.342D-02 0.147D-01
+ Coeff:      0.301D-01-0.433D+00 0.139D+01
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=1.45D-07 MaxDP=5.27D-06 DE=-1.43D-09 OVMax= 5.49D-06
+
+ Cycle  10  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499907081052     Delta-E=       -0.000000000089 Rises=F Damp=F
+ DIIS: error= 3.47D-07 at cycle  10 NSaved=  10.
+ NSaved=10 IEnMin=10 EnMin= -15.6499907081052     IErMin=10 ErrMin= 3.47D-07
+ ErrMax= 3.47D-07  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.86D-12 BMatP= 3.38D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.354D-04-0.707D-04 0.687D-04 0.404D-05-0.462D-03-0.214D-02
+ Coeff-Com:  0.277D-02 0.299D-01-0.179D+00 0.115D+01
+ Coeff:      0.354D-04-0.707D-04 0.687D-04 0.404D-05-0.462D-03-0.214D-02
+ Coeff:      0.277D-02 0.299D-01-0.179D+00 0.115D+01
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=1.20D-08 MaxDP=4.51D-07 DE=-8.85D-11 OVMax= 4.73D-07
+
+ Cycle  11  Pass 1  IDiag  1:
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ E= -15.6499907081059     Delta-E=       -0.000000000001 Rises=F Damp=F
+ DIIS: error= 4.77D-08 at cycle  11 NSaved=  11.
+ NSaved=11 IEnMin=11 EnMin= -15.6499907081059     IErMin=11 ErrMin= 4.77D-08
+ ErrMax= 4.77D-08  0.00D+00 EMaxC= 1.00D-01 BMatC= 5.46D-14 BMatP= 2.86D-12
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.163D-06 0.330D-06-0.607D-06 0.131D-04 0.300D-04 0.264D-03
+ Coeff-Com: -0.179D-03-0.561D-02 0.244D-01-0.235D+00 0.122D+01
+ Coeff:     -0.163D-06 0.330D-06-0.607D-06 0.131D-04 0.300D-04 0.264D-03
+ Coeff:     -0.179D-03-0.561D-02 0.244D-01-0.235D+00 0.122D+01
+ Gap=     0.335 Goal=   None    Shift=    0.000
+ RMSDP=1.95D-09 MaxDP=7.23D-08 DE=-7.23D-13 OVMax= 7.52D-08
+
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ SCF Done:  E(ROHF) =  -15.6499907081     A.U. after   11 cycles
+            NFock= 11  Conv=0.20D-08     -V/T= 2.3409
+ <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 1.0000 <S**2>= 2.0000 S= 1.0000
+ <L.S>=  0.00000000000    
+ KE= 1.167102962393D+01 PE=-3.792570815851D+01 EE= 1.060468782647D+01
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     2.0000,   after     2.0000
+ Leave Link  502 at Wed Feb 21 16:17:20 2018, MaxMem=  8589934592 cpu:               6.5 elap:               0.4
+ (Enter /home1/apps/gaussian/16rA.03/g16/l801.exe)
+ Windowed orbitals will be sorted by symmetry type.
+ Density matrix breaks symmetry, PCut= 1.00D-07
+ Density has only Abelian symmetry.
+ GenMOA:  NOpAll= 48 NOp2=8 NOpUse=  8 JSym2X=1
+ FoFJK:  IHMeth= 1 ICntrl=       0 DoSepK=F KAlg= 0 I1Cent=           0 FoldK=F
+ IRaf=         0 NMat=       1 IRICut=       1 DoRegI=T DoRafI=F ISym2E= 1 IDoP0=0 IntGTp=1.
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=         0 IOpCl=  1 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 1.0000 <S**2>= 2.0000 S= 1.0000
+ Range of M.O.s used for correlation:     1    71
+ NBasis=    71 NAE=     4 NBE=     2 NFC=     0 NFV=     0
+ NROrb=     71 NOA=     4 NOB=     2 NVA=    67 NVB=    69
+
+ **** Warning!!: The largest alpha MO coefficient is  0.68017126D+02
+
+
+ **** Warning!!: The largest beta MO coefficient is  0.68018121D+02
+
+ Singles contribution to E2=   -0.4885142601D-02
+ Leave Link  801 at Wed Feb 21 16:17:20 2018, MaxMem=  8589934592 cpu:               3.3 elap:               0.2
+ (Enter /home1/apps/gaussian/16rA.03/g16/l804.exe)
+ Open-shell transformation, MDV=  8589934592 ITran=4 ISComp=2.
+ Unit  1 TFree=        154379 TCopy=        226045.
+ Semi-Direct transformation.
+ ModeAB=           2 MOrb=             4 LenV=    8589607281
+ LASXX=        91070 LTotXX=       91070 LenRXX=       91070
+ LTotAB=       97026 MaxLAS=      943164 LenRXY=      943164
+ NonZer=      992580 LenScr=     2231808 LnRSAI=           0
+ LnScr1=           0 LExtra=      382761 Total=      3648803
+ MaxDsk= 67108864000 SrtSym=           F ITran=            4
+ DoSDTr:  NPSUse= 17
+ JobTyp=1 Pass  1:  I=   1 to   4.
+ (rs|ai) integrals will be sorted in core.
+ Complete sort for first half transformation.
+ First half transformation complete.
+ Complete sort for second half transformation.
+ Second half transformation complete.
+ ModeAB=           2 MOrb=             2 LenV=    8589607281
+ LASXX=        47290 LTotXX=       47290 LenRXX=      471582
+ LTotAB=       44891 MaxLAS=      471582 LenRXY=       44891
+ NonZer=      496290 LenScr=     1487872 LnRSAI=           0
+ LnScr1=           0 LExtra=     1416995 Total=      3421340
+ MaxDsk= 67108864000 SrtSym=           F ITran=            4
+ DoSDTr:  NPSUse= 17
+ JobTyp=2 Pass  1:  I=   1 to   2.
+ (rs|ai) integrals will be sorted in core.
+ Complete sort for first half transformation.
+ First half transformation complete.
+ Complete sort for second half transformation.
+ Second half transformation complete.
+ Spin components of T(2) and E(2):
+     alpha-alpha T2 =       0.6125692399D-02 E2=     -0.3131748691D-01
+     alpha-beta  T2 =       0.2325091751D-01 E2=     -0.1182581758D+00
+     beta-beta   T2 =       0.9804445384D-03 E2=     -0.4365534318D-02
+ ANorm=    0.1016011707D+01
+ E2 =    -0.1588263397D+00 EUMP2 =    -0.15808817047784D+02
+ (S**2,0)=  0.20000D+01           (S**2,1)=  0.20000D+01
+ E(PUHF)=      -0.15649990708D+02        E(PMP2)=      -0.15808817048D+02
+ Leave Link  804 at Wed Feb 21 16:17:21 2018, MaxMem=  8589934592 cpu:               5.7 elap:               0.4
+ (Enter /home1/apps/gaussian/16rA.03/g16/l913.exe)
+ CIDS:  MDV=  8589934592.
+ IFCWin=0 IBDFC=1 NFBD=     0     0 NFCmp=     0     0 NFFFC=     0     0
+ Using original routines for 1st iteration.
+ Using DD4UQ or CC4UQ for 2nd and later iterations.
+ Keep R2 and R3 ints in memory in symmetry-blocked form, NReq=11065792.
+ FoFCou: FMM=F IPFlag=           0 FMFlag=           0 FMFlg1=           0
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=       600 IOpCl=  0 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=   2556 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ CIDS: In Core Option IDoMem=           1.
+ CCSD(T)
+ =======
+ Iterations= 150 Convergence= 0.100D-06
+ Produce multiple copies of IABC intergrals
+ Iteration Nr.   1
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ MP4(R+Q)=  0.17837993D-01
+ Maximum subspace dimension=  5
+ A-vector RMS=  2.3365715D-04 Max=  8.4480026D-04 conv= 1.00D-05.
+ RLE energy=       -0.1564012642
+ E3=       -0.15401498D-01        EROMP3=      -0.15824218546D+02
+ E4(SDQ)=  -0.10191484D-02        ROMP4(SDQ)=  -0.15825237694D+02
+ VARIATIONAL ENERGIES WITH THE FIRST-ORDER WAVEFUNCTION:
+ DE(Corr)= -0.15636137     E(Corr)=     -15.806352083    
+ NORM(A)=   0.10153539D+01
+ Iteration Nr.   2
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  2.0316191D-03 Max=  1.0538691D-02 conv= 1.00D-05.
+ RLE energy=       -0.1590210527
+ DE(Corr)= -0.17149311     E(CORR)=     -15.821483816     Delta=-1.51D-02
+ NORM(A)=   0.10159956D+01
+ Iteration Nr.   3
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  1.7910471D-03 Max=  9.4438726D-03 conv= 1.00D-05.
+ RLE energy=       -0.1646976936
+ DE(Corr)= -0.17198787     E(CORR)=     -15.821978577     Delta=-4.95D-04
+ NORM(A)=   0.10176569D+01
+ Iteration Nr.   4
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  1.2261778D-03 Max=  6.7532505D-03 conv= 1.00D-05.
+ RLE energy=       -0.1806603078
+ DE(Corr)= -0.17316775     E(CORR)=     -15.823158459     Delta=-1.18D-03
+ NORM(A)=   0.10236327D+01
+ Iteration Nr.   5
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  5.9029036D-04 Max=  3.0348560D-03 conv= 1.00D-05.
+ RLE energy=       -0.1756301214
+ DE(Corr)= -0.17654379     E(CORR)=     -15.826534500     Delta=-3.38D-03
+ NORM(A)=   0.10216450D+01
+ Iteration Nr.   6
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  3.1117893D-05 Max=  2.2178468D-04 conv= 1.00D-05.
+ RLE energy=       -0.1754989579
+ DE(Corr)= -0.17551746     E(CORR)=     -15.825508170     Delta= 1.03D-03
+ NORM(A)=   0.10216130D+01
+ Iteration Nr.   7
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  1.9435039D-05 Max=  1.4581781D-04 conv= 1.00D-05.
+ RLE energy=       -0.1755044705
+ DE(Corr)= -0.17549837     E(CORR)=     -15.825489076     Delta= 1.91D-05
+ NORM(A)=   0.10216154D+01
+ Iteration Nr.   8
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  5.7919676D-06 Max=  3.5693800D-05 conv= 1.00D-05.
+ RLE energy=       -0.1754983921
+ DE(Corr)= -0.17550070     E(CORR)=     -15.825491407     Delta=-2.33D-06
+ NORM(A)=   0.10216098D+01
+ Iteration Nr.   9
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  9.1709184D-07 Max=  4.6372413D-06 conv= 1.00D-05.
+ RLE energy=       -0.1754986320
+ DE(Corr)= -0.17549850     E(CORR)=     -15.825489206     Delta= 2.20D-06
+ NORM(A)=   0.10216098D+01
+ Iteration Nr.  10
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  4.3170966D-07 Max=  2.2755395D-06 conv= 1.00D-05.
+ RLE energy=       -0.1754986541
+ DE(Corr)= -0.17549861     E(CORR)=     -15.825489318     Delta=-1.13D-07
+ NORM(A)=   0.10216101D+01
+ Iteration Nr.  11
+ **********************
+ DD1Dir will call FoFMem   1 times, MxPair=        24
+ NAB=     8 NAA=     6 NBB=     1.
+ A-vector RMS=  1.3471111D-07 Max=  8.3334561D-07 conv= 1.00D-05.
+ RLE energy=       -0.1754987412
+ DE(Corr)= -0.17549870     E(CORR)=     -15.825489406     Delta=-8.74D-08
+ NORM(A)=   0.10216102D+01
+ CI/CC converged in   11 iterations to DelEn=-8.74D-08 Conv= 1.00D-07 ErrA1= 1.35D-07 Conv= 1.00D-05
+ Wavefunction amplitudes converged. E(Corr)=     -15.825489406    
+ Largest amplitude= 3.78D-02
+ Time for triples=       67.65 seconds.
+ T4(CCSD)= -0.37625640D-02
+ T5(CCSD)=  0.25247378D-04
+ CCSD(T)= -0.15829226723D+02
+ Discarding MO integrals.
+ Leave Link  913 at Wed Feb 21 16:17:26 2018, MaxMem=  8589934592 cpu:              77.2 elap:               4.6
+ (Enter /home1/apps/gaussian/16rA.03/g16/l601.exe)
+ Copying SCF densities to generalized density rwf, IOpCl= 0 IROHF=1.
+ SCF density gives NOpUse=  8 NOpAll= 48.
+ Marking SCF density as not fully symmetric.
+
+ **********************************************************************
+
+            Population analysis using the SCF density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (A1G) (?A) (?A) (?A)
+       Virtual   (?B) (?A) (?A) (?A) (?B) (T2G) (T2G) (T2G) (?B)
+                 (?A) (?A) (?A) (?B) (?A) (?A) (?A) (A2U) (?A)
+                 (?A) (?A) (?C) (T2G) (T2G) (T2G) (?C) (T1U) (T1U)
+                 (T1U) (?C) (?D) (?D) (?D) (A2U) (?D) (?D) (?D)
+                 (?C) (T2G) (T2G) (T2G) (?C) (A1G) (T1U) (T1U)
+                 (T1U) (A1G) (T1U) (T1U) (T1U) (T2G) (EG) (T2G)
+                 (T2G) (EG) (A1G) (T1U) (T1U) (T1U) (A1G) (A1G)
+                 (T1U) (T1U) (T1U) (A1G) (A1G) (A1G) (A1G)
+ Unable to determine electronic state:  an orbital has unidentified symmetry.
+ Alpha  occ. eigenvalues --   -1.41840  -0.70376  -0.70376  -0.60751
+ Alpha virt. eigenvalues --    0.15099   0.15316   0.15316   0.16269   0.62182
+ Alpha virt. eigenvalues --    0.62182   0.63784   0.63784   0.64242   0.86131
+ Alpha virt. eigenvalues --    0.86131   0.90454   1.03823   1.99490   1.99490
+ Alpha virt. eigenvalues --    2.01721   2.01721   2.03045   2.03045   2.03479
+ Alpha virt. eigenvalues --    2.03508   2.03508   2.08177   2.08177   2.09542
+ Alpha virt. eigenvalues --    3.72412   3.72412   3.80021   4.50291   6.31807
+ Alpha virt. eigenvalues --    6.31807   6.36392   6.36392   6.39113   6.39113
+ Alpha virt. eigenvalues --    6.40007   6.74947   6.74947   6.81608   6.81608
+ Alpha virt. eigenvalues --    6.83826  14.47302  14.63010  14.63010  14.70896
+ Alpha virt. eigenvalues --   32.24239  47.14858  47.14858  47.21257  49.73042
+ Alpha virt. eigenvalues --   49.73042  49.77299  49.77299  49.78719  65.04998
+ Alpha virt. eigenvalues --  123.33009 123.33009 123.37397 124.43579 239.22714
+ Alpha virt. eigenvalues --  295.97170 295.97170 295.99623 528.719181497.52343
+ Alpha virt. eigenvalues -- 5625.24726**********
+     Molecular Orbital Coefficients:
+                           1         2         3         4         5
+                       (A1G)--O      O         O         O         V
+     Eigenvalues --    -1.41840  -0.70376  -0.70376  -0.60751   0.15099
+   1 1   O  1S          0.00000   0.00000   0.00000   0.00000   0.00000
+   2        2S         -0.00000   0.00000   0.00000   0.00000  -0.00002
+   3        3S          0.00003   0.00000   0.00000   0.00000   0.00012
+   4        4S         -0.00021   0.00000   0.00000   0.00000  -0.00078
+   5        5S          0.00357   0.00000   0.00000   0.00000   0.00683
+   6        6S          0.17835   0.00000   0.00000   0.00000   0.12186
+   7        7S         -0.10289   0.00000   0.00000   0.00000   0.31268
+   8        8S          0.61274   0.00000   0.00000   0.00000   0.15245
+   9        9S          0.15856   0.00000   0.00000   0.00000  -0.19738
+  10       10S          0.36933   0.00000   0.00000   0.00000  -1.06977
+  11       11S         -0.13836   0.00000   0.00000   0.00000  -0.26732
+  12       12S         -0.10317   0.00000   0.00000   0.00000  -0.08539
+  13       13S          0.00679   0.00000   0.00000   0.00000   1.58184
+  14       14PX         0.00000  -0.00486   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000  -0.00519   0.00000
+  16       14PZ         0.00000   0.00000  -0.00519   0.00000   0.00000
+  17       15PX         0.00000   0.10194   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.10503   0.00000
+  19       15PZ         0.00000   0.00000   0.10503   0.00000   0.00000
+  20       16PX         0.00000   0.29862   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.31372   0.00000
+  22       16PZ         0.00000   0.00000   0.31372   0.00000   0.00000
+  23       17PX         0.00000   0.48317   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.50984   0.00000
+  25       17PZ         0.00000   0.00000   0.50984   0.00000   0.00000
+  26       18PX         0.00000   0.34411   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.30220   0.00000
+  28       18PZ         0.00000   0.00000   0.30220   0.00000   0.00000
+  29       19PX         0.00000   0.00685   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00735   0.00000
+  31       19PZ         0.00000   0.00000   0.00735   0.00000   0.00000
+  32       20PX         0.00000   0.00145   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00156   0.00000
+  34       20PZ         0.00000   0.00000   0.00156   0.00000   0.00000
+  35       21PX         0.00000   0.03094   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00882   0.00000
+  37       21PZ         0.00000   0.00000   0.00882   0.00000   0.00000
+  38       22D 0       -0.00039   0.00000   0.00000   0.00000  -0.00027
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00068   0.00000   0.00000   0.00000   0.00046
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0       -0.00067   0.00000   0.00000   0.00000  -0.00235
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00115   0.00000   0.00000   0.00000   0.00407
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0       -0.00008   0.00000   0.00000   0.00000  -0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00014   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0       -0.00180   0.00000   0.00000   0.00000   0.00756
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00312   0.00000   0.00000   0.00000  -0.01309
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00355   0.00000   0.00000
+  59       26F+1        0.00000   0.00192   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00145   0.00000
+  61       26F+2        0.00000   0.00000  -0.00458   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000  -0.00248   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000  -0.00561   0.00000
+  65       27F 0        0.00000   0.00000   0.00286   0.00000   0.00000
+  66       27F+1        0.00000   0.00195   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00117   0.00000
+  68       27F+2        0.00000   0.00000  -0.00369   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000  -0.00252   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000  -0.00452   0.00000
+                           6         7         8         9
+                           V         V         V         V
+     Eigenvalues --     0.15316   0.15316   0.16269   0.62182
+   1 1   O  1S          0.00000   0.00000   0.00000   0.00000
+   2        2S          0.00000   0.00000   0.00000  -0.00000
+   3        3S          0.00000   0.00000   0.00000   0.00000
+   4        4S          0.00000   0.00000   0.00000  -0.00000
+   5        5S          0.00000   0.00000   0.00000   0.00000
+   6        6S          0.00000   0.00000   0.00000   0.00000
+   7        7S          0.00000   0.00000   0.00000   0.00000
+   8        8S          0.00000   0.00000   0.00000   0.00000
+   9        9S          0.00000   0.00000   0.00000  -0.00000
+  10       10S          0.00000   0.00000   0.00000  -0.00000
+  11       11S          0.00000   0.00000   0.00000  -0.00000
+  12       12S          0.00000   0.00000   0.00000  -0.00000
+  13       13S          0.00000   0.00000   0.00000  -0.00000
+  14       14PX         0.00000   0.00000   0.00338   0.00000
+  15       14PY         0.00312   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00312   0.00000   0.00000
+  17       15PX         0.00000   0.00000  -0.01668   0.00000
+  18       15PY        -0.01285   0.00000   0.00000   0.00000
+  19       15PZ         0.00000  -0.01285   0.00000   0.00000
+  20       16PX         0.00000   0.00000  -0.09205   0.00000
+  21       16PY        -0.07958   0.00000   0.00000   0.00000
+  22       16PZ         0.00000  -0.07958   0.00000   0.00000
+  23       17PX         0.00000   0.00000  -0.05073   0.00000
+  24       17PY        -0.03638   0.00000   0.00000   0.00000
+  25       17PZ         0.00000  -0.03638   0.00000   0.00000
+  26       18PX         0.00000   0.00000  -0.40028   0.00000
+  27       18PY        -0.38137   0.00000   0.00000   0.00000
+  28       18PZ         0.00000  -0.38137   0.00000   0.00000
+  29       19PX         0.00000   0.00000  -0.00682   0.00000
+  30       19PY        -0.00638   0.00000   0.00000   0.00000
+  31       19PZ         0.00000  -0.00638   0.00000   0.00000
+  32       20PX         0.00000   0.00000  -0.00113   0.00000
+  33       20PY        -0.00105   0.00000   0.00000   0.00000
+  34       20PZ         0.00000  -0.00105   0.00000   0.00000
+  35       21PX         0.00000   0.00000   1.18309   0.00000
+  36       21PY         1.18133   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   1.18133   0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.03555
+  39       22D+1        0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.02053
+  42       22D-2        0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000  -0.10094
+  44       23D+1        0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000  -0.05828
+  47       23D-2        0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000  -0.00053
+  49       24D+1        0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000  -0.00030
+  52       24D-2        0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.91955
+  54       25D+1        0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.53090
+  57       25D-2        0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000  -0.00063   0.00000   0.00000
+  59       26F+1        0.00000   0.00000  -0.00085   0.00000
+  60       26F-1       -0.00026   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00082   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00109   0.00000
+  64       26F-3        0.00100   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00045   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00051   0.00000
+  67       27F-1        0.00019   0.00000   0.00000   0.00000
+  68       27F+2        0.00000  -0.00059   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000  -0.00065   0.00000
+  71       27F-3       -0.00072   0.00000   0.00000   0.00000
+     Alpha Density Matrix:
+                           1         2         3         4         5
+   1 1   O  1S          0.00000
+   2        2S         -0.00000   0.00000
+   3        3S          0.00000  -0.00000   0.00000
+   4        4S         -0.00000   0.00000  -0.00000   0.00000
+   5        5S          0.00000  -0.00000   0.00000  -0.00000   0.00001
+   6        6S          0.00000  -0.00000   0.00000  -0.00004   0.00064
+   7        7S         -0.00000   0.00000  -0.00000   0.00002  -0.00037
+   8        8S          0.00000  -0.00000   0.00002  -0.00013   0.00219
+   9        9S          0.00000  -0.00000   0.00000  -0.00003   0.00057
+  10       10S          0.00000  -0.00000   0.00001  -0.00008   0.00132
+  11       11S         -0.00000   0.00000  -0.00000   0.00003  -0.00049
+  12       12S         -0.00000   0.00000  -0.00000   0.00002  -0.00037
+  13       13S          0.00000  -0.00000   0.00000  -0.00000   0.00002
+  14       14PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  39       22D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  40       22D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  41       22D+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  42       22D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  43       23D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  44       23D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  45       23D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  46       23D+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  47       23D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  48       24D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  49       24D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  50       24D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  51       24D+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  52       24D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  53       25D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00001
+  54       25D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  56       25D+2        0.00000  -0.00000   0.00000  -0.00000   0.00001
+  57       25D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                           6         7         8         9        10
+   6        6S          0.03181
+   7        7S         -0.01835   0.01059
+   8        8S          0.10928  -0.06305   0.37546
+   9        9S          0.02828  -0.01631   0.09716   0.02514
+  10       10S          0.06587  -0.03800   0.22631   0.05856   0.13641
+  11       11S         -0.02468   0.01424  -0.08478  -0.02194  -0.05110
+  12       12S         -0.01840   0.01061  -0.06321  -0.01636  -0.03810
+  13       13S          0.00121  -0.00070   0.00416   0.00108   0.00251
+  14       14PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0       -0.00007   0.00004  -0.00024  -0.00006  -0.00014
+  39       22D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  40       22D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00012  -0.00007   0.00042   0.00011   0.00025
+  42       22D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  43       23D 0       -0.00012   0.00007  -0.00041  -0.00011  -0.00025
+  44       23D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  45       23D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00021  -0.00012   0.00071   0.00018   0.00043
+  47       23D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  48       24D 0       -0.00001   0.00001  -0.00005  -0.00001  -0.00003
+  49       24D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  50       24D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00003  -0.00001   0.00009   0.00002   0.00005
+  52       24D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  53       25D 0       -0.00032   0.00019  -0.00110  -0.00029  -0.00067
+  54       25D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  56       25D+2        0.00056  -0.00032   0.00191   0.00049   0.00115
+  57       25D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          11        12        13        14        15
+  11       11S          0.01914
+  12       12S          0.01427   0.01064
+  13       13S         -0.00094  -0.00070   0.00005
+  14       14PX         0.00000   0.00000   0.00000   0.00002
+  15       14PY         0.00000   0.00000   0.00000  -0.00000   0.00003
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000  -0.00050   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000  -0.00054
+  19       15PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  20       16PX         0.00000   0.00000   0.00000  -0.00145   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000  -0.00163
+  22       16PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  23       17PX         0.00000   0.00000   0.00000  -0.00235   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000  -0.00265
+  25       17PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  26       18PX         0.00000   0.00000   0.00000  -0.00167  -0.00000
+  27       18PY         0.00000   0.00000   0.00000  -0.00000  -0.00157
+  28       18PZ         0.00000   0.00000   0.00000   0.00000  -0.00000
+  29       19PX         0.00000   0.00000   0.00000  -0.00003   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000  -0.00004
+  31       19PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  32       20PX         0.00000   0.00000   0.00000  -0.00001   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000  -0.00001
+  34       20PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  35       21PX         0.00000   0.00000   0.00000  -0.00015  -0.00000
+  36       21PY         0.00000   0.00000   0.00000  -0.00000  -0.00005
+  37       21PZ         0.00000   0.00000   0.00000   0.00000  -0.00000
+  38       22D 0        0.00005   0.00004  -0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  40       22D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  41       22D+2       -0.00009  -0.00007   0.00000   0.00000   0.00000
+  42       22D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00009   0.00007  -0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  45       23D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  46       23D+2       -0.00016  -0.00012   0.00001   0.00000   0.00000
+  47       23D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00001   0.00001  -0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  50       24D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  51       24D+2       -0.00002  -0.00001   0.00000   0.00000   0.00000
+  52       24D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00025   0.00019  -0.00001   0.00000   0.00000
+  54       25D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  56       25D+2       -0.00043  -0.00032   0.00002   0.00000   0.00000
+  57       25D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  59       26F+1        0.00000   0.00000   0.00000  -0.00001  -0.00000
+  60       26F-1        0.00000   0.00000   0.00000  -0.00000  -0.00001
+  61       26F+2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000  -0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00001  -0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00003
+  65       27F 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  66       27F+1        0.00000   0.00000   0.00000  -0.00001  -0.00000
+  67       27F-1        0.00000   0.00000   0.00000  -0.00000  -0.00001
+  68       27F+2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00001  -0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00002
+                          16        17        18        19        20
+  16       14PZ         0.00003
+  17       15PX        -0.00000   0.01039
+  18       15PY        -0.00000  -0.00000   0.01103
+  19       15PZ        -0.00054   0.00000  -0.00000   0.01103
+  20       16PX        -0.00000   0.03044  -0.00000   0.00000   0.08917
+  21       16PY        -0.00000  -0.00000   0.03295  -0.00000  -0.00000
+  22       16PZ        -0.00163   0.00000  -0.00000   0.03295   0.00000
+  23       17PX        -0.00000   0.04926  -0.00000   0.00000   0.14428
+  24       17PY        -0.00000  -0.00000   0.05355  -0.00000  -0.00000
+  25       17PZ        -0.00265   0.00000  -0.00000   0.05355   0.00000
+  26       18PX         0.00000   0.03508   0.00000  -0.00000   0.10276
+  27       18PY        -0.00000   0.00000   0.03174  -0.00000   0.00000
+  28       18PZ        -0.00157  -0.00000  -0.00000   0.03174  -0.00000
+  29       19PX        -0.00000   0.00070  -0.00000   0.00000   0.00205
+  30       19PY        -0.00000  -0.00000   0.00077   0.00000  -0.00000
+  31       19PZ        -0.00004   0.00000   0.00000   0.00077   0.00000
+  32       20PX        -0.00000   0.00015  -0.00000   0.00000   0.00043
+  33       20PY        -0.00000  -0.00000   0.00016   0.00000  -0.00000
+  34       20PZ        -0.00001   0.00000   0.00000   0.00016   0.00000
+  35       21PX         0.00000   0.00315   0.00000  -0.00000   0.00924
+  36       21PY        -0.00000   0.00000   0.00093   0.00000   0.00000
+  37       21PZ        -0.00005  -0.00000   0.00000   0.00093  -0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00002  -0.00000  -0.00000   0.00037  -0.00000
+  59       26F+1       -0.00000   0.00020   0.00000   0.00000   0.00057
+  60       26F-1       -0.00000   0.00000   0.00015  -0.00000   0.00000
+  61       26F+2        0.00002   0.00000  -0.00000  -0.00048   0.00000
+  62       26F-2        0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  63       26F+3        0.00000  -0.00025   0.00000  -0.00000  -0.00074
+  64       26F-3        0.00000  -0.00000  -0.00059   0.00000  -0.00000
+  65       27F 0       -0.00001  -0.00000   0.00000   0.00030  -0.00000
+  66       27F+1       -0.00000   0.00020   0.00000   0.00000   0.00058
+  67       27F-1       -0.00000   0.00000   0.00012  -0.00000   0.00000
+  68       27F+2        0.00002   0.00000   0.00000  -0.00039   0.00000
+  69       27F-2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  70       27F+3        0.00000  -0.00026   0.00000  -0.00000  -0.00075
+  71       27F-3        0.00000  -0.00000  -0.00048  -0.00000  -0.00000
+                          21        22        23        24        25
+  21       16PY         0.09842
+  22       16PZ        -0.00000   0.09842
+  23       17PX        -0.00000   0.00000   0.23345
+  24       17PY         0.15995   0.00000  -0.00000   0.25994
+  25       17PZ         0.00000   0.15995   0.00000   0.00000   0.25994
+  26       18PX         0.00000  -0.00000   0.16627   0.00000  -0.00000
+  27       18PY         0.09481  -0.00000   0.00000   0.15408  -0.00000
+  28       18PZ        -0.00000   0.09481  -0.00000  -0.00000   0.15408
+  29       19PX        -0.00000   0.00000   0.00331  -0.00000   0.00000
+  30       19PY         0.00231   0.00000  -0.00000   0.00375   0.00000
+  31       19PZ         0.00000   0.00231   0.00000   0.00000   0.00375
+  32       20PX        -0.00000   0.00000   0.00070  -0.00000   0.00000
+  33       20PY         0.00049   0.00000  -0.00000   0.00079   0.00000
+  34       20PZ         0.00000   0.00049   0.00000   0.00000   0.00079
+  35       21PX         0.00000  -0.00000   0.01495   0.00000  -0.00000
+  36       21PY         0.00277   0.00000   0.00000   0.00450   0.00000
+  37       21PZ         0.00000   0.00277  -0.00000   0.00000   0.00450
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00000   0.00111  -0.00000  -0.00000   0.00181
+  59       26F+1        0.00000   0.00000   0.00093   0.00000   0.00000
+  60       26F-1        0.00045  -0.00000   0.00000   0.00074  -0.00000
+  61       26F+2       -0.00000  -0.00144   0.00000  -0.00000  -0.00233
+  62       26F-2        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  63       26F+3        0.00000  -0.00000  -0.00120   0.00000  -0.00000
+  64       26F-3       -0.00176   0.00000  -0.00000  -0.00286   0.00000
+  65       27F 0        0.00000   0.00090  -0.00000   0.00000   0.00146
+  66       27F+1        0.00000   0.00000   0.00094   0.00000   0.00000
+  67       27F-1        0.00037   0.00000   0.00000   0.00060   0.00000
+  68       27F+2        0.00000  -0.00116   0.00000   0.00000  -0.00188
+  69       27F-2        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  70       27F+3        0.00000  -0.00000  -0.00122   0.00000  -0.00000
+  71       27F-3       -0.00142  -0.00000  -0.00000  -0.00231  -0.00000
+                          26        27        28        29        30
+  26       18PX         0.11841
+  27       18PY         0.00000   0.09133
+  28       18PZ        -0.00000  -0.00000   0.09133
+  29       19PX         0.00236   0.00000  -0.00000   0.00005
+  30       19PY         0.00000   0.00222   0.00000  -0.00000   0.00005
+  31       19PZ        -0.00000   0.00000   0.00222   0.00000   0.00000
+  32       20PX         0.00050   0.00000  -0.00000   0.00001  -0.00000
+  33       20PY         0.00000   0.00047   0.00000  -0.00000   0.00001
+  34       20PZ        -0.00000   0.00000   0.00047   0.00000   0.00000
+  35       21PX         0.01065   0.00000  -0.00000   0.00021   0.00000
+  36       21PY         0.00000   0.00266   0.00000   0.00000   0.00006
+  37       21PZ        -0.00000   0.00000   0.00266  -0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00000  -0.00000   0.00107  -0.00000   0.00000
+  59       26F+1        0.00066   0.00000   0.00000   0.00001   0.00000
+  60       26F-1        0.00000   0.00044  -0.00000   0.00000   0.00001
+  61       26F+2        0.00000   0.00000  -0.00138   0.00000  -0.00000
+  62       26F-2       -0.00000   0.00000  -0.00000  -0.00000   0.00000
+  63       26F+3       -0.00085   0.00000  -0.00000  -0.00002   0.00000
+  64       26F-3       -0.00000  -0.00169   0.00000  -0.00000  -0.00004
+  65       27F 0       -0.00000  -0.00000   0.00086  -0.00000   0.00000
+  66       27F+1        0.00067   0.00000   0.00000   0.00001   0.00000
+  67       27F-1        0.00000   0.00035  -0.00000   0.00000   0.00001
+  68       27F+2        0.00000   0.00000  -0.00112   0.00000  -0.00000
+  69       27F-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  70       27F+3       -0.00087   0.00000  -0.00000  -0.00002   0.00000
+  71       27F-3       -0.00000  -0.00137   0.00000  -0.00000  -0.00003
+                          31        32        33        34        35
+  31       19PZ         0.00005
+  32       20PX         0.00000   0.00000
+  33       20PY         0.00000  -0.00000   0.00000
+  34       20PZ         0.00001   0.00000   0.00000   0.00000
+  35       21PX        -0.00000   0.00004   0.00000  -0.00000   0.00096
+  36       21PY         0.00000   0.00000   0.00001   0.00000   0.00000
+  37       21PZ         0.00006  -0.00000   0.00000   0.00001  -0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00003  -0.00000   0.00000   0.00001  -0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00006
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2       -0.00003   0.00000  -0.00000  -0.00001   0.00000
+  62       26F-2       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  63       26F+3       -0.00000  -0.00000   0.00000  -0.00000  -0.00008
+  64       26F-3       -0.00000  -0.00000  -0.00001  -0.00000  -0.00000
+  65       27F 0        0.00002  -0.00000   0.00000   0.00000  -0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00006
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2       -0.00003   0.00000  -0.00000  -0.00001   0.00000
+  69       27F-2       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  70       27F+3       -0.00000  -0.00000   0.00000  -0.00000  -0.00008
+  71       27F-3       -0.00000  -0.00000  -0.00001  -0.00000  -0.00000
+                          36        37        38        39        40
+  36       21PY         0.00008
+  37       21PZ         0.00000   0.00008
+  38       22D 0        0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  41       22D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  42       22D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  47       23D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00003   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00001   0.00000   0.00000   0.00000   0.00000
+  61       26F+2       -0.00000  -0.00004   0.00000   0.00000   0.00000
+  62       26F-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3       -0.00005  -0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00003   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00001   0.00000   0.00000   0.00000   0.00000
+  68       27F+2       -0.00000  -0.00003   0.00000   0.00000   0.00000
+  69       27F-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3       -0.00004  -0.00000   0.00000   0.00000   0.00000
+                          41        42        43        44        45
+  41       22D+2        0.00000
+  42       22D-2        0.00000   0.00000
+  43       23D 0       -0.00000  -0.00000   0.00000
+  44       23D+1       -0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  46       23D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  47       23D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  48       24D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  49       24D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  54       25D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          46        47        48        49        50
+  46       23D+2        0.00000
+  47       23D-2        0.00000   0.00000
+  48       24D 0       -0.00000  -0.00000   0.00000
+  49       24D+1       -0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  54       25D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          51        52        53        54        55
+  51       24D+2        0.00000
+  52       24D-2        0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000
+  54       25D+1       -0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00001  -0.00000  -0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          56        57        58        59        60
+  56       25D+2        0.00001
+  57       25D-2        0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00001
+  59       26F+1        0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000  -0.00002  -0.00000   0.00000
+  62       26F-2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  63       26F+3        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000  -0.00000  -0.00001
+  65       27F 0        0.00000   0.00000   0.00001   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000  -0.00001  -0.00000   0.00000
+  69       27F-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000  -0.00000  -0.00001
+                          61        62        63        64        65
+  61       26F+2        0.00002
+  62       26F-2        0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00001
+  64       26F-3       -0.00000  -0.00000  -0.00000   0.00003
+  65       27F 0       -0.00001  -0.00000  -0.00000  -0.00000   0.00001
+  66       27F+1       -0.00000  -0.00000  -0.00000  -0.00000   0.00000
+  67       27F-1       -0.00000   0.00000   0.00000  -0.00001   0.00000
+  68       27F+2        0.00002   0.00000   0.00000  -0.00000  -0.00001
+  69       27F-2        0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  70       27F+3        0.00000   0.00000   0.00001  -0.00000  -0.00000
+  71       27F-3        0.00000  -0.00000  -0.00000   0.00003  -0.00000
+                          66        67        68        69        70
+  66       27F+1        0.00000
+  67       27F-1        0.00000   0.00000
+  68       27F+2       -0.00000   0.00000   0.00001
+  69       27F-2        0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00000   0.00000   0.00000  -0.00000   0.00001
+  71       27F-3       -0.00000  -0.00001  -0.00000  -0.00000  -0.00000
+                          71
+  71       27F-3        0.00002
+     Beta Density Matrix:
+                           1         2         3         4         5
+   1 1   O  1S          0.00000
+   2        2S         -0.00000   0.00000
+   3        3S          0.00000  -0.00000   0.00000
+   4        4S         -0.00000   0.00000  -0.00000   0.00000
+   5        5S          0.00000  -0.00000   0.00000  -0.00000   0.00001
+   6        6S          0.00000  -0.00000   0.00000  -0.00004   0.00064
+   7        7S         -0.00000   0.00000  -0.00000   0.00002  -0.00037
+   8        8S          0.00000  -0.00000   0.00002  -0.00013   0.00219
+   9        9S          0.00000  -0.00000   0.00000  -0.00003   0.00057
+  10       10S          0.00000  -0.00000   0.00001  -0.00008   0.00132
+  11       11S         -0.00000   0.00000  -0.00000   0.00003  -0.00049
+  12       12S         -0.00000   0.00000  -0.00000   0.00002  -0.00037
+  13       13S          0.00000  -0.00000   0.00000  -0.00000   0.00002
+  14       14PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  39       22D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  40       22D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  41       22D+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  42       22D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  43       23D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  44       23D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  45       23D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  46       23D+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  47       23D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  48       24D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  49       24D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  50       24D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  51       24D+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  52       24D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  53       25D 0       -0.00000   0.00000  -0.00000   0.00000  -0.00001
+  54       25D+1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  56       25D+2        0.00000  -0.00000   0.00000  -0.00000   0.00001
+  57       25D-2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                           6         7         8         9        10
+   6        6S          0.03181
+   7        7S         -0.01835   0.01059
+   8        8S          0.10928  -0.06305   0.37546
+   9        9S          0.02828  -0.01631   0.09716   0.02514
+  10       10S          0.06587  -0.03800   0.22631   0.05856   0.13641
+  11       11S         -0.02468   0.01424  -0.08478  -0.02194  -0.05110
+  12       12S         -0.01840   0.01061  -0.06321  -0.01636  -0.03810
+  13       13S          0.00121  -0.00070   0.00416   0.00108   0.00251
+  14       14PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0       -0.00007   0.00004  -0.00024  -0.00006  -0.00014
+  39       22D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  40       22D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00012  -0.00007   0.00042   0.00011   0.00025
+  42       22D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  43       23D 0       -0.00012   0.00007  -0.00041  -0.00011  -0.00025
+  44       23D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  45       23D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00021  -0.00012   0.00071   0.00018   0.00043
+  47       23D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  48       24D 0       -0.00001   0.00001  -0.00005  -0.00001  -0.00003
+  49       24D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  50       24D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00003  -0.00001   0.00009   0.00002   0.00005
+  52       24D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  53       25D 0       -0.00032   0.00019  -0.00110  -0.00029  -0.00067
+  54       25D+1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  56       25D+2        0.00056  -0.00032   0.00191   0.00049   0.00115
+  57       25D-2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          11        12        13        14        15
+  11       11S          0.01914
+  12       12S          0.01427   0.01064
+  13       13S         -0.00094  -0.00070   0.00005
+  14       14PX         0.00000   0.00000   0.00000   0.00002
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000  -0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000  -0.00050  -0.00000
+  18       15PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000  -0.00145  -0.00000
+  21       16PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000  -0.00235  -0.00000
+  24       17PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000  -0.00167  -0.00000
+  27       18PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000  -0.00003  -0.00000
+  30       19PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000  -0.00001  -0.00000
+  33       20PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000  -0.00015  -0.00000
+  36       21PY         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0        0.00005   0.00004  -0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  40       22D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  41       22D+2       -0.00009  -0.00007   0.00000   0.00000   0.00000
+  42       22D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00009   0.00007  -0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  45       23D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  46       23D+2       -0.00016  -0.00012   0.00001   0.00000   0.00000
+  47       23D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00001   0.00001  -0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  50       24D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  51       24D+2       -0.00002  -0.00001   0.00000   0.00000   0.00000
+  52       24D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00025   0.00019  -0.00001   0.00000   0.00000
+  54       25D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  56       25D+2       -0.00043  -0.00032   0.00002   0.00000   0.00000
+  57       25D-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000  -0.00001  -0.00000
+  60       26F-1        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  61       26F+2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00001   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000  -0.00001  -0.00000
+  67       27F-1        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  68       27F+2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00001   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          16        17        18        19        20
+  16       14PZ         0.00000
+  17       15PX         0.00000   0.01039
+  18       15PY         0.00000   0.00000   0.00000
+  19       15PZ        -0.00000  -0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.03044   0.00000  -0.00000   0.08917
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ        -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  23       17PX         0.00000   0.04926   0.00000  -0.00000   0.14428
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ        -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  26       18PX         0.00000   0.03508   0.00000  -0.00000   0.10276
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ        -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  29       19PX         0.00000   0.00070   0.00000  -0.00000   0.00205
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ        -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  32       20PX         0.00000   0.00015   0.00000  -0.00000   0.00043
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ        -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  35       21PX         0.00000   0.00315   0.00000  -0.00000   0.00924
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ        -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  59       26F+1        0.00000   0.00020   0.00000  -0.00000   0.00057
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  62       26F-2        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  63       26F+3       -0.00000  -0.00025  -0.00000   0.00000  -0.00074
+  64       26F-3        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  65       27F 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  66       27F+1        0.00000   0.00020   0.00000  -0.00000   0.00058
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00000  -0.00026  -0.00000   0.00000  -0.00075
+  71       27F-3        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+                          21        22        23        24        25
+  21       16PY         0.00000
+  22       16PZ         0.00000   0.00000
+  23       17PX         0.00000  -0.00000   0.23345
+  24       17PY         0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000  -0.00000   0.00000   0.00000
+  26       18PX         0.00000  -0.00000   0.16627   0.00000  -0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000  -0.00000   0.00000   0.00000
+  29       19PX         0.00000  -0.00000   0.00331   0.00000  -0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000  -0.00000   0.00000   0.00000
+  32       20PX         0.00000  -0.00000   0.00070   0.00000  -0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000  -0.00000   0.00000   0.00000
+  35       21PX         0.00000  -0.00000   0.01495   0.00000  -0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000  -0.00000   0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000  -0.00000   0.00000   0.00000
+  59       26F+1        0.00000  -0.00000   0.00093   0.00000  -0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  62       26F-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  63       26F+3       -0.00000   0.00000  -0.00120  -0.00000   0.00000
+  64       26F-3       -0.00000   0.00000  -0.00000  -0.00000   0.00000
+  65       27F 0        0.00000   0.00000  -0.00000   0.00000   0.00000
+  66       27F+1        0.00000  -0.00000   0.00094   0.00000  -0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00000   0.00000  -0.00122  -0.00000   0.00000
+  71       27F-3       -0.00000   0.00000  -0.00000  -0.00000   0.00000
+                          26        27        28        29        30
+  26       18PX         0.11841
+  27       18PY         0.00000   0.00000
+  28       18PZ        -0.00000   0.00000   0.00000
+  29       19PX         0.00236   0.00000  -0.00000   0.00005
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ        -0.00000   0.00000   0.00000  -0.00000   0.00000
+  32       20PX         0.00050   0.00000  -0.00000   0.00001   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ        -0.00000   0.00000   0.00000  -0.00000   0.00000
+  35       21PX         0.01065   0.00000  -0.00000   0.00021   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ        -0.00000   0.00000   0.00000  -0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  59       26F+1        0.00066   0.00000  -0.00000   0.00001   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  62       26F-2       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  63       26F+3       -0.00085  -0.00000   0.00000  -0.00002  -0.00000
+  64       26F-3       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  65       27F 0       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  66       27F+1        0.00067   0.00000  -0.00000   0.00001   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00087  -0.00000   0.00000  -0.00002  -0.00000
+  71       27F-3       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+                          31        32        33        34        35
+  31       19PZ         0.00000
+  32       20PX        -0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000
+  34       20PZ         0.00000  -0.00000   0.00000   0.00000
+  35       21PX        -0.00000   0.00004   0.00000  -0.00000   0.00096
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000  -0.00000   0.00000   0.00000  -0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  59       26F+1       -0.00000   0.00000   0.00000  -0.00000   0.00006
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  62       26F-2        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  63       26F+3        0.00000  -0.00000  -0.00000   0.00000  -0.00008
+  64       26F-3        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  65       27F 0        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  66       27F+1       -0.00000   0.00000   0.00000  -0.00000   0.00006
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000  -0.00000  -0.00000   0.00000  -0.00008
+  71       27F-3        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+                          36        37        38        39        40
+  36       21PY         0.00000
+  37       21PZ         0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  41       22D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  42       22D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  47       23D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3       -0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3       -0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3       -0.00000   0.00000   0.00000   0.00000   0.00000
+                          41        42        43        44        45
+  41       22D+2        0.00000
+  42       22D-2        0.00000   0.00000
+  43       23D 0       -0.00000  -0.00000   0.00000
+  44       23D+1       -0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  46       23D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  47       23D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  48       24D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  49       24D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  54       25D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          46        47        48        49        50
+  46       23D+2        0.00000
+  47       23D-2        0.00000   0.00000
+  48       24D 0       -0.00000  -0.00000   0.00000
+  49       24D+1       -0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  54       25D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          51        52        53        54        55
+  51       24D+2        0.00000
+  52       24D-2        0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000
+  54       25D+1       -0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00001  -0.00000  -0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          56        57        58        59        60
+  56       25D+2        0.00001
+  57       25D-2        0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000  -0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  64       26F-3        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  65       27F 0        0.00000   0.00000   0.00000  -0.00000   0.00000
+  66       27F+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  71       27F-3        0.00000   0.00000   0.00000  -0.00000  -0.00000
+                          61        62        63        64        65
+  61       26F+2        0.00000
+  62       26F-2        0.00000  -0.00000
+  63       26F+3       -0.00000   0.00000   0.00001
+  64       26F-3        0.00000   0.00000   0.00000   0.00000
+  65       27F 0       -0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  67       27F-1        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  68       27F+2        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  69       27F-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  70       27F+3       -0.00000   0.00000   0.00001   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          66        67        68        69        70
+  66       27F+1        0.00000
+  67       27F-1        0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00000  -0.00000  -0.00000  -0.00000   0.00001
+  71       27F-3       -0.00000  -0.00000   0.00000   0.00000   0.00000
+                          71
+  71       27F-3        0.00000
+    Full Mulliken population analysis:
+                           1         2         3         4         5
+   1 1   O  1S          0.00000
+   2        2S         -0.00000   0.00000
+   3        3S          0.00000  -0.00000   0.00000
+   4        4S         -0.00000   0.00000  -0.00000   0.00000
+   5        5S          0.00000  -0.00000   0.00000  -0.00000   0.00003
+   6        6S          0.00000  -0.00000   0.00000  -0.00004   0.00105
+   7        7S         -0.00000   0.00000  -0.00000   0.00001  -0.00038
+   8        8S          0.00000  -0.00000   0.00000  -0.00001   0.00051
+   9        9S          0.00000  -0.00000   0.00000  -0.00001   0.00025
+  10       10S          0.00000  -0.00000   0.00000  -0.00000   0.00014
+  11       11S         -0.00000   0.00000  -0.00000   0.00002  -0.00057
+  12       12S         -0.00000   0.00000  -0.00000   0.00002  -0.00065
+  13       13S          0.00000  -0.00000   0.00000  -0.00000   0.00000
+  14       14PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000  -0.00000   0.00000
+  39       22D+1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  41       22D+2       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  42       22D-2       -0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0       -0.00000   0.00000   0.00000  -0.00000  -0.00000
+  44       23D+1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  45       23D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  46       23D+2       -0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  48       24D 0       -0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  50       24D-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  51       24D+2       -0.00000   0.00000   0.00000  -0.00000  -0.00000
+  52       24D-2       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000  -0.00000   0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  56       25D+2       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                           6         7         8         9        10
+   6        6S          0.06362
+   7        7S         -0.03072   0.02117
+   8        8S          0.05309  -0.05853   0.75091
+   9        9S          0.02534  -0.02461   0.16590   0.05028
+  10       10S          0.01503  -0.01763   0.37000   0.06129   0.27281
+  11       11S         -0.04441   0.02818  -0.06814  -0.02980  -0.02012
+  12       12S         -0.03645   0.01631  -0.02621  -0.01273  -0.00736
+  13       13S          0.00012  -0.00014   0.00378   0.00053   0.00393
+  14       14PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  15       14PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  19       15PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  20       16PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  21       16PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  22       16PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  25       17PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  26       18PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  28       18PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  29       19PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  31       19PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  32       20PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  34       20PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  35       21PX         0.00000   0.00000   0.00000   0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000   0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  41       22D+2       -0.00000  -0.00000   0.00000  -0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  47       23D-2       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000  -0.00000   0.00000
+  50       24D-1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  51       24D+2       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  52       24D-2       -0.00000   0.00000  -0.00000   0.00000  -0.00000
+  53       25D 0        0.00000  -0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  56       25D+2       -0.00000  -0.00000   0.00000  -0.00000   0.00000
+  57       25D-2       -0.00000   0.00000   0.00000  -0.00000  -0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          11        12        13        14        15
+  11       11S          0.03829
+  12       12S          0.02395   0.02129
+  13       13S         -0.00016  -0.00006   0.00009
+  14       14PX         0.00000   0.00000   0.00000   0.00005
+  15       14PY         0.00000   0.00000   0.00000  -0.00000   0.00003
+  16       14PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  17       15PX         0.00000   0.00000   0.00000  -0.00052   0.00000
+  18       15PY         0.00000   0.00000   0.00000   0.00000  -0.00029
+  19       15PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  20       16PX         0.00000   0.00000   0.00000  -0.00047   0.00000
+  21       16PY         0.00000   0.00000   0.00000  -0.00000  -0.00026
+  22       16PZ         0.00000   0.00000   0.00000  -0.00000   0.00000
+  23       17PX         0.00000   0.00000   0.00000  -0.00020   0.00000
+  24       17PY         0.00000   0.00000   0.00000   0.00000  -0.00011
+  25       17PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  26       18PX         0.00000   0.00000   0.00000  -0.00003   0.00000
+  27       18PY         0.00000   0.00000   0.00000   0.00000  -0.00002
+  28       18PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  29       19PX         0.00000   0.00000   0.00000  -0.00005  -0.00000
+  30       19PY         0.00000   0.00000   0.00000   0.00000  -0.00003
+  31       19PZ         0.00000   0.00000   0.00000  -0.00000  -0.00000
+  32       20PX         0.00000   0.00000   0.00000  -0.00001   0.00000
+  33       20PY         0.00000   0.00000   0.00000   0.00000  -0.00001
+  34       20PZ         0.00000   0.00000   0.00000   0.00000  -0.00000
+  35       21PX         0.00000   0.00000   0.00000  -0.00000   0.00000
+  36       21PY         0.00000   0.00000   0.00000   0.00000  -0.00000
+  37       21PZ         0.00000   0.00000   0.00000  -0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  40       22D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000  -0.00000  -0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  45       23D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  46       23D+2       -0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  48       24D 0        0.00000  -0.00000   0.00000   0.00000   0.00000
+  49       24D+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  56       25D+2       -0.00000  -0.00000  -0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000  -0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000  -0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000  -0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  66       27F+1        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  67       27F-1        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000  -0.00000
+  69       27F-2        0.00000   0.00000   0.00000  -0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000  -0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000  -0.00000   0.00000
+                          16        17        18        19        20
+  16       14PZ         0.00003
+  17       15PX        -0.00000   0.02078
+  18       15PY        -0.00000   0.00000   0.01103
+  19       15PZ        -0.00029   0.00000  -0.00000   0.01103
+  20       16PX        -0.00000   0.03917  -0.00000  -0.00000   0.17834
+  21       16PY         0.00000   0.00000   0.02120  -0.00000  -0.00000
+  22       16PZ        -0.00026  -0.00000   0.00000   0.02120   0.00000
+  23       17PX        -0.00000   0.02275  -0.00000   0.00000   0.19380
+  24       17PY        -0.00000  -0.00000   0.01236  -0.00000   0.00000
+  25       17PZ        -0.00011   0.00000  -0.00000   0.01236   0.00000
+  26       18PX         0.00000   0.00417   0.00000   0.00000   0.04826
+  27       18PY         0.00000  -0.00000   0.00189  -0.00000   0.00000
+  28       18PZ        -0.00002   0.00000  -0.00000   0.00189   0.00000
+  29       19PX        -0.00000   0.00122  -0.00000   0.00000   0.00153
+  30       19PY        -0.00000  -0.00000   0.00067   0.00000   0.00000
+  31       19PZ        -0.00003   0.00000   0.00000   0.00067  -0.00000
+  32       20PX        -0.00000   0.00010  -0.00000   0.00000   0.00008
+  33       20PY         0.00000   0.00000   0.00006   0.00000   0.00000
+  34       20PZ        -0.00001   0.00000   0.00000   0.00006   0.00000
+  35       21PX        -0.00000   0.00008   0.00000  -0.00000   0.00103
+  36       21PY        -0.00000   0.00000   0.00001   0.00000  -0.00000
+  37       21PZ        -0.00000  -0.00000   0.00000   0.00001   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000  -0.00000  -0.00000   0.00000   0.00000
+  59       26F+1       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  60       26F-1        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000  -0.00000
+  62       26F-2        0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  63       26F+3        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  66       27F+1       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  67       27F-1        0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  68       27F+2        0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  69       27F-2        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  70       27F+3        0.00000   0.00000  -0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000  -0.00000  -0.00000   0.00000
+                          21        22        23        24        25
+  21       16PY         0.09842
+  22       16PZ        -0.00000   0.09842
+  23       17PX        -0.00000   0.00000   0.46691
+  24       17PY         0.10742   0.00000  -0.00000   0.25994
+  25       17PZ         0.00000   0.10742   0.00000   0.00000   0.25994
+  26       18PX        -0.00000   0.00000   0.21628   0.00000   0.00000
+  27       18PY         0.02226  -0.00000  -0.00000   0.10021  -0.00000
+  28       18PZ        -0.00000   0.02226   0.00000  -0.00000   0.10021
+  29       19PX         0.00000   0.00000   0.00073  -0.00000   0.00000
+  30       19PY         0.00086   0.00000  -0.00000   0.00042   0.00000
+  31       19PZ         0.00000   0.00086   0.00000   0.00000   0.00042
+  32       20PX        -0.00000   0.00000   0.00003  -0.00000   0.00000
+  33       20PY         0.00004   0.00000   0.00000   0.00002   0.00000
+  34       20PZ        -0.00000   0.00004   0.00000   0.00000   0.00002
+  35       21PX         0.00000   0.00000   0.00621  -0.00000  -0.00000
+  36       21PY         0.00015   0.00000  -0.00000   0.00093   0.00000
+  37       21PZ         0.00000   0.00015   0.00000   0.00000   0.00093
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000  -0.00000
+  60       26F-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  61       26F+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  62       26F-2       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  63       26F+3       -0.00000  -0.00000   0.00000  -0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000  -0.00000   0.00000
+  65       27F 0       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  67       27F-1       -0.00000  -0.00000  -0.00000  -0.00000   0.00000
+  68       27F+2       -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  69       27F-2       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  70       27F+3        0.00000   0.00000  -0.00000  -0.00000  -0.00000
+  71       27F-3       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+                          26        27        28        29        30
+  26       18PX         0.23683
+  27       18PY        -0.00000   0.09133
+  28       18PZ         0.00000  -0.00000   0.09133
+  29       19PX         0.00013   0.00000  -0.00000   0.00009
+  30       19PY         0.00000   0.00006   0.00000   0.00000   0.00005
+  31       19PZ        -0.00000   0.00000   0.00006   0.00000   0.00000
+  32       20PX         0.00001  -0.00000   0.00000   0.00001  -0.00000
+  33       20PY        -0.00000   0.00000   0.00000  -0.00000   0.00001
+  34       20PZ        -0.00000   0.00000   0.00000  -0.00000   0.00000
+  35       21PX         0.01321  -0.00000  -0.00000   0.00000  -0.00000
+  36       21PY         0.00000   0.00165   0.00000   0.00000   0.00000
+  37       21PZ        -0.00000   0.00000   0.00165  -0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  59       26F+1       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  60       26F-1       -0.00000  -0.00000   0.00000  -0.00000   0.00000
+  61       26F+2        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  62       26F-2       -0.00000  -0.00000  -0.00000  -0.00000   0.00000
+  63       26F+3        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  64       26F-3        0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  65       27F 0       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  66       27F+1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  68       27F+2       -0.00000  -0.00000   0.00000  -0.00000   0.00000
+  69       27F-2        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  70       27F+3       -0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000  -0.00000
+                          31        32        33        34        35
+  31       19PZ         0.00005
+  32       20PX         0.00000   0.00000
+  33       20PY         0.00000   0.00000   0.00000
+  34       20PZ         0.00001   0.00000   0.00000   0.00000
+  35       21PX        -0.00000   0.00000  -0.00000   0.00000   0.00191
+  36       21PY         0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  37       21PZ         0.00000   0.00000   0.00000   0.00000   0.00000
+  38       22D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  40       22D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  56       25D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  59       26F+1        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  60       26F-1       -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  61       26F+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  62       26F-2       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  63       26F+3       -0.00000  -0.00000  -0.00000  -0.00000   0.00000
+  64       26F-3       -0.00000   0.00000   0.00000  -0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000  -0.00000
+  67       27F-1       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  68       27F+2       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  69       27F-2       -0.00000   0.00000  -0.00000  -0.00000   0.00000
+  70       27F+3        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  71       27F-3       -0.00000   0.00000  -0.00000  -0.00000   0.00000
+                          36        37        38        39        40
+  36       21PY         0.00008
+  37       21PZ         0.00000   0.00008
+  38       22D 0        0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000  -0.00000   0.00000
+  40       22D-1        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  44       23D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000  -0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  54       25D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  55       25D-1        0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000   0.00000  -0.00000   0.00000  -0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00000  -0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1       -0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  62       26F-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  65       27F 0       -0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000  -0.00000   0.00000   0.00000   0.00000
+  67       27F-1       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2       -0.00000  -0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000  -0.00000   0.00000   0.00000   0.00000
+                          41        42        43        44        45
+  41       22D+2        0.00000
+  42       22D-2        0.00000   0.00000
+  43       23D 0        0.00000  -0.00000   0.00000
+  44       23D+1       -0.00000   0.00000   0.00000   0.00000
+  45       23D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  46       23D+2        0.00000  -0.00000  -0.00000   0.00000  -0.00000
+  47       23D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  48       24D 0       -0.00000  -0.00000   0.00000   0.00000  -0.00000
+  49       24D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  50       24D-1       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000  -0.00000  -0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000  -0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  56       25D+2        0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+  57       25D-2        0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          46        47        48        49        50
+  46       23D+2        0.00000
+  47       23D-2        0.00000   0.00000
+  48       24D 0        0.00000  -0.00000   0.00000
+  49       24D+1        0.00000   0.00000  -0.00000   0.00000
+  50       24D-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  51       24D+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  52       24D-2       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  53       25D 0       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  54       25D+1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000  -0.00000   0.00000   0.00000   0.00000
+  57       25D-2       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          51        52        53        54        55
+  51       24D+2        0.00000
+  52       24D-2       -0.00000   0.00000
+  53       25D 0        0.00000  -0.00000   0.00001
+  54       25D+1       -0.00000   0.00000  -0.00000   0.00000
+  55       25D-1       -0.00000   0.00000   0.00000   0.00000  -0.00000
+  56       25D+2        0.00000  -0.00000   0.00000   0.00000  -0.00000
+  57       25D-2       -0.00000   0.00000  -0.00000   0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  59       26F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  64       26F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000   0.00000
+  71       27F-3        0.00000   0.00000   0.00000   0.00000   0.00000
+                          56        57        58        59        60
+  56       25D+2        0.00002
+  57       25D-2       -0.00000   0.00000
+  58       26F 0        0.00000   0.00000   0.00001
+  59       26F+1        0.00000   0.00000   0.00000   0.00001
+  60       26F-1        0.00000   0.00000  -0.00000   0.00000   0.00000
+  61       26F+2        0.00000   0.00000   0.00000  -0.00000  -0.00000
+  62       26F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  63       26F+3        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  64       26F-3        0.00000   0.00000  -0.00000  -0.00000   0.00000
+  65       27F 0        0.00000   0.00000   0.00001   0.00000  -0.00000
+  66       27F+1        0.00000   0.00000   0.00000   0.00000   0.00000
+  67       27F-1        0.00000   0.00000   0.00000  -0.00000   0.00000
+  68       27F+2        0.00000   0.00000   0.00000   0.00000   0.00000
+  69       27F-2        0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000   0.00000   0.00000   0.00000  -0.00000
+  71       27F-3        0.00000   0.00000  -0.00000  -0.00000  -0.00000
+                          61        62        63        64        65
+  61       26F+2        0.00002
+  62       26F-2        0.00000   0.00000
+  63       26F+3        0.00000  -0.00000   0.00001
+  64       26F-3        0.00000   0.00000   0.00000   0.00003
+  65       27F 0        0.00000   0.00000   0.00000   0.00000   0.00001
+  66       27F+1       -0.00000  -0.00000   0.00000  -0.00000  -0.00000
+  67       27F-1        0.00000  -0.00000   0.00000  -0.00000   0.00000
+  68       27F+2        0.00001  -0.00000   0.00000  -0.00000   0.00000
+  69       27F-2       -0.00000   0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00000  -0.00000   0.00001   0.00000   0.00000
+  71       27F-3       -0.00000   0.00000   0.00000   0.00001   0.00000
+                          66        67        68        69        70
+  66       27F+1        0.00001
+  67       27F-1        0.00000   0.00000
+  68       27F+2        0.00000  -0.00000   0.00001
+  69       27F-2       -0.00000   0.00000   0.00000   0.00000
+  70       27F+3       -0.00000   0.00000   0.00000   0.00000   0.00001
+  71       27F-3       -0.00000   0.00000   0.00000   0.00000  -0.00000
+                          71
+  71       27F-3        0.00002
+     Gross orbital populations:
+                         Total     Alpha     Beta      Spin
+   1 1   O  1S          0.00000   0.00000   0.00000   0.00000
+   2        2S         -0.00000  -0.00000  -0.00000   0.00000
+   3        3S          0.00000   0.00000   0.00000   0.00000
+   4        4S         -0.00001  -0.00000  -0.00000   0.00000
+   5        5S          0.00037   0.00018   0.00018   0.00000
+   6        6S          0.04662   0.02331   0.02331   0.00000
+   7        7S         -0.06633  -0.03316  -0.03316   0.00000
+   8        8S          1.19129   0.59565   0.59565   0.00000
+   9        9S          0.23646   0.11823   0.11823   0.00000
+  10       10S          0.67809   0.33904   0.33904   0.00000
+  11       11S         -0.07276  -0.03638  -0.03638   0.00000
+  12       12S         -0.02188  -0.01094  -0.01094   0.00000
+  13       13S          0.00810   0.00405   0.00405   0.00000
+  14       14PX        -0.00124  -0.00062  -0.00062   0.00000
+  15       14PY        -0.00069  -0.00069  -0.00000  -0.00069
+  16       14PZ        -0.00069  -0.00069  -0.00000  -0.00069
+  17       15PX         0.08775   0.04387   0.04387   0.00000
+  18       15PY         0.04693   0.04693   0.00000   0.04693
+  19       15PZ         0.04693   0.04693   0.00000   0.04693
+  20       16PX         0.46174   0.23087   0.23087   0.00000
+  21       16PY         0.25010   0.25010   0.00000   0.25010
+  22       16PZ         0.25010   0.25010   0.00000   0.25010
+  23       17PX         0.90652   0.45326   0.45326   0.00000
+  24       17PY         0.48119   0.48119   0.00000   0.48119
+  25       17PZ         0.48119   0.48119   0.00000   0.48119
+  26       18PX         0.51885   0.25942   0.25942   0.00000
+  27       18PY         0.21739   0.21739   0.00000   0.21739
+  28       18PZ         0.21739   0.21739   0.00000   0.21739
+  29       19PX         0.00366   0.00183   0.00183   0.00000
+  30       19PY         0.00204   0.00204   0.00000   0.00204
+  31       19PZ         0.00204   0.00204   0.00000   0.00204
+  32       20PX         0.00022   0.00011   0.00011   0.00000
+  33       20PY         0.00012   0.00012   0.00000   0.00012
+  34       20PZ         0.00012   0.00012   0.00000   0.00012
+  35       21PX         0.02245   0.01122   0.01122   0.00000
+  36       21PY         0.00283   0.00283   0.00000   0.00283
+  37       21PZ         0.00283   0.00283   0.00000   0.00283
+  38       22D 0        0.00000   0.00000   0.00000   0.00000
+  39       22D+1        0.00000   0.00000   0.00000   0.00000
+  40       22D-1       -0.00000  -0.00000  -0.00000   0.00000
+  41       22D+2        0.00000   0.00000   0.00000   0.00000
+  42       22D-2        0.00000   0.00000   0.00000   0.00000
+  43       23D 0        0.00000   0.00000   0.00000   0.00000
+  44       23D+1        0.00000   0.00000   0.00000   0.00000
+  45       23D-1        0.00000   0.00000   0.00000   0.00000
+  46       23D+2        0.00001   0.00000   0.00000   0.00000
+  47       23D-2        0.00000   0.00000   0.00000   0.00000
+  48       24D 0        0.00000   0.00000   0.00000   0.00000
+  49       24D+1        0.00000   0.00000   0.00000   0.00000
+  50       24D-1        0.00000   0.00000   0.00000   0.00000
+  51       24D+2        0.00000   0.00000   0.00000   0.00000
+  52       24D-2        0.00000   0.00000   0.00000   0.00000
+  53       25D 0        0.00001   0.00000   0.00000   0.00000
+  54       25D+1        0.00000   0.00000   0.00000   0.00000
+  55       25D-1       -0.00000  -0.00000  -0.00000   0.00000
+  56       25D+2        0.00002   0.00001   0.00001   0.00000
+  57       25D-2        0.00000   0.00000   0.00000   0.00000
+  58       26F 0        0.00002   0.00002   0.00000   0.00002
+  59       26F+1        0.00001   0.00001   0.00001   0.00000
+  60       26F-1        0.00000   0.00000   0.00000   0.00000
+  61       26F+2        0.00003   0.00003   0.00000   0.00003
+  62       26F-2        0.00000   0.00000  -0.00000   0.00000
+  63       26F+3        0.00002   0.00001   0.00001   0.00000
+  64       26F-3        0.00005   0.00005   0.00000   0.00005
+  65       27F 0        0.00001   0.00001   0.00000   0.00001
+  66       27F+1        0.00001   0.00001   0.00001   0.00000
+  67       27F-1        0.00000   0.00000   0.00000   0.00000
+  68       27F+2        0.00002   0.00002   0.00000   0.00002
+  69       27F-2        0.00000   0.00000   0.00000   0.00000
+  70       27F+3        0.00002   0.00001   0.00001   0.00000
+  71       27F-3        0.00003   0.00003   0.00000   0.00003
+          Condensed to atoms (all electrons):
+               1
+     1  O    6.000000
+          Atomic-Atomic Spin Densities.
+               1
+     1  O    2.000000
+ Mulliken charges and spin densities:
+               1          2
+     1  O   -0.000000   2.000000
+ Sum of Mulliken charges =  -0.00000   2.00000
+ Mulliken charges and spin densities with hydrogens summed into heavy atoms:
+               1          2
+     1  O   -0.000000   2.000000
+ Electronic spatial extent (au):  <R**2>=             11.1527
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.0000    Y=              0.0000    Z=              0.0000  Tot=              0.0000
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -5.8306   YY=             -4.5851   ZZ=             -4.5851
+   XY=             -0.0000   XZ=              0.0000   YZ=             -0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -0.8303   YY=              0.4152   ZZ=              0.4152
+   XY=             -0.0000   XZ=              0.0000   YZ=             -0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=              0.0000  YYY=              0.0000  ZZZ=              0.0000  XYY=              0.0000
+  XXY=              0.0000  XXZ=              0.0000  XZZ=              0.0000  YZZ=              0.0000
+  YYZ=              0.0000  XYZ=              0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=             -4.9335 YYYY=             -3.0929 ZZZZ=             -3.0929 XXXY=             -0.0000
+ XXXZ=              0.0000 YYYX=             -0.0000 YYYZ=             -0.0000 ZZZX=              0.0000
+ ZZZY=             -0.0000 XXYY=             -1.3383 XXZZ=             -1.3383 YYZZ=             -1.0310
+ XXYZ=             -0.0000 YYXZ=              0.0000 ZZXY=             -0.0000
+ N-N= 0.000000000000D+00 E-N=-3.792570830322D+01  KE= 1.167102962393D+01
+ Symmetry AG   KE= 1.706276897643D+00
+ Symmetry B1G  KE= 3.643274226716D-37
+ Symmetry B2G  KE= 3.643274226718D-37
+ Symmetry B3G  KE=-1.651140585729D-54
+ Symmetry AU   KE= 3.413471619732D-36
+ Symmetry B1U  KE= 2.577766560217D+00
+ Symmetry B2U  KE= 2.577766560217D+00
+ Symmetry B3U  KE= 4.809219605860D+00
+ Symmetry AG   SP= 0.000000000000D+00
+ Symmetry B1G  SP= 0.000000000000D+00
+ Symmetry B2G  SP= 0.000000000000D+00
+ Symmetry B3G  SP= 0.000000000000D+00
+ Symmetry AU   SP= 7.990795212747D-37
+ Symmetry B1U  SP= 1.000000000000D+00
+ Symmetry B2U  SP= 1.000000000000D+00
+ Symmetry B3U  SP=-1.560076936808D-50
+ Orbital energies and kinetic energies (alpha):
+                                 1                 2
+   1         (A1G)--O         -1.418404          0.853138
+   2         O                -0.703759          2.404610
+   3         O                -0.703759          2.577767
+   4         O                -0.607511          2.577767
+   5         V                 0.150987          0.232233
+   6         V                 0.153164          0.248206
+   7         V                 0.153164          0.248206
+   8         V                 0.162687          0.289084
+   9         V                 0.621820          0.719120
+ Total kinetic energy from orbitals= 1.682656274437D+01
+                          Isotropic Fermi Contact Couplings
+        Atom                 a.u.       MegaHertz       Gauss      10(-4) cm-1
+     1  O(17)              0.00000      -0.00000      -0.00000      -0.00000
+ --------------------------------------------------------
+       Center         ----  Spin Dipole Couplings  ----
+                      3XX-RR        3YY-RR        3ZZ-RR
+ --------------------------------------------------------
+     1   Atom       -3.472080      1.736040      1.736040
+ --------------------------------------------------------
+                        XY            XZ            YZ
+ --------------------------------------------------------
+     1   Atom        0.000000      0.000000      0.000000
+ --------------------------------------------------------
+
+
+ ---------------------------------------------------------------------------------
+              Anisotropic Spin Dipole Couplings in Principal Axis System
+ ---------------------------------------------------------------------------------
+
+       Atom             a.u.   MegaHertz   Gauss  10(-4) cm-1        Axes
+
+              Baa    -3.4721   251.237    89.648    83.804  1.0000  0.0000  0.0000
+     1 O(17)  Bbb     1.7360  -125.619   -44.824   -41.902 -0.0000  1.0000  0.0000
+              Bcc     1.7360  -125.619   -44.824   -41.902  0.0000  0.0000  1.0000
+ 
+
+ ---------------------------------------------------------------------------------
+
+ No NMR shielding tensors so no spin-rotation constants.
+ Leave Link  601 at Wed Feb 21 16:17:26 2018, MaxMem=  8589934592 cpu:               3.6 elap:               0.2
+ (Enter /home1/apps/gaussian/16rA.03/g16/l9999.exe)
+ 1\1\GINC-C506-023\SP\ROCCSD(T)-Full\Gen\O1(3)\AANNABE\21-Feb-2018\0\\#
+ P ROCCSD(T)=(maxcyc=150, Full)/Gen 5d 7f SCF=(maxcycles=300) MaxDisk=5
+ 00GB Pop=Regular Pseudo=Read Guess=Read\\O\\0,3\O,0,0.,0.,0.\\Version=
+ ES64L-G16RevA.03\HF=-15.6499907\MP2=-15.808817\MP3=-15.8242185\PUHF=-1
+ 5.6499907\PMP2-0=-15.808817\MP4SDQ=-15.8252377\CCSD=-15.8254894\CCSD(T
+ )=-15.8292267\RMSD=1.953e-09\PG=OH [O(O1)]\\@
+
+
+ I DON'T EXACTLY UNDERSTAND WHAT YOU ARE SAYING,
+ BUT YOU ARE ABSOLUTELY RIGHT.
+     M.S.GORDON, IN A NDSU FACULTY MEETING
+ Job cpu time:       0 days  0 hours  1 minutes 48.1 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  6.7 seconds.
+ File lengths (MBytes):  RWF=     33 Int=      0 D2E=      0 Chk=      4 Scr=      1
+ Normal termination of Gaussian 16 at Wed Feb 21 16:17:26 2018.
