@@ -1,0 +1,401 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /home1/apps/gaussian/16rA.03/g16/l1.exe "/tmp/Gau-71442.inp" -scrdir="/tmp/"
+ Entering Link 1 = /home1/apps/gaussian/16rA.03/g16/l1.exe PID=     71443.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2016,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision A.03,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2016.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevA.03 25-Dec-2016
+                26-Feb-2018 
+ ******************************************
+ %MEM=64GB
+ %CPU=0-15
+ SetSPE:  set environment variable "MP_BIND" = "yes"
+ SetSPE:  set environment variable "MP_BLIST" = "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
+ Will use up to   16 processors via shared memory.
+ %RWF=/scratch/04843/aannabe/gaussian/
+ %Int=/scratch/04843/aannabe/gaussian/
+ %D2E=/scratch/04843/aannabe/gaussian/
+ %NoSave
+ %CHK=MnH
+ ----------------------------------------------------------------------
+ #P ROCCSD(T)=(maxcyc=150, Full, SaveAmplitudes, ReadAmplitudes)/Gen 5d
+  7f SCF=(maxcycles=300) Integral(NoXCTest) MaxDisk=500GB Pop=Regular P
+ seudo=Read Guess=Read
+ ----------------------------------------------------------------------
+ 1/38=1,172=1/1;
+ 2/12=2,17=6,18=5,40=1/2;
+ 3/5=7,8=11,11=2,16=1,17=8,25=1,30=1,47=8,116=101/1,2,3;
+ 4/5=1/1;
+ 5/5=2,7=300,38=6/2;
+ 8/5=-1,6=4,9=120000,10=90,24=1/1,4;
+ 9/5=7,6=150,14=2,77=1/13;
+ 6//1;
+ 99/5=1,9=1/99;
+ Leave Link    1 at Mon Feb 26 19:45:57 2018, MaxMem=  8589934592 cpu:               4.0 elap:               0.3
+ (Enter /home1/apps/gaussian/16rA.03/g16/l101.exe)
+ ---
+ MnH
+ ---
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 7
+ Mn                    0.        0.        0. 
+ H                     0.        0.        2.1 
+ 
+ ITRead=  0  0
+ MicOpt= -1 -1
+ NAtoms=      2 NQM=        2 NQMF=       0 NMMI=      0 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1           2
+ IAtWgt=          55           1
+ AtmWgt=  54.9380463   1.0078250
+ NucSpn=           5           1
+ AtZEff=  -0.0000000  -0.0000000
+ NQMom=   33.0000000   0.0000000
+ NMagM=    3.4532000   2.7928460
+ AtZNuc=  25.0000000   1.0000000
+ Leave Link  101 at Mon Feb 26 19:45:57 2018, MaxMem=  8589934592 cpu:               1.5 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l202.exe)
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1         25           0        0.000000    0.000000    0.000000
+      2          1           0        0.000000    0.000000    2.100000
+ ---------------------------------------------------------------------
+ Stoichiometry    HMn(7)
+ Framework group  C*V[C*(HMn)]
+ Deg. of freedom     1
+ Full point group                 C*V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1         25           0        0.000000    0.000000    0.080769
+      2          1           0        0.000000    0.000000   -2.019231
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):           0.0000000         115.7945977         115.7945977
+ Leave Link  202 at Mon Feb 26 19:45:57 2018, MaxMem=  8589934592 cpu:               0.3 elap:               0.1
+ (Enter /home1/apps/gaussian/16rA.03/g16/l301.exe)
+ General basis read from cards:  (5D, 7F)
+ Centers:       1
+ S 1 1.00
+     Exponent=  1.2210500000D+07 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.8281570000D+06 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  4.1603030000D+05 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.1784360000D+05 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  3.8448140000D+04 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.3881710000D+04 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  5.4150020000D+03 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.2464600000D+03 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  9.8014630000D+02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  4.4589520000D+02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.1005580000D+02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.0180460000D+02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  5.0011260000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.2939390000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.1522640000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  5.7763380000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.6259590000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.2603220000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  5.7713000000D-01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.3658200000D-01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  6.3535000000D-02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.8521000000D-02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  5.3389000000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.6013000000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.2800000000D-02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  3.5005120000D+04 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  8.2794620000D+03 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.6884650000D+03 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.0294900000D+03 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  4.3807080000D+02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.0061530000D+02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  9.7007690000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  4.8870520000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.5292810000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.3353820000D+01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  7.1317860000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  3.7643650000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.9462650000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  9.8545500000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  4.8186500000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.8822219000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  7.7539570000D-02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  3.1549450000D-02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  7.3423000000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.9340000000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  1.2840000000D-02 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  3.1310900000D+02 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  9.2527600000D+01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  3.5419100000D+01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  1.5157700000D+01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  6.9096400000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  3.2725600000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  1.5493600000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  7.1709400000D-01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  3.1931000000D-01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  1.3415700000D-01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  5.1400000000D-02 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  4.6851000000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  2.4217000000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  1.9690000000D-02 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  6.6540000000D+00 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  2.7676000000D+00 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  1.1511000000D+00 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  3.8120000000D-01 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  1.2624000000D-01 Coefficients=  1.0000000000D+00
+ G 1 1.00
+     Exponent=  5.4683000000D+00 Coefficients=  1.0000000000D+00
+ G 1 1.00
+     Exponent=  2.3327000000D+00 Coefficients=  1.0000000000D+00
+ G 1 1.00
+     Exponent=  8.5200000000D-01 Coefficients=  1.0000000000D+00
+ G 1 1.00
+     Exponent=  3.1119000000D-01 Coefficients=  1.0000000000D+00
+ H 1 1.00
+     Exponent=  5.1185000000D+00 Coefficients=  1.0000000000D+00
+ H 1 1.00
+     Exponent=  1.9660000000D+00 Coefficients=  1.0000000000D+00
+ H 1 1.00
+     Exponent=  7.5513000000D-01 Coefficients=  1.0000000000D+00
+ ****
+ Centers:       2
+ S 1 1.00
+     Exponent=  8.2640000000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  1.2410000000D+01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.8240000000D+00 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  7.9770000000D-01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.5810000000D-01 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  8.9890000000D-02 Coefficients=  1.0000000000D+00
+ S 1 1.00
+     Exponent=  2.3630000000D-02 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.2920000000D+00 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  8.3800000000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  2.9200000000D-01 Coefficients=  1.0000000000D+00
+ P 1 1.00
+     Exponent=  8.4800000000D-02 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  2.0620000000D+00 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  6.6200000000D-01 Coefficients=  1.0000000000D+00
+ D 1 1.00
+     Exponent=  1.9000000000D-01 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  1.3970000000D+00 Coefficients=  1.0000000000D+00
+ F 1 1.00
+     Exponent=  3.6000000000D-01 Coefficients=  1.0000000000D+00
+ ****
+ ======================================================================================================
+                                       Pseudopotential Parameters
+ ======================================================================================================
+  Center     Atomic      Valence      Angular      Power
+  Number     Number     Electrons     Momentum     of R      Exponent        Coefficient   SO-Coeffient
+ ======================================================================================================
+    1         25           15
+                                      D and up 
+                                                     1        3.2952461       15.00000000    0.00000000
+                                                     3        3.6159915       49.42869068    0.00000000
+                                                     2        3.5740576      -61.66925169    0.00000000
+                                      S - D
+                                                     2        9.9915420      112.85037953    0.00000000
+                                      P - D
+                                                     2        7.8092522       49.18832867    0.00000000
+    2          1            1
+                                      P and up 
+                                                     2       21.7769666      -10.85192405    0.00000000
+                                                     1       21.2435951        1.00000000    0.00000000
+                                                     3       21.2435951       21.24359508    0.00000000
+                                      S - P
+                                                     2        1.0000000        0.00000000    0.00000000
+ ======================================================================================================
+ Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
+ There are   171 symmetry adapted cartesian basis functions of A1  symmetry.
+ There are    45 symmetry adapted cartesian basis functions of A2  symmetry.
+ There are    93 symmetry adapted cartesian basis functions of B1  symmetry.
+ There are    93 symmetry adapted cartesian basis functions of B2  symmetry.
+ There are   126 symmetry adapted basis functions of A1  symmetry.
+ There are    38 symmetry adapted basis functions of A2  symmetry.
+ There are    73 symmetry adapted basis functions of B1  symmetry.
+ There are    73 symmetry adapted basis functions of B2  symmetry.
+   310 basis functions,   402 primitive gaussians,   402 cartesian basis functions
+    11 alpha electrons        5 beta electrons
+       nuclear repulsion energy         3.7798372209 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned on.
+ Leave Link  301 at Mon Feb 26 19:45:57 2018, MaxMem=  8589934592 cpu:               3.9 elap:               0.3
+ (Enter /home1/apps/gaussian/16rA.03/g16/l302.exe)
+ NPDir=0 NMtPBC=     1 NCelOv=     1 NCel=       1 NClECP=     1 NCelD=      1
+         NCelK=      1 NCelE2=     1 NClLst=     1 CellRange=     0.0.
+ One-electron integrals computed using PRISM.
+ One-electron integral symmetry used in STVInt
+   4 Symmetry operations used in ECPInt.
+ ECPInt:  NShTT=    3916 NPrTT=    3916 LenC2=    3852 LenP2D=    3851.
+ LDataN:  DoStor=T MaxTD1=10 Len=  848
+ NBasis=   310 RedAO= T EigKep=  1.76D-05  NBF=   126    38    73    73
+ NBsUse=   303 1.00D-06 EigRej=  4.10D-07 NBFU=   123    38    71    71
+ Leave Link  302 at Mon Feb 26 19:45:59 2018, MaxMem=  8589934592 cpu:              37.6 elap:               2.4
+ (Enter /home1/apps/gaussian/16rA.03/g16/l303.exe)
+ DipDrv:  MaxL=1.
+ Leave Link  303 at Mon Feb 26 19:46:00 2018, MaxMem=  8589934592 cpu:               1.5 elap:               0.2
+ (Enter /home1/apps/gaussian/16rA.03/g16/l401.exe)
+ Initial guess from the checkpoint file:  "MnH.chk"
+ Basis set data is not on the checkpoint file.
+ Error termination via Lnk1e in /home1/apps/gaussian/16rA.03/g16/l401.exe at Mon Feb 26 19:46:00 2018.
+ Job cpu time:       0 days  0 hours  0 minutes 50.2 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  3.4 seconds.
+ File lengths (MBytes):  RWF=     10 Int=      0 D2E=      0 Chk=      1 Scr=      1
