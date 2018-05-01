@@ -20,7 +20,7 @@ toeV = 27.211386
 
 mols = ['ScH','ScO','TiH','TiO','VH','VO',\
         'CrH','CrO','MnH','MnO','FeH','FeO',\
-        'CoH','CoO','NiH','NiO','CuH','CuO','ZnO']
+        'CoH','CoO','NiH','NiO','CuH','CuO','ZnH','ZnO']
 
 req = {'ScH':1.8,## AE
        'ScO':1.668,
@@ -122,3 +122,4 @@ def plot(mol):
 #    plot(mol)
 
 plot('ZnH')
+
