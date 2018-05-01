@@ -1,0 +1,22 @@
+The distance range used for fitting:
+
+ScH:	1.2 - 2.2
+ScO:	1.4 - 2.0
+TiH:	
+TiO:	1.3 - 1.9
+VH:	
+VO:	
+CrH:	
+CrO:	
+MnH:	1.4 - 2.0
+MnO:	1.3 - 1.9
+FeH:	1.2 - 1.9
+FeO:	1.3 - 1.8
+CoH:	1.2 - 1.8
+CoO:	1.3 - 1.8
+NiH:	
+NiO:	1.3 - 1.8
+CuH:	1.0 - 1.8
+CuO:	1.4 - 1.9
+ZnH:	1.4 - 1.8
+ZnO:	1.4 - 1.9
