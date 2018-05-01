@@ -40,6 +40,7 @@ req = {'ScH':1.8,## AE
        'NiO':1.627,
        'CuH':1.463,
        'CuO':1.724,
+	   'ZnH':1.6,##AE
        'ZnO':1.7 ##AE
        }
 
@@ -96,7 +97,7 @@ def plot(mol):
         ax.set_ylabel('Discrepancy (eV)')
         for i,ecp in enumerate(ecps):
             if (mol in ['TiH','TiO'] and ecp == 'ccECP') \
-	    	or (mol in ['CoH','CoO','NiH','NiO','ZnO'] and ecp == 'tn17'):
+	    	or (mol in ['CoH','CoO','NiH','NiO','ZnH','ZnO'] and ecp == 'tn17'):
             	pass
             else:
             	x = df.index.values
@@ -110,12 +111,14 @@ def plot(mol):
         	plt.legend(loc='lower left')
         elif mol in ['FeH']:
             plt.legend(loc='upper left')
-        elif mol in ['MnH','CrO','FeO','MnO','CoO','NiO','CuO','ZnO']:
+        elif mol in ['MnH','CrO','FeO','MnO','CoO','NiO','CuO','ZnH','ZnO']:
         	plt.legend(loc='lower right')
         else:
         	plt.legend(loc='upper right')
         plt.savefig('figs/'+mol+'.pdf')
         plt.show()
 
-for mol in mols:
-    plot(mol)
+#for mol in mols:
+#    plot(mol)
+
+plot('ZnH')
