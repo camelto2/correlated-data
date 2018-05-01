@@ -79,29 +79,43 @@ def get_data(mol):
     df.dropna(inplace=True)
     for col in df:
         df[col] = df[col]*toeV
-    print(df.head())
     return df
 
 
 def plot(mol):
-    fig,ax = init()
-    df = get_data(mol)
+    if mol == 'NiH': 
+    	pass
+    else:
+        print('Molecule: {}'.format(mol))
+        fig,ax = init()
+        df = get_data(mol)
 
-    ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
-    ax.axhline(0.0,color='black')
-    ax.set_xlabel('Bond Length (\AA)')
-    ax.set_ylabel('Discrepancy (eV)')
-    for i,ecp in enumerate(ecps):
-        x = df.index.values
-        y = df[ecp].values - df['ae'].values
-        plt.plot(x,y,**styles[ecp])
-    ax.set_xlim((x[0],x[-1]))
+        ax.axhspan(-0.043,0.043,alpha=0.25,color='gray')
+        ax.axhline(0.0,color='black')
+        ax.set_xlabel('Bond Length (\AA)')
+        ax.set_ylabel('Discrepancy (eV)')
+        for i,ecp in enumerate(ecps):
+            if (mol in ['TiH','TiO'] and ecp == 'ccECP') \
+	    	or (mol in ['CoH','CoO','NiH','NiO','ZnO'] and ecp == 'tn17'):
+            	pass
+            else:
+            	x = df.index.values
+            	y = df[ecp].values - df['ae'].values
+            	plt.plot(x,y,**styles[ecp])
+        ax.set_xlim((x[0],x[-1]))
 
-    ax.axvline(req[mol],color='black',linestyle='--',linewidth=1.5,dashes=(2,2))
-
-    plt.legend(loc='upper center')
-    plt.savefig('discrep.pdf')
-    plt.show()
+        ax.axvline(req[mol],color='black',linestyle='--',linewidth=1.5,dashes=(2,2))
+	    
+        if mol in ['ScH']:
+        	plt.legend(loc='lower left')
+        elif mol in ['FeH']:
+            plt.legend(loc='upper left')
+        elif mol in ['MnH','CrO','FeO','MnO','CoO','NiO','CuO','ZnO']:
+        	plt.legend(loc='lower right')
+        else:
+        	plt.legend(loc='upper right')
+        plt.savefig('figs/'+mol+'.pdf')
+        plt.show()
 
 for mol in mols:
     plot(mol)
