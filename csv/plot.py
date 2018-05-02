@@ -118,5 +118,5 @@ def plot(mol):
 #for mol in mols:
 #    plot(mol)
 
-plot('NiH')
+plot('ScH')
 
