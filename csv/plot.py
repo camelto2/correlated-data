@@ -47,19 +47,23 @@ req = {'ScH':1.8,## AE
 def init():
     font = {'family' : 'serif',
             'size': 20}
-    lines = {'linewidth':4}
+    lines = {'linewidth':3.5,'scale_dashes':False}
     axes = {'linewidth': 3}
     tick = {'major.size': 5,
-            'major.width':2}
+            'major.width':2,
+            'labelsize':18,
+            'direction':'in',
+            }
     legend = {'frameon':False,
-              'fontsize':18,
-              'handlelength':2.5}
+              'fontsize':15,
+              'handlelength':2.25,
+              'labelspacing':0.25}
 
     mpl.rc('font',**font)
     mpl.rc('lines',**lines)
     mpl.rc('axes',**axes)
-    mpl.rc('xtick',**tick)
-    mpl.rc('ytick',**tick)
+    mpl.rc('xtick',top=True,bottom=True,**tick)
+    mpl.rc('ytick',left=True,right=True,**tick)
     mpl.rc('legend',**legend)
 
     mpl.rcParams['text.usetex'] = True
@@ -105,7 +109,7 @@ def plot(mol):
    ax.axvline(req[mol],color='black',linestyle='--',linewidth=1.5,dashes=(2,2))
    
    if mol in ['ScH']:
-   	plt.legend(loc='lower left')
+       plt.legend(loc='lower left')
    elif mol in ['FeH']:
        plt.legend(loc='upper left')
    elif mol in ['MnH','CrO','FeO','MnO','CoO','NiO','CuO','ZnH','ZnO']:
@@ -115,8 +119,7 @@ def plot(mol):
    plt.savefig('figs/'+mol+'.pdf')
    plt.show()
 
-#for mol in mols:
-#    plot(mol)
+for mol in mols:
+    plot(mol)
 
-plot('ScH')
 
