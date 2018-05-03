@@ -97,7 +97,7 @@ def plot(mol):
    ax.set_xlabel('Bond Length (\AA)')
    ax.set_ylabel('Discrepancy (eV)')
    for i,ecp in enumerate(ecps):
-       if (mol in ['TiH','TiO'] and ecp == 'ccECP') \
+       if (mol in ['ScH','ScO','TiH','TiO'] and ecp == 'ccECP') \
    	or (mol in ['CoH','CoO','NiH','NiO','ZnH','ZnO'] and ecp == 'tn17'):
        	pass
        else:
@@ -119,7 +119,6 @@ def plot(mol):
    plt.savefig('figs/'+mol+'.pdf')
    plt.show()
 
-for mol in mols:
-    plot(mol)
-
+plot('ScH')
+plot('ScO')
 
