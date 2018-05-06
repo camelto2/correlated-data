@@ -119,6 +119,6 @@ def plot(mol):
    plt.savefig('figs/'+mol+'.pdf')
    plt.show()
 
-plot('ScH')
-plot('ScO')
+plot('MnH')
+plot('MnO')
 
