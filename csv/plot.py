@@ -101,6 +101,8 @@ def plot(mol):
    	or (mol in ['CoH','CoO','NiH','NiO','ZnH','ZnO'] and ecp == 'tn17'):
        	pass
        else:
+        if( mol in ['ScH','ScO','TiH','TiO'] and ecp == 'ccECP.S'):
+            styles[ecp] = styles['ccECP']
        	x = df.index.values
        	y = df[ecp].values - df['ae'].values
        	plt.plot(x,y,**styles[ecp])
@@ -120,7 +122,8 @@ def plot(mol):
    plt.show()
 
 
-#for mol in mols:
-#    plot(mol)
 
-plot('ZnH')
+plot('ScH')
+plot('ScO')
+plot('TiH')
+plot('TiO')
