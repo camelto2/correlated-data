@@ -122,8 +122,4 @@ def plot(mol):
    plt.show()
 
 
-
-plot('ScH')
-plot('ScO')
-plot('TiH')
-plot('TiO')
+plot('NiH')
