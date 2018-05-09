@@ -1,0 +1,7 @@
+%mem=160GB
+%cpu=0-31
+%chk=5z.chk
+%rwf=/scratch/04843/gwang18/zno/Gau-388513.rwf
+
+#P Restart
+
