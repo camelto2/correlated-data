@@ -1,0 +1,1636 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ gthresh,twoint=1.e-12
+ geometry={
+ 1
+ V
+ V  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /remote/cmelton/data/corrECP/V/ae/aug-cc-pwCVTZ-dk.basis
+ }
+ 
+ 
+ set,dkroll=1,dkho=10,dkhp=4
+ 
+ Including file /remote/cmelton/data/corrECP/V/ae/states.proc
+ 
+ do i=9,9
+     if (i.eq.1) then
+         Is2d3
+     else if (i.eq.2) then
+         Is1d4
+     else if (i.eq.3) then
+         Id5
+     else if (i.eq.4) then
+         IIs1d3
+     else if (i.eq.5) then
+         IId4
+     else if (i.eq.6) then
+         VI
+     else if (i.eq.7) then
+         XII
+     else if (i.eq.8) then
+         As2d4
+     else if (i.eq.9) then
+         Id3s1p1
+     endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+                                                                                 !    {rccsd(t),maxit=100;core}
+                                                                                 !    ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.08 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.5.2.el7.x86_64/doppio.sandia.gov(x86_64) 64 bit serial version         DATE: 08-Jan-18          TIME: 10:53:06  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-12  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING DKROLL         =         1.00000000                                  
+ SETTING DKHO           =        10.00000000                                  
+ SETTING DKHP           =         4.00000000                                  
+
+ DO I                   =         9.00000000   
+
+ Running procedure=ID3S1P1
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Atom
+ Symmetry elements: X,Y,Z
+ Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+   --><cml:symmetry pointGroup="D2h"/><!--
+   --><cml:atomArray>
+    <cml:atom id="a1" elementType="V" x3="0.0" y3="0.0" z3="0.0"/>
+   </cml:atomArray><!--
+   --><cml:bondArray>
+   </cml:bondArray><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  V      23.00    0.000000000    0.000000000    0.000000000
+
+ NUCLEAR CHARGE:                   23
+ NUMBER OF PRIMITIVE AOS:         225
+ NUMBER OF SYMMETRY AOS:          185
+ NUMBER OF CONTRACTIONS:          185   (  52Ag  +  27B3u +  27B2u +  16B1g +  27B1u +  16B2g +  16B3g +   4Au  )
+ NUMBER OF CORE ORBITALS:           9   (   3Ag  +   2B3u +   2B2u +   0B1g +   2B1u +   0B2g +   0B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        6   (   3Ag  +   0B3u +   0B2u +   1B1g +   0B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY    0.00000000
+
+ One-electron integrals computed with SEWARD
+
+ 10nd-order Douglas-Kroll-Hess method activated. McWeeny DKH parametrization is used.
+
+ Computing Douglas-Kroll integrals
+
+ AO integral compression algorithm  1   Integral accuracy      1.0D-12
+
+     123.994 MB (compressed) written to integral file ( 44.6%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:   19566767.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   2  SEGMENT LENGTH:   15996239      RECORD LENGTH: 524288
+
+ Memory used in sort:      16.55 MW
+
+ SORT1 READ    34683935. AND WROTE    12872493. INTEGRALS IN     38 RECORDS. CPU TIME:     0.60 SEC, REAL TIME:     0.73 SEC
+ SORT2 READ    12872493. AND WROTE    19566767. INTEGRALS IN    473 RECORDS. CPU TIME:     0.34 SEC, REAL TIME:     0.43 SEC
+
+ FILE SIZES:   FILE 1:   132.6 MBYTE,  FILE 4:   159.4 MBYTE,   TOTAL:    292.0 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 2 3 2 3 2
+                                        3 2 3 4 5 6 4 5 6 4   5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 2   3 2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 2   3 2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 5:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 2   3 2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 6:   1 1 1 1 1 1 1 1 1 1   2 3 2 3 2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 7:   1 1 1 1 1 1 1 1 1 1   2 3 2 3 2 3
+
+ Eigenvalues of metric
+
+         1 0.708E-05 0.956E-04 0.384E-03 0.384E-03 0.598E-03 0.163E-02 0.319E-02 0.517E-02
+         2 0.615E-07 0.440E-06 0.129E-02 0.473E-02 0.114E-01 0.228E-01 0.421E-01 0.748E-01
+         3 0.615E-07 0.440E-06 0.129E-02 0.473E-02 0.114E-01 0.228E-01 0.421E-01 0.748E-01
+         4 0.384E-03 0.455E-01 0.121E+00 0.222E+00 0.386E+00 0.386E+00 0.441E+00 0.694E+00
+         5 0.615E-07 0.440E-06 0.129E-02 0.473E-02 0.114E-01 0.228E-01 0.421E-01 0.748E-01
+         6 0.384E-03 0.455E-01 0.121E+00 0.222E+00 0.386E+00 0.386E+00 0.441E+00 0.694E+00
+         7 0.384E-03 0.455E-01 0.121E+00 0.222E+00 0.386E+00 0.386E+00 0.441E+00 0.694E+00
+         8 0.249E+00 0.590E+00 0.124E+01 0.192E+01
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      23       71.15       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1300     1080     1600   
+                                         ERIS     AOSYM     SMH  
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *         8.56      8.43
+ REAL TIME  *         9.33 SEC
+ DISK USED  *       294.63 MB      
+ **********************************************************************************************************************************
+
+1PROGRAM * RHF-SCF (OPEN SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      14+    9-    SPACE SYMMETRY=5    SPIN SYMMETRY: Sextet  
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                 -0.30 (CLOSED)  0.00 (OPEN) 
+
+
+ Singly occupied orbitals:      4.1       5.1       6.1       3.2       1.6
+ 
+ Extra symmetries of mos in symmetry 1:   1   1   1   1   3   2
+ Orbital guess generated from atomic densities. Full valence occupancy:    6   2   2   1   2   1   1   0
+
+
+ Molecular orbital dump at record        4202.2
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00      -947.96111236    690.470478    0.00000    0.00000    0.00000    0    start
+    2      0.000D+00      0.112D-01      -948.08320405    706.913003    0.00000    0.00000    0.00000    1    diag,B
+    3      0.120D+00      0.684D-02      -948.09706217    703.907754    0.00000    0.00000    0.00000    2    diag,B
+    4      0.115D-01      0.153D-02      -948.10047962    704.412539    0.00000    0.00000    0.00000    3    diag,B
+    5      0.637D-02      0.706D-03      -948.10148117    704.370410    0.00000    0.00000    0.00000    4    diag,B
+    6      0.405D-02      0.111D-03      -948.10156905    704.435733    0.00000    0.00000    0.00000    5    diag,B
+    7      0.226D-02      0.314D-04      -948.10157577    704.444576    0.00000    0.00000    0.00000    6    fixocc
+    8      0.750D-03      0.904D-05      -948.10157602    704.449817    0.00000    0.00000    0.00000    7    diag,B
+    9      0.501D-04      0.150D-05      -948.10157603    704.450751    0.00000    0.00000    0.00000    8    diag,B
+   10      0.240D-04      0.217D-06      -948.10157603    704.450881    0.00000    0.00000    0.00000    9    orth
+   11      0.115D-05      0.333D-07      -948.10157603    704.450882    0.00000    0.00000    0.00000    0    orth
+
+ Final alpha occupancy:   6   3   2   0   2   1   0   0
+ Final beta  occupancy:   3   2   2   0   2   0   0   0
+
+ !RHF STATE 1.5 Energy               -948.101576030128
+   --><property name="Energy" method="RHF" principal="true" stateSymmetry="5" stateNumber="1"
+     value="-948.101576030128"/><!--
+ Nuclear energy                         0.00000000
+ One-electron energy                -1300.32701698
+ Two-electron energy                  352.22544095
+ Virial quotient                       -0.96748893
+ !RHF STATE 1.5 Dipole moment           0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="5"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1          8.1
+   -202.912376   -24.198939    -3.263891    -0.323255    -0.574817    -0.514830     0.021690     0.064714
+
+         1.2          2.2          3.2          4.2          5.2
+    -20.099783    -2.059205    -0.177473     0.037522     0.180713
+
+         1.3          2.3          3.3          4.3
+    -20.112984    -2.074509    -0.000592     0.043005
+
+         1.4          2.4
+      0.050309     0.093283
+
+         1.5          2.5          3.5          4.5
+    -20.100556    -2.063256     0.001828     0.044315
+
+         1.6          2.6          3.6
+     -0.514759     0.066573     0.220856
+
+         1.7          2.7
+      0.054228     0.090102
+
+         1.8          2.8
+      0.461821     1.485474
+
+ HOMO      3.2    -0.177473 =      -4.8293eV
+ LUMO      3.3    -0.000592 =      -0.0161eV
+ LUMO-HOMO         0.176882 =       4.8132eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      23       71.15       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1300     1080     1600   
+                                         ERIS     AOSYM     SMH  
+
+              2       5        5.26       200      700     1000      520     4202   
+                                        OPTIONS   GEOM     BASIS   MCVARS     RHF  
+
+ PROGRAMS   *        TOTAL       RHF       INT
+ CPU TIMES  *         9.20      0.64      8.43
+ REAL TIME  *        10.10 SEC
+ DISK USED  *       294.63 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="10:53:06" end="10:53:15" cpu="9.2" system="0.74" real="10.1"/>
+   <storage units="megabyte" memory="4097.84" sf="0.0" df="294.63" eaf="0.0"/>
+  </jobstep><!--
+  --><jobstep command="MULTI" commandset="MULTI">
+   <!--
+
+1PROGRAM * MULTI (Direct Multiconfiguration SCF)       Authors: P.J. Knowles, H.-J. Werner (1984)     S.T. Elbert (1988)
+
+
+ Number of closed-shell orbitals:   9 (   3   2   2   0   2   0   0   0 )
+ Number of active  orbitals:        9 (   3   1   1   1   1   1   1   0 )
+ Number of external orbitals:     167 (  46  24  24  15  24  15  15   4 )
+
+ State symmetry 1
+
+ Number of electrons:     5    Spin symmetry=Quartet   Space symmetry=2
+ Number of states:        7
+ Number of CSFs:        126   (141 determinants, 1134 intermediate states)
+
+ State symmetry 2
+
+ Number of electrons:     5    Spin symmetry=Quartet   Space symmetry=3
+ Number of states:       10
+ Number of CSFs:        126   (141 determinants, 1134 intermediate states)
+
+ State symmetry 3
+
+ Number of electrons:     5    Spin symmetry=Quartet   Space symmetry=5
+ Number of states:        4
+ Number of CSFs:        126   (141 determinants, 1134 intermediate states)
+
+ State symmetry 4
+
+ Number of electrons:     5    Spin symmetry=Quartet   Space symmetry=8
+ Number of states:        9
+ Number of CSFs:        138   (153 determinants, 1134 intermediate states)
+
+ Molecular orbitals read from record     4202.2  Type=RHF/CANONICAL (state 1.5)
+ *** IN SYMMETRY 1 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.333D-04 HAS BEEN REMOVED
+ *** IN SYMMETRY 1 ORBITAL  2 SYMMETRY CONTAMINATION OF 0.105D-02 HAS BEEN REMOVED
+ *** IN SYMMETRY 1 ORBITAL  3 SYMMETRY CONTAMINATION OF 0.130D-01 HAS BEEN REMOVED
+ *** IN SYMMETRY 1 ORBITAL  4 SYMMETRY CONTAMINATION OF 0.783D-01 HAS BEEN REMOVED
+ *** IN SYMMETRY 1 ORBITAL  5 SYMMETRY CONTAMINATION OF 0.424D+00 HAS BEEN REMOVED
+ *** IN SYMMETRY 1 ORBITAL  6 SYMMETRY CONTAMINATION OF 0.460D+00 HAS BEEN REMOVED
+
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 1:   1 1 1 1 3 2 1 2 3 1   3 2 1 3 2 1 6 5 4 3   2 1 6 5 4 3 2 1 3 2   6 5 4 1 3 2 1 3 2 1
+                                        3 2 1 1 1 1 1 1 1 1   1 1
+ *** IN SYMMETRY 2 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.389D-03 HAS BEEN REMOVED
+ *** IN SYMMETRY 2 ORBITAL  2 SYMMETRY CONTAMINATION OF 0.231D-02 HAS BEEN REMOVED
+ *** IN SYMMETRY 2 ORBITAL  3 SYMMETRY CONTAMINATION OF 0.335D-02 HAS BEEN REMOVED
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 2:   1 1 1 1 1 3 2 1 2 3   1 2 3 1 1 3 2 1 1 1   1 1 1 1 1 1 1
+ *** IN SYMMETRY 3 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.115D-02 HAS BEEN REMOVED
+ *** IN SYMMETRY 3 ORBITAL  2 SYMMETRY CONTAMINATION OF 0.105D-01 HAS BEEN REMOVED
+ *** IN SYMMETRY 3 ORBITAL  3 SYMMETRY CONTAMINATION OF 0.692D-02 HAS BEEN REMOVED
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 3:   1 1 1 1 1 2 3 1 2 3   1 3 2 1 1 3 2 1 1 1   1 1 1 1 1 1 1
+ *** IN SYMMETRY 4 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.360D-02 HAS BEEN REMOVED
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 4:   1 1 1 1 2 3 1 3 2 1   1 3 2 1 1 1
+ *** IN SYMMETRY 5 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.453D-03 HAS BEEN REMOVED
+ *** IN SYMMETRY 5 ORBITAL  2 SYMMETRY CONTAMINATION OF 0.244D-02 HAS BEEN REMOVED
+ *** IN SYMMETRY 5 ORBITAL  3 SYMMETRY CONTAMINATION OF 0.207D-02 HAS BEEN REMOVED
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 5:   1 1 1 1 1 2 3 1 2 3   1 2 3 1 1 2 3 1 1 1   1 1 1 1 1 1 1
+ *** IN SYMMETRY 6 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.452D-02 HAS BEEN REMOVED
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 6:   1 1 1 1 3 2 1 3 2 1   1 3 2 1 1 1
+ *** IN SYMMETRY 7 ORBITAL  1 SYMMETRY CONTAMINATION OF 0.325D-02 HAS BEEN REMOVED
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 7:   1 1 1 1 2 3 1 2 3 1   1 2 3 1 1 1
+
+ Wavefunction dump at record             5202.2
+
+ Convergence thresholds  0.10E-01 (gradient)  0.10E-05 (energy)  0.10E-02 (step length)
+
+ Weight factors for state symmetry  1:    0.03333   0.03333   0.03333   0.03333   0.03333   0.03333   0.03333
+ Weight factors for state symmetry  2:    0.03333   0.03333   0.03333   0.03333   0.03333   0.03333   0.03333   0.03333
+                                          0.03333   0.03333
+ Weight factors for state symmetry  3:    0.03333   0.03333   0.03333   0.03333
+ Weight factors for state symmetry  4:    0.03333   0.03333   0.03333   0.03333   0.03333   0.03333   0.03333   0.03333
+                                          0.03333
+
+ Number of orbital rotations:      552   (    15 Core/Active    282 Core/Virtual   0 Active/Active    255 Active/Virtual)
+ Total number of variables:       4890
+
+
+ ITER. MIC  NCI  NEG     ENERGY(VAR)     ENERGY(PROJ)   ENERGY CHANGE     GRAD(0)  GRAD(ORB)   GRAD(CI)     STEP       TIME
+
+   1   40   68    0    -947.96152430    -948.38773670   -0.42621240    0.04052783 0.00129591 0.00000053  0.13D+01      0.56
+   2   19   32    0    -948.00748909    -948.06539031   -0.05790123    0.32045635 0.00000019 0.00000000  0.40D+00      0.97
+   3   17   48    0    -948.06778333    -948.06817032   -0.00038699    0.01938022 0.00000034 0.00000000  0.50D-01      1.42
+   4   24   24    0    -948.06817270    -948.06817273   -0.00000004    0.00015886 0.00000001 0.00000004  0.46D-03      1.76
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000000  3.750000000  3.750000001  3.750000001
+ *** WARNING *** <S**2> =  3.750000000  8.749999968  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000000  3.750000000  3.750000001  3.750000001
+ FINAL VALUES OF <S**2>    3.750000000  8.749999968  3.750000000  3.750000000
+   5   26   66    0    -948.06877313    -948.06889358   -0.00012044    0.00166141 0.00000000 0.05349928  0.31D-02      2.28
+   6   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      2.80
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000000  3.750000000  3.750000000  3.750000000
+ *** WARNING *** <S**2> =  3.750000000  8.749999965  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000000  3.750000000  3.750000000  3.750000000
+ FINAL VALUES OF <S**2>    3.750000000  8.749999965  3.750000000  3.750000000
+   7   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      3.32
+   8   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      3.82
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000002  3.750000000  3.750000004  3.750000006
+ *** WARNING *** <S**2> =  3.750000000  8.749999917  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000002  3.750000000  3.750000004  3.750000006
+ FINAL VALUES OF <S**2>    3.750000000  8.749999917  3.750000000  3.750000000
+   9   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      4.33
+  10   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      4.83
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000000  3.750000000  3.750000001  3.750000001
+ *** WARNING *** <S**2> =  3.750000000  8.749999959  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000000  3.750000000  3.750000001  3.750000001
+ FINAL VALUES OF <S**2>    3.750000000  8.749999959  3.750000000  3.750000000
+  11   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      5.34
+  12   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      5.87
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000002  3.750000000  3.750000004  3.750000007
+ *** WARNING *** <S**2> =  3.750000000  8.749999931  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000002  3.750000000  3.750000004  3.750000007
+ FINAL VALUES OF <S**2>    3.750000000  8.749999931  3.750000000  3.750000000
+  13   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      6.39
+  14   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      6.91
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000001  3.750000000  3.750000001  3.750000002
+ *** WARNING *** <S**2> =  3.750000000  8.749999941  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000001  3.750000000  3.750000001  3.750000002
+ FINAL VALUES OF <S**2>    3.750000000  8.749999941  3.750000000  3.750000000
+  15   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      7.42
+  16   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      7.93
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000003  3.750000000  3.750000006  3.750000010
+ *** WARNING *** <S**2> =  3.750000000  8.749999914  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000003  3.750000000  3.750000006  3.750000010
+ FINAL VALUES OF <S**2>    3.750000000  8.749999914  3.750000000  3.750000000
+  17   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      8.46
+  18   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02      8.99
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+ *** WARNING *** <S**2> =  3.750000000  3.750000000  3.750000000  3.750000000  3.750000000
+ *** WARNING *** <S**2> =  3.750000000  8.749999985  3.750000000  3.750000000
+ ANNIHILATE S =  2.5 COMPONENT
+ FINAL VALUES OF <S**2>    3.750000000  3.750000000  3.750000000  3.750000000  3.750000000
+ FINAL VALUES OF <S**2>    3.750000000  8.749999985  3.750000000  3.750000000
+  19   26   66    0    -948.06877314    -948.06889358   -0.00012044    0.00166132 0.00000000 0.05349928  0.31D-02      9.52
+  20   16   60    0    -948.06817064    -948.06817273   -0.00000209    0.00157677 0.00000026 0.00000000  0.31D-02     10.04
+ WARNING: exit with wrong ci vector!!
+ WARNING: exit with wrong ci vector!!
+
+ ** WVFN ****  MAXIMUM NUMBER OF ITERATIONS REACHED
+
+
+
+ Results for state 1.2
+ =====================
+
+ !MCSCF STATE 1.2 Energy             -948.088897892326
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="1"
+     value="-948.088897892326"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.91533957
+ One electron energy                -1300.19530151
+ Two electron energy                  352.10640362
+ Virial ratio                           1.96752123
+
+ !MCSCF STATE 1.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Results for state 2.2
+ =====================
+
+ !MCSCF STATE 2.2 Energy             -948.083968982972
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="2"
+     value="-948.083968982972"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93496241
+ One electron energy                -1300.24764501
+ Two electron energy                  352.16367603
+ Virial ratio                           1.96749683
+
+ !MCSCF STATE 2.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="2" value="0.0 0.0 0.0"/><!--
+
+ Results for state 3.2
+ =====================
+
+ !MCSCF STATE 3.2 Energy             -948.083944545087
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="3"
+     value="-948.083944545087"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93512071
+ One electron energy                -1300.25040133
+ Two electron energy                  352.16645678
+ Virial ratio                           1.96749665
+
+ !MCSCF STATE 3.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="3" value="0.0 0.0 0.0"/><!--
+
+ Results for state 4.2
+ =====================
+
+ !MCSCF STATE 4.2 Energy             -948.078163949110
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="4"
+     value="-948.07816394911"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.90437916
+ One electron energy                -1300.16594543
+ Two electron energy                  352.08778148
+ Virial ratio                           1.96752110
+
+ !MCSCF STATE 4.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="4" value="0.0 0.0 0.0"/><!--
+
+ Results for state 5.2
+ =====================
+
+ !MCSCF STATE 5.2 Energy             -948.078148573957
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="5"
+     value="-948.078148573957"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.90709135
+ One electron energy                -1300.17374289
+ Two electron energy                  352.09559432
+ Virial ratio                           1.96751841
+
+ !MCSCF STATE 5.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="5" value="0.0 0.0 0.0"/><!--
+
+ Results for state 6.2
+ =====================
+
+ !MCSCF STATE 6.2 Energy             -948.038810797838
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="6"
+     value="-948.038810797838"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93415020
+ One electron energy                -1300.24987758
+ Two electron energy                  352.21106678
+ Virial ratio                           1.96745155
+
+ !MCSCF STATE 6.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="6" value="0.0 0.0 0.0"/><!--
+
+ Results for state 7.2
+ =====================
+
+ !MCSCF STATE 7.2 Energy             -948.038798405695
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="2" stateNumber="7"
+     value="-948.038798405695"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93634176
+ One electron energy                -1300.25407233
+ Two electron energy                  352.21527392
+ Virial ratio                           1.96744937
+
+ !MCSCF STATE 7.2 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="2"
+     stateNumber="7" value="0.0 0.0 0.0"/><!--
+
+
+
+ Results for state 1.3
+ =====================
+
+ !MCSCF STATE 1.3 Energy             -948.088899944328
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="1"
+     value="-948.088899944328"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.91619152
+ One electron energy                -1300.19825557
+ Two electron energy                  352.10935562
+ Virial ratio                           1.96752039
+
+ !MCSCF STATE 1.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Results for state 2.3
+ =====================
+
+ !MCSCF STATE 2.3 Energy             -948.083966164453
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="2"
+     value="-948.083966164453"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93842201
+ One electron energy                -1300.25581616
+ Two electron energy                  352.17184999
+ Virial ratio                           1.96749341
+
+ !MCSCF STATE 2.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="2" value="0.0 0.0 0.0"/><!--
+
+ Results for state 3.3
+ =====================
+
+ !MCSCF STATE 3.3 Energy             -948.083926134151
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="3"
+     value="-948.083926134151"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93326741
+ One electron energy                -1300.24798375
+ Two electron energy                  352.16405761
+ Virial ratio                           1.96749846
+
+ !MCSCF STATE 3.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="3" value="0.0 0.0 0.0"/><!--
+
+ Results for state 4.3
+ =====================
+
+ !MCSCF STATE 4.3 Energy             -948.078165727036
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="4"
+     value="-948.078165727036"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.90598595
+ One electron energy                -1300.16967162
+ Two electron energy                  352.09150589
+ Virial ratio                           1.96751952
+
+ !MCSCF STATE 4.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="4" value="0.0 0.0 0.0"/><!--
+
+ Results for state 5.3
+ =====================
+
+ !MCSCF STATE 5.3 Energy             -948.078104865102
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="5"
+     value="-948.078104865102"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.90748732
+ One electron energy                -1300.17753444
+ Two electron energy                  352.09942957
+ Virial ratio                           1.96751797
+
+ !MCSCF STATE 5.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="5" value="0.0 0.0 0.0"/><!--
+
+ Results for state 6.3
+ =====================
+
+ !MCSCF STATE 6.3 Energy             -948.038811473875
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="6"
+     value="-948.038811473875"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93412891
+ One electron energy                -1300.24973094
+ Two electron energy                  352.21091947
+ Virial ratio                           1.96745157
+
+ !MCSCF STATE 6.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="6" value="0.0 0.0 0.0"/><!--
+
+ Results for state 7.3
+ =====================
+
+ !MCSCF STATE 7.3 Energy             -948.038795249014
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="7"
+     value="-948.038795249014"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93697170
+ One electron energy                -1300.25629142
+ Two electron energy                  352.21749617
+ Virial ratio                           1.96744875
+
+ !MCSCF STATE 7.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="7" value="0.0 0.0 0.0"/><!--
+
+ Results for state 8.3
+ =====================
+
+ !MCSCF STATE 8.3 Energy             -948.038767047488
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="8"
+     value="-948.038767047488"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93893809
+ One electron energy                -1300.25740066
+ Two electron energy                  352.21863361
+ Virial ratio                           1.96744678
+
+ !MCSCF STATE 8.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="8" value="0.0 0.0 0.0"/><!--
+
+ Results for state 9.3
+ =====================
+
+ !MCSCF STATE 9.3 Energy             -948.034890069082
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3" stateNumber="9"
+     value="-948.034890069082"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.92790385
+ One electron energy                -1300.23088650
+ Two electron energy                  352.19599643
+ Virial ratio                           1.96745371
+
+ !MCSCF STATE 9.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="9" value="0.0 0.0 0.0"/><!--
+
+ Results for state10.3
+ =====================
+
+ !MCSCF STATE10.3 Energy             -948.034879990326
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="10" value="-948.034879990326"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93010170
+ One electron energy                -1300.23774827
+ Two electron energy                  352.20286828
+ Virial ratio                           1.96745153
+
+ !MCSCF STATE10.3 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="3"
+     stateNumber="10" value="0.0 0.0 0.0"/><!--
+
+
+
+ Results for state 1.5
+ =====================
+
+ !MCSCF STATE 1.5 Energy             -948.088914081992
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="5" stateNumber="1"
+     value="-948.088914081992"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.92096578
+ One electron energy                -1300.20740965
+ Two electron energy                  352.11849557
+ Virial ratio                           1.96751569
+
+ !MCSCF STATE 1.5 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="5"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Results for state 2.5
+ =====================
+
+ !MCSCF STATE 2.5 Energy             -948.083965902512
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="5" stateNumber="2"
+     value="-948.083965902512"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93836571
+ One electron energy                -1300.25567885
+ Two electron energy                  352.17171294
+ Virial ratio                           1.96749347
+
+ !MCSCF STATE 2.5 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="5"
+     stateNumber="2" value="0.0 0.0 0.0"/><!--
+
+ Results for state 3.5
+ =====================
+
+ !MCSCF STATE 3.5 Energy             -948.083938659390
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="5" stateNumber="3"
+     value="-948.08393865939"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93773746
+ One electron energy                -1300.25664866
+ Two electron energy                  352.17271000
+ Virial ratio                           1.96749406
+
+ !MCSCF STATE 3.5 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="5"
+     stateNumber="3" value="0.0 0.0 0.0"/><!--
+
+ Results for state 4.5
+ =====================
+
+ !MCSCF STATE 4.5 Energy             -948.078158240609
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="5" stateNumber="4"
+     value="-948.078158240609"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.90467850
+ One electron energy                -1300.16725982
+ Two electron energy                  352.08910158
+ Virial ratio                           1.96752080
+
+ !MCSCF STATE 4.5 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="5"
+     stateNumber="4" value="0.0 0.0 0.0"/><!--
+
+
+
+ Results for state 1.8
+ =====================
+
+ !MCSCF STATE 1.8 Energy             -948.088904644477
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="1"
+     value="-948.088904644477"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.91681787
+ One electron energy                -1300.19847064
+ Two electron energy                  352.10956599
+ Virial ratio                           1.96751978
+
+ !MCSCF STATE 1.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="1" value="0.0 0.0 0.0"/><!--
+
+ Results for state 2.8
+ =====================
+
+ !MCSCF STATE 2.8 Energy             -948.088885122503
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="2"
+     value="-948.088885122503"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.91343545
+ One electron energy                -1300.19321668
+ Two electron energy                  352.10433156
+ Virial ratio                           1.96752310
+
+ !MCSCF STATE 2.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="2" value="0.0 0.0 0.0"/><!--
+
+ Results for state 3.8
+ =====================
+
+ !MCSCF STATE 3.8 Energy             -948.083969356856
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="3"
+     value="-948.083969356856"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93534729
+ One electron energy                -1300.24849366
+ Two electron energy                  352.16452430
+ Virial ratio                           1.96749645
+
+ !MCSCF STATE 3.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="3" value="0.0 0.0 0.0"/><!--
+
+ Results for state 4.8
+ =====================
+
+ !MCSCF STATE 4.8 Energy             -948.083947579766
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="4"
+     value="-948.083947579766"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93585205
+ One electron energy                -1300.25198878
+ Two electron energy                  352.16804120
+ Virial ratio                           1.96749593
+
+ !MCSCF STATE 4.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="4" value="0.0 0.0 0.0"/><!--
+
+ Results for state 5.8
+ =====================
+
+ !MCSCF STATE 5.8 Energy             -948.083924910430
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="5"
+     value="-948.08392491043"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93380627
+ One electron energy                -1300.24921770
+ Two electron energy                  352.16529279
+ Virial ratio                           1.96749793
+
+ !MCSCF STATE 5.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="5" value="0.0 0.0 0.0"/><!--
+
+ Results for state 6.8
+ =====================
+
+ !MCSCF STATE 6.8 Energy             -948.078147504453
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="6"
+     value="-948.078147504453"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.90704232
+ One electron energy                -1300.17360002
+ Two electron energy                  352.09545251
+ Virial ratio                           1.96751845
+
+ !MCSCF STATE 6.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="6" value="0.0 0.0 0.0"/><!--
+
+ Results for state 7.8
+ =====================
+
+ !MCSCF STATE 7.8 Energy             -948.052902583564
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="7"
+     value="-948.052902583564"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93468522
+ One electron energy                -1300.24888388
+ Two electron energy                  352.19598130
+ Virial ratio                           1.96746540
+
+ !MCSCF STATE 7.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="7" value="0.0 0.0 0.0"/><!--
+
+ Results for state 8.8
+ =====================
+
+ !MCSCF STATE 8.8 Energy             -948.038808191725
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="8"
+     value="-948.038808191725"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93412054
+ One electron energy                -1300.24935689
+ Two electron energy                  352.21054870
+ Virial ratio                           1.96745157
+
+ !MCSCF STATE 8.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="8" value="0.0 0.0 0.0"/><!--
+
+ Results for state 9.8
+ =====================
+
+ !MCSCF STATE 9.8 Energy             -948.038787468636
+   --><property name="Energy" method="MCSCF" principal="true" stateSymmetry="8" stateNumber="9"
+     value="-948.038787468636"/><!--
+ Nuclear energy                         0.00000000
+ Kinetic energy                       979.93766793
+ One electron energy                -1300.25697660
+ Two electron energy                  352.21818913
+ Virial ratio                           1.96744805
+
+ !MCSCF STATE 9.8 Dipole moment         0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                   0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="MCSCF" principal="true" stateSymmetry="8"
+     stateNumber="9" value="0.0 0.0 0.0"/><!--
+
+ State-averaged charge density matrix saved on record  5202.2 (density set 1)
+
+
+ NATURAL ORBITALS (state averaged)
+ =================================
+
+   Orb     Occ        Energy       Coefficients
+
+                                   1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s   
+                                   1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s      1 1s   
+                                   1 1s      1 1s      1 1s      1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0  
+                                   1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0     1 3d2+    1 3d0  
+                                   1 3d2+    1 3d0     1 3d2+    1 5g0     1 5g4+    1 5g2+    1 5g0     1 5g4+    1 5g2+    1 5g0  
+                                   1 5g4+    1 5g2+ 
+
+   1.1  2.00000  -202.917165     0.000129  0.000382  0.001075  0.002868  0.007705  0.020798  0.054412  0.129036  0.253759  0.356356
+                                 0.268462  0.063569 -0.002308  0.005117  0.005880 -0.002564 -0.000473  0.000056 -0.000047  0.000022
+                                -0.007735  0.001842 -0.000006  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000
+
+   2.1  2.00000   -24.202170    -0.000039 -0.000115 -0.000325 -0.000869 -0.002347 -0.006403 -0.017169 -0.042883 -0.094425 -0.166972
+                                -0.181038  0.057145  0.510935  0.504188  0.114004 -0.024184 -0.004712  0.000671 -0.000600  0.000260
+                                -0.022226  0.020826 -0.000073  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000
+
+   3.1  2.00000    -3.268532     0.000014  0.000042  0.000117  0.000315  0.000849  0.002325  0.006233  0.015723  0.034895  0.063957
+                                 0.071858 -0.023459 -0.293169 -0.437079  0.141091  0.687407  0.398511  0.021293 -0.013127  0.005461
+                                -0.032038  0.039772 -0.001437  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000
+
+   4.1  0.99889    -0.154664    -0.000003 -0.000010 -0.000028 -0.000074 -0.000200 -0.000547 -0.001469 -0.003704 -0.008250 -0.015135
+                                -0.017206  0.005842  0.072608  0.119942 -0.019340 -0.277309 -0.325418  0.387129  0.612406  0.179063
+                                -0.011923  0.051498 -0.002811  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000
+
+   5.1  0.60820    -0.014313    -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000
+                                -0.000000  0.000000  0.000000 -0.000000  0.000000  0.000000  0.000000 -0.000000 -0.000000 -0.000000
+                                 0.000000 -0.000000  0.000000  0.003797  0.000000  0.026425  0.000000  0.099695  0.000000  0.242256
+                                 0.000000  0.381525  0.000000  0.203418  0.000000  0.026138  0.000000  0.370809  0.000000  0.000202
+                                 0.000000 -0.000532 -0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000
+
+   6.1  0.59534    -0.013223    -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000 -0.000000
+                                -0.000000  0.000000  0.000000  0.000000  0.000000 -0.000000  0.000000 -0.000000 -0.000000 -0.000000
+                                 0.000000 -0.000000  0.000000  0.000000  0.003793  0.000000  0.026400  0.000000  0.099604  0.000000
+                                 0.241967  0.000000  0.381270  0.000000  0.204556  0.000000  0.026811  0.000000  0.370351  0.000000
+                                 0.000266  0.000000 -0.000572  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                                 0.000000  0.000000
+
+                                   1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px  
+                                   1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 2px     1 4f1+ 
+                                   1 4f3+    1 4f1+    1 4f3+    1 4f1+    1 4f3+    1 4f1+    1 4f3+ 
+
+   1.2  2.00000   -20.108477     0.000108  0.000538  0.002576  0.010367  0.035111  0.097362  0.209730  0.329886  0.329977  0.160720
+                                 0.023584  0.007654  0.000379 -0.000023  0.000016 -0.000011 -0.003791 -0.006613  0.000003  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+   2.2  2.00000    -2.071199    -0.000038 -0.000189 -0.000905 -0.003665 -0.012558 -0.035742 -0.079642 -0.131579 -0.135648  0.152937
+                                 0.315433  0.804446  0.291991  0.038989 -0.003795  0.001478 -0.127423 -0.335627 -0.000510  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+   3.2  0.30296     0.020812     0.000007  0.000036  0.000173  0.000704  0.002406  0.006894  0.015326  0.025707  0.025664 -0.103015
+                                -0.066043 -0.458944 -0.097899  0.131114  0.563396  0.423245  0.093772  0.349397  0.021537  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+                                   1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py  
+                                   1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 2py     1 4f1- 
+                                   1 4f3-    1 4f1-    1 4f3-    1 4f1-    1 4f3-    1 4f1-    1 4f3- 
+
+   1.3  2.00000   -20.108177     0.000108  0.000538  0.002577  0.010367  0.035111  0.097363  0.209732  0.329890  0.329974  0.160751
+                                 0.023584  0.007682  0.000381 -0.000023  0.000015 -0.000011 -0.003829 -0.006637  0.000003  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+   2.3  2.00000    -2.070826    -0.000038 -0.000189 -0.000905 -0.003665 -0.012560 -0.035749 -0.079658 -0.131605 -0.135681  0.152231
+                                 0.315579  0.801268  0.291784  0.038884 -0.003798  0.001457 -0.126709 -0.332325 -0.000510  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+   3.3  0.34978     0.016950     0.000007  0.000036  0.000172  0.000700  0.002393  0.006855  0.015239  0.025558  0.025524 -0.101735
+                                -0.065696 -0.454871 -0.097430  0.129028  0.561418  0.426181  0.092560  0.346044  0.022389  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+                                   1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2-    1 3d2- 
+                                   1 5g2-    1 5g4-    1 5g2-    1 5g4-    1 5g2-    1 5g4- 
+
+   1.4  0.56412    -0.002610     0.003798  0.026434  0.099724  0.242416  0.381403  0.202992  0.026216  0.371080  0.000152 -0.000511
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+                                   1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz  
+                                   1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 2pz     1 4f0  
+                                   1 4f2+    1 4f0     1 4f2+    1 4f0     1 4f2+    1 4f0     1 4f2+ 
+
+   1.5  2.00000   -20.107295     0.000108  0.000538  0.002576  0.010367  0.035111  0.097362  0.209730  0.329885  0.329973  0.160737
+                                 0.023590  0.007675  0.000384 -0.000022  0.000018 -0.000009 -0.003810 -0.006625  0.000003  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+   2.5  2.00000    -2.070131    -0.000038 -0.000189 -0.000905 -0.003665 -0.012559 -0.035746 -0.079649 -0.131592 -0.135661  0.152745
+                                 0.315468  0.803477  0.291941  0.038953 -0.003782  0.001485 -0.127231 -0.334628 -0.000510  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+   3.5  0.35037     0.017253     0.000007  0.000036  0.000172  0.000700  0.002392  0.006853  0.015233  0.025552  0.025503 -0.102704
+                                -0.065562 -0.459055 -0.097758  0.128827  0.561652  0.426163  0.093504  0.350359  0.022354  0.000000
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+                                   1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+    1 3d1+ 
+                                   1 5g1+    1 5g3+    1 5g1+    1 5g3+    1 5g1+    1 5g3+ 
+
+   1.6  0.61292    -0.017078     0.003796  0.026417  0.099668  0.242136  0.381501  0.203738  0.026130  0.370679  0.000271 -0.000553
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+                                   1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1-    1 3d1- 
+                                   1 5g1-    1 5g3-    1 5g1-    1 5g3-    1 5g1-    1 5g3- 
+
+   1.7  0.61743    -0.017744     0.003796  0.026417  0.099664  0.242192  0.381347  0.203797  0.026553  0.370690  0.000196 -0.000541
+                                 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+ 
+
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 1:   1 1 1 1 2 3 1 3 2 1   3 2 1 3 2 1 5 6 4 3   2 1 5 6 4 3 2 1 3 2   5 6 4 1 3 2 1 3 2 1
+                                        3 2 1 1 1 1 1 1 1 1   1 1
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 2:   1 1 1 1 1 3 2 1 3 2   1 3 2 1 1 3 2 1 1 1   1 1 1 1 1 1 1
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 3:   1 1 1 1 1 3 2 1 3 2   1 3 2 1 1 3 2 1 1 1   1 1 1 1 1 1 1
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 4:   1 1 1 1 3 2 1 3 2 1   1 3 2 1 1 1
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 5:   1 1 1 1 1 3 2 1 3 2   1 3 2 1 1 3 2 1 1 1   1 1 1 1 1 1 1
+ EXTRA SYMMETRY OF MOS IN SYMMETRY 7:   1 1 1 1 3 2 1 3 2 1   1 3 2 1 1 1
+
+ Natural orbital dump (state averaged) at molpro section  5202.2    (Orbital set 2)
+
+
+ CI vector for state symmetry 1
+ ==============================
+
+ a0a 0 b 0 0 a a       0.3084342  -0.1280421   0.3619034   0.3310617   0.1117026  -0.0001351   0.0000928
+ aa0 0 0 a b 0 a      -0.1746172  -0.2401124  -0.2031366   0.3605775  -0.1238656  -0.0000405  -0.0000161
+ a0a a 0 0 0 0 2       0.0022505   0.0554940  -0.0442656  -0.0429368  -0.0139144  -0.0780577   0.3583582
+ a00 b 0 a 0 a a       0.3080036  -0.1428421  -0.3549981  -0.0260728   0.3490342   0.0000303   0.0000343
+ a02 0 0 0 a a 0      -0.0261224   0.0152608  -0.0433119  -0.0247784  -0.0211417   0.3323173  -0.0055699
+ a0a 0 a 0 0 b a      -0.1970214   0.0567423  -0.2729732  -0.2202455  -0.0619008  -0.3237923  -0.1454365
+ aa2 a 0 0 0 0 0      -0.0059901   0.0433532   0.0022313   0.0242496   0.0158173  -0.3215455  -0.1015519
+ aaa 0 b a 0 0 0      -0.1745869   0.3143953  -0.0064449   0.2110926   0.3175136   0.0000683  -0.0000409
+ a0a 0 0 a b 0 a       0.3162374   0.2710497  -0.0063259  -0.0604833  -0.0921937  -0.0000747  -0.0001561
+ a00 0 a a 0 0 2      -0.0272739  -0.0213367   0.0197346  -0.0058153   0.0064865   0.0434532   0.3151598
+ a0a 0 a 0 0 a b      -0.1437845   0.0636078  -0.2109213  -0.1957569  -0.0609230   0.0519272   0.3100039
+ b0a 0 a 0 0 a a       0.2043686  -0.1059280   0.2997877   0.2595445   0.0874363   0.0000666   0.0001750
+ b00 a 0 a 0 a a       0.2045706  -0.1186279  -0.2947957  -0.0205774   0.2744434  -0.0001547  -0.0001839
+ aaa 0 0 0 b a 0      -0.1746667  -0.2296885   0.2137032  -0.2554572   0.2839142  -0.0001997   0.0000886
+ ba0 0 0 a a 0 a      -0.1205744  -0.1989274  -0.1682906   0.2827922  -0.0970318  -0.0002167  -0.0001667
+ a0b 0 a 0 0 a a      -0.1719969   0.1136200  -0.1777967  -0.1746037  -0.0763151   0.2719336  -0.1648352
+ a00 a 0 a 0 a b      -0.1684988   0.1082119   0.2688628   0.0183100  -0.2432384  -0.2691302  -0.2400595
+ aaa 0 a b 0 0 0       0.0819438  -0.1927447   0.0008074  -0.1306823  -0.1761160  -0.0268837  -0.2690174
+ baa 0 a a 0 0 0      -0.1205067   0.2603783  -0.0053793   0.1655763   0.2489557   0.0002436   0.0002259
+ a00 a 0 a 0 b a      -0.1720213   0.0321243   0.2082846   0.0304207  -0.1886522   0.2523439   0.1729070
+ aab 0 a a 0 0 0       0.0816470  -0.1920680   0.0071369  -0.1114415  -0.1879719   0.0810997   0.2507756
+ aa0 0 0 b a 0 a       0.1210818   0.1607415   0.1598242  -0.2487256   0.0604770   0.0050160   0.0652912
+ a0b 0 0 a a 0 a      -0.1854354  -0.1800117   0.0470181   0.0353874   0.0376645  -0.0806477   0.2468363
+ aab 0 0 0 a a 0       0.1210737   0.1524538  -0.1667598   0.1530291  -0.2052936   0.2384257  -0.1457827
+ a20 0 a a 0 0 0       0.0034373   0.0604964   0.0326528  -0.0214786   0.0384387   0.2349447  -0.1947253
+ a00 0 0 0 a a 2       0.0271631  -0.0291000   0.0006359  -0.0047784  -0.0071093  -0.2260857   0.0751469
+ b0a 0 0 a a 0 a       0.2014171   0.2245363  -0.0051006  -0.0474700  -0.0723618   0.0000553   0.0001461
+ baa 0 0 0 a a 0      -0.1205170  -0.1902205   0.1768235  -0.2002325   0.2224968  -0.0001117  -0.0000736
+ a0a a 0 0 0 2 0      -0.0011695  -0.0178557   0.0197641   0.0022056   0.0185649  -0.0980937  -0.2207432
+ a0a 0 0 b a 0 a      -0.1854113  -0.1822298  -0.0386734   0.0206164   0.0479256  -0.0321811  -0.2090869
+ aa0 0 0 a a 0 b       0.0817943   0.1448960   0.1267468  -0.2029169   0.0814996  -0.1860920   0.0583101
+ aba 0 a a 0 0 0       0.1315028  -0.1899610   0.0038799  -0.1345452  -0.2023813  -0.0545279   0.0180569
+ a00 0 a a 0 2 0       0.0261245  -0.0171492  -0.0425680  -0.0144582   0.0292903  -0.1428966  -0.2021631
+ aa0 a 0 0 0 0 2       0.0038814  -0.0496082  -0.0179056   0.0264541  -0.0163451   0.2007231  -0.0679239
+ aaa 0 0 0 a b 0       0.0818341   0.1385484  -0.1330879   0.1548680  -0.1552283  -0.1978668   0.0689685
+ aa0 a 0 2 0 0 0      -0.0060100   0.0431422  -0.0040998   0.0053441   0.0283241   0.0309727   0.1962436
+ ab0 0 0 a a 0 a       0.0923155   0.1334023   0.0848561  -0.1917273   0.0789208   0.1813331  -0.1234186
+ a00 a 0 b 0 a a      -0.1720541   0.1211337   0.1726463  -0.0020805  -0.1915870   0.0169107   0.0673022
+ aa0 0 b 0 0 a a      -0.1865611   0.1572627  -0.0031686   0.1053590   0.1585034  -0.0001837  -0.0003225
+ a2a a 0 0 0 0 0      -0.0034631  -0.0590591   0.0352733  -0.0441352   0.0050302   0.1674581  -0.1708671
+ aba 0 0 0 a a 0       0.0922760   0.1289067  -0.0906790   0.1477927  -0.1458890  -0.0402476   0.0767992
+ a0a 0 0 a a 0 b      -0.1468079  -0.1333445   0.0030819   0.0519495   0.0789655   0.1128483  -0.0377394
+ a02 0 a a 0 0 0       0.0080537  -0.0219899  -0.0098016  -0.0048709  -0.0224096  -0.1358977   0.0822473
+ ba0 0 a 0 0 a a      -0.1141745   0.1302197  -0.0026691   0.0827024   0.1242928  -0.0000402  -0.0001715
+ ab0 0 a 0 0 a a       0.1144380  -0.1222998   0.0025697  -0.0537337  -0.0805799  -0.1088640   0.0364010
+ aa0 0 a 0 0 a b       0.0862541  -0.0770494  -0.0174623  -0.0397454  -0.1160562   0.0048848  -0.0031148
+ aa0 0 a 0 0 b a       0.1000436  -0.0881332   0.0207303  -0.0945824  -0.0861601   0.1042031  -0.0327922
+ a00 0 0 2 a a 0      -0.0260363   0.0171043   0.0424609  -0.0097784  -0.0310459  -0.0237485  -0.0959363
+ aa0 a 0 0 0 2 0      -0.0099994  -0.0367641   0.0198420  -0.0225739   0.0226511   0.0891591  -0.0274258
+ a20 0 0 0 a a 0       0.0146047  -0.0033769   0.0001021   0.0007884   0.0012392  -0.0815807   0.0268668
+
+ TOTAL ENERGIES                      -948.08889789  -948.08396898  -948.08394455
+                                     -948.07816395  -948.07814857  -948.03881080
+                                     -948.03879841
+
+ CI vector for state symmetry 2
+ ==============================
+
+ aaa 0 0 0 b 0 a      -0.1752301   0.0305670  -0.3117818   0.3807592  -0.0297192  -0.0001671   0.0000630
+                       0.0000690  -0.0092546  -0.0005204
+ a2a 0 a 0 0 0 0      -0.0036194   0.0204678  -0.0655847   0.0306072  -0.0320089   0.1669852  -0.1707863
+                      -0.3137733   0.3723666   0.0237078
+ a0b a 0 0 0 a a       0.1708223  -0.0325294  -0.2088033  -0.0460231   0.1852088  -0.2583241   0.1867910
+                       0.0392545  -0.0087996   0.3683978
+ a0a 0 a 0 0 2 0       0.0024085  -0.0120870   0.0697817   0.0151122  -0.0425320  -0.0402553   0.3674950
+                      -0.0818590  -0.3648733  -0.0451123
+ a20 a 0 a 0 0 0      -0.0035053   0.0669267  -0.0160164  -0.0440201  -0.0069887  -0.2291542   0.2040332
+                       0.2479977   0.0763298   0.3630085
+ aaa b 0 a 0 0 0      -0.1730827  -0.2266782   0.2152546   0.1248345   0.3616779   0.0000235  -0.0000073
+                      -0.0000406   0.0068738   0.0068646
+ a00 0 a b 0 a a      -0.1732396  -0.2065722  -0.0475059  -0.1497666  -0.1165508   0.0065050   0.0508228
+                       0.3166152  -0.3614900   0.0616121
+ a0a b 0 0 0 a a      -0.3061464   0.1437830   0.3558469   0.1129360  -0.3318183   0.0001087  -0.0001163
+                      -0.0000274   0.0104756  -0.0060422
+ a00 0 b a 0 a a       0.3105667   0.3452385   0.1685664   0.2913117   0.1888152   0.0000125   0.0000085
+                       0.0000596   0.0036482  -0.0107210
+ a0a a 0 0 0 a b       0.1957060  -0.1386397  -0.2420843  -0.0849042   0.2139284   0.3376292   0.1167307
+                      -0.0196970   0.0343101  -0.2635073
+ a02 0 0 0 a 0 a       0.0260030  -0.0172862  -0.0426634   0.0016146   0.0328490  -0.3315931   0.0350586
+                       0.0160922   0.1916942  -0.1043120
+ aa2 0 a 0 0 0 0       0.0059158   0.0335827  -0.0272525   0.0019767  -0.0291398   0.3287739   0.0717166
+                       0.0200730   0.1320479   0.2441448
+ aa0 0 0 a b a 0       0.1747605  -0.3150191   0.0069383   0.3184651  -0.2087964   0.0000294   0.0000205
+                      -0.0000402   0.0011746   0.0096305
+ a0a 0 0 a b a 0       0.3167256  -0.1995000   0.1833639  -0.0365447  -0.1031909  -0.0001079  -0.0001426
+                      -0.0000601   0.0062736   0.0046925
+ a00 0 0 2 a 0 a       0.0261462   0.0410726   0.0201193   0.0183430   0.0262104   0.0480419   0.1076954
+                      -0.3098521  -0.0735906   0.2035335
+ a00 a 0 a 0 2 0       0.0274316  -0.0028852   0.0288780  -0.0087779   0.0006086  -0.0711602  -0.3091492
+                      -0.0234093  -0.1150696   0.0020804
+ a0a a 0 0 0 b a       0.1425219  -0.0920529  -0.2000273  -0.0707602   0.1934518  -0.0794983  -0.3035131
+                      -0.0194046  -0.1387811  -0.0426526
+ baa 0 0 0 a 0 a      -0.1210111   0.0253103  -0.2582550   0.2983690  -0.0232937  -0.0000296  -0.0002162
+                      -0.0000481  -0.0955792   0.0008685
+ b0a a 0 0 0 a a      -0.2029039   0.1194390   0.2950679   0.0887516  -0.2607707   0.0000845   0.0001076
+                      -0.0001256   0.1027949  -0.0561957
+ b00 0 a a 0 a a       0.2060528   0.2860439   0.1399786   0.2285695   0.1478711   0.0001922  -0.0000074
+                      -0.0003489   0.0399132  -0.1101535
+ baa a 0 a 0 0 0      -0.1196020  -0.1883535   0.1785442   0.0981322   0.2843605   0.0000087   0.0003895
+                       0.0002150   0.0721040   0.0628122
+ a00 0 a a 0 a b      -0.1733379  -0.1637371  -0.1332357  -0.1673260  -0.0891119   0.2712129   0.1531732
+                      -0.0750099   0.2376032   0.2811139
+ a00 0 a a 0 b a      -0.1700419  -0.2609731  -0.1278034  -0.2027886  -0.1310236  -0.2779226  -0.2039972
+                      -0.2413160   0.0803254  -0.2218515
+ aa0 0 0 b a a 0      -0.1210933   0.2268342   0.0132031  -0.1998386   0.1590558   0.0029297  -0.0520091
+                      -0.2775456  -0.0935379   0.1631451
+ aaa a 0 b 0 0 0       0.0811102   0.1413654  -0.1295739  -0.0610204  -0.2116650  -0.0501271  -0.2647536
+                      -0.0240346  -0.0886031   0.0535090
+ ba0 0 0 a a a 0       0.1206133  -0.2609172   0.0059558   0.2497951  -0.1636325  -0.0000478   0.0002417
+                       0.0003036   0.0131008   0.0947495
+ aa0 0 a 2 0 0 0       0.0058990   0.0292079  -0.0318445  -0.0193483  -0.0216962  -0.0624244  -0.2048550
+                       0.2589738   0.2597112   0.0919966
+ aab 0 0 0 a 0 a       0.1215362  -0.0038632   0.2255383  -0.2562154  -0.0039177   0.2264409  -0.1649691
+                      -0.0455313  -0.1481438   0.1190667
+ a0b 0 0 a a a 0      -0.1858412   0.1037885  -0.1539514   0.0085526   0.0506879  -0.0605294   0.2506480
+                       0.0624638   0.1438256  -0.1436587
+ ab0 0 0 a a a 0      -0.0924096   0.1562886  -0.0248283  -0.1796215   0.1031850  -0.1733255   0.1356534
+                       0.0854432   0.1826252  -0.2481353
+ aa0 0 a 0 0 0 2       0.0100467  -0.0143085   0.0392107  -0.0315575   0.0041943  -0.0816150   0.0396636
+                      -0.0932909  -0.2462626  -0.1323508
+ aab a 0 a 0 0 0       0.0807780   0.1366592  -0.1338395  -0.0821828  -0.2035016   0.1001105   0.2390726
+                       0.0764169   0.0388417  -0.0976388
+ a0a 0 a 0 0 0 2      -0.0012335   0.0002903  -0.0265883   0.0133360   0.0130841  -0.1303821  -0.2222250
+                       0.2373158   0.1583458   0.0331848
+ aba a 0 a 0 0 0       0.1307965   0.1370071  -0.1303854  -0.0797635  -0.2308718  -0.0500155   0.0252988
+                      -0.0525567  -0.0292164  -0.0255469
+ aba 0 0 0 a 0 a       0.0925410  -0.0365088   0.1532068  -0.2056556   0.0286454  -0.0441171   0.0703263
+                       0.2214175   0.2180596  -0.2180150
+ aaa 0 0 0 a 0 b       0.0821640  -0.0155053   0.1912918  -0.2172572   0.0282852  -0.1821270   0.0947960
+                      -0.1759070   0.0349179   0.0986002
+ a00 0 0 0 a 2 a      -0.0271413  -0.0211775   0.0200792   0.0029735   0.0083502   0.2074881  -0.1053796
+                       0.2166363  -0.0884587  -0.0762293
+ a00 a 0 a 0 0 2      -0.0263628  -0.0412891  -0.0202252  -0.0318444  -0.0058633   0.1718211   0.1983141
+                      -0.2054004   0.0737418  -0.2041291
+ aa0 0 a 0 0 2 0      -0.0038706  -0.0487159   0.0196623   0.0291959  -0.0106022  -0.1838692   0.0940653
+                      -0.1865577  -0.1462139  -0.2033474
+ b0a 0 0 a a a 0       0.2017378  -0.1651855   0.1522051  -0.0285129  -0.0808892  -0.0001491   0.0002707
+                       0.0002070   0.0629982   0.0533284
+ a0a 0 0 b a a 0      -0.1855880   0.1624758  -0.0913718   0.0254131   0.0444494  -0.0428746  -0.1978444
+                      -0.1708912  -0.1201469   0.1650376
+ aa0 0 0 a a b 0      -0.0818708   0.1928136  -0.0012690  -0.1888001   0.1101881   0.1704142  -0.0839065
+                       0.1918391  -0.1033628  -0.0193899
+ aa0 b 0 0 0 a a      -0.1859834  -0.1131974   0.1082865   0.0626961   0.1807070  -0.0002117  -0.0003136
+                      -0.0000179   0.0041112   0.0024144
+ a0a 0 a 2 0 0 0      -0.0079593  -0.0088564   0.0223557  -0.0010356   0.0229010   0.0033738   0.0254269
+                       0.1582076  -0.1655086  -0.0116401
+ a02 a 0 a 0 0 0      -0.0080428  -0.0228451   0.0074390   0.0150107   0.0178186   0.1290143  -0.0934039
+                      -0.0195230  -0.0354270  -0.1620438
+ a0a 0 0 a a b 0      -0.1470341   0.0984213  -0.0902458   0.0310920   0.0889428   0.1036611  -0.0529317
+                       0.1082804  -0.0929505  -0.0793998
+ ba0 a 0 0 0 a a      -0.1138803  -0.0940872   0.0896507   0.0491969   0.1421042  -0.0001633  -0.0000962
+                       0.0001087   0.0364509   0.0307578
+ aa0 a 0 0 0 a b       0.0997401   0.0507182  -0.0749082  -0.0112802  -0.1278971   0.0956158  -0.0471103
+                       0.1071921  -0.0049018  -0.0830248
+ ab0 a 0 0 0 a a       0.1141609   0.0885825  -0.0842426  -0.0320498  -0.0922496  -0.1000828   0.0510586
+                      -0.1049062   0.0249215   0.0227488
+ aa0 a 0 0 0 b a       0.0859627   0.0679839  -0.0387864  -0.0685630  -0.1026644   0.0048420  -0.0035385
+                      -0.0023767  -0.0605818   0.0271037
+ a20 0 0 0 a 0 a      -0.0146200  -0.0024171   0.0024233  -0.0003981  -0.0013500   0.0749403  -0.0377909
+                       0.0780681  -0.0283715  -0.0241898
+ 200 0 0 a a a 0       0.0331444  -0.0015099   0.0150825   0.0509410  -0.0040086   0.0000114  -0.0000333
+                      -0.0000184  -0.0240544   0.0002730
+
+ TOTAL ENERGIES                      -948.08889994  -948.08396616  -948.08392613
+                                     -948.07816573  -948.07810487  -948.03881147
+                                     -948.03879525  -948.03876705  -948.03489007
+                                     -948.03487999
+
+ CI vector for state symmetry 3
+ ==============================
+
+ aaa 0 b 0 0 0 a      -0.1746267   0.0213384  -0.3124971   0.3800171
+ a00 0 0 a b a a      -0.3091326   0.3695046  -0.1097097  -0.2517808
+ aa0 0 b a 0 a 0       0.3621497   0.2978464   0.2154989   0.1609935
+ aa0 b 0 a 0 0 a      -0.3593583  -0.1253375   0.3462706   0.1623488
+ a0a 0 b a 0 a 0      -0.0065678   0.1843520  -0.0557416   0.3127652
+ b00 0 0 a a a a      -0.2049146   0.3059843  -0.0911537  -0.1975471
+ baa 0 a 0 0 0 a      -0.1205591   0.0176568  -0.2589649   0.2978909
+ ba0 a 0 a 0 0 a      -0.2337836  -0.1042245   0.2872958   0.1275817
+ a00 0 0 b a a a       0.1691389  -0.2792199   0.0832867   0.1753630
+ aaa b 0 0 0 a 0      -0.1725632   0.1888406   0.2481180   0.0567097
+ ba0 0 a a 0 a 0       0.2355173   0.2468402   0.1788711   0.1263952
+ b0a 0 a a 0 a 0       0.0039393   0.1526991  -0.0461812   0.2452215
+ aba 0 a 0 0 0 a       0.0963247  -0.0318972   0.2250587  -0.2390490
+ aa0 0 a a 0 b 0      -0.2216964  -0.2378055  -0.1138248  -0.0983974
+ aa0 a 0 a 0 0 b       0.2202323   0.1331670  -0.2280033  -0.0993684
+ ab0 a 0 a 0 0 a       0.2057032   0.0201906  -0.2228481  -0.0756394
+ aab 0 a 0 0 0 a       0.1170254   0.0091763   0.1551270  -0.2198613
+ aaa 0 a 0 0 0 b       0.0818357  -0.0162743   0.1912763  -0.2189977
+ a00 0 0 a a b a       0.1723869  -0.2121044   0.0129798   0.1257925
+ ab0 0 a a 0 a 0      -0.2072754  -0.1411409  -0.1722109  -0.0982278
+ baa a 0 0 0 a 0      -0.1191618   0.1568805   0.2059237   0.0446025
+ a0a 0 a a 0 b 0      -0.0123687  -0.1227208   0.0370884  -0.2037874
+ a0a 0 a b 0 a 0       0.0022628  -0.1233795   0.0239988  -0.1857491
+ a00 0 0 a a a b       0.1725215  -0.1841645   0.1045970   0.1481725
+ aa0 a 0 b 0 0 a       0.1672064   0.0762042  -0.1827151  -0.1149227
+ a0a b 0 a 0 0 a      -0.0071072   0.1815931  -0.0558955  -0.0606643
+ aba a 0 0 0 a 0       0.0950030  -0.1502562  -0.1694803  -0.0651075
+ aa0 0 a b 0 a 0      -0.1686952  -0.1657401  -0.1083342  -0.0907635
+ a0b 0 a a 0 a 0       0.0127344  -0.0909508   0.0408356  -0.1684502
+ b0a a 0 a 0 0 a       0.0035772   0.1508625  -0.0464525  -0.0477016
+ aaa a 0 0 0 b 0       0.0806741  -0.1183746  -0.1501204  -0.0213656
+ aab a 0 0 0 a 0       0.1160479  -0.0770903  -0.1344411  -0.0148391
+ a0a a 0 a 0 0 b      -0.0120419  -0.1209464   0.0373100   0.0715887
+ a0a a 0 b 0 0 a       0.0026029  -0.1145617   0.0486706   0.0101200
+ a0b a 0 a 0 0 a       0.0129690  -0.0969475   0.0163674   0.0266572
+ aa2 0 0 0 a 0 0      -0.0001732  -0.0225616  -0.0751707   0.0349141
+ aa0 0 0 2 a 0 0       0.0001443   0.0227970   0.0749491   0.0347448
+ 200 0 a a 0 a 0      -0.0330977   0.0010814  -0.0151816  -0.0509464
+
+ TOTAL ENERGIES                      -948.08891408  -948.08396590  -948.08393866
+                                     -948.07815824
+ WARNING: exit with wrong ci vector!!
+
+ CI vector for state symmetry 4
+ ==============================
+
+ aa0 0 0 0 b a a      -0.0939722  -0.0045133  -0.1771730  -0.0223884   0.0859624  -0.0004278   0.4472828
+                       0.0000194  -0.0001765
+ ba0 0 0 0 a a a      -0.0732996  -0.0035107  -0.1467478  -0.0185678   0.0712240  -0.0003605   0.4472245
+                       0.0000810   0.0000837
+ aa0 0 0 0 a a b       0.0568836   0.0066978   0.1170404   0.0098762  -0.0498863  -0.0035578   0.4472093
+                      -0.0944027  -0.0061078
+ aa0 0 0 0 a b a       0.0573007  -0.0012090   0.1107271   0.0189138  -0.0606637   0.0041148   0.4472093
+                       0.0943347   0.0063692
+ ab0 0 0 0 a a a       0.0530411   0.0025330   0.0960535   0.0121535  -0.0465879   0.0002311   0.4471420
+                      -0.0000324  -0.0001686
+ a0b 0 0 0 a a a      -0.0075666   0.1691443  -0.1190245   0.1717316  -0.2011012  -0.2425807   0.0000000
+                       0.4206836   0.0278133
+ aaa 0 0 a b 0 0       0.4170460   0.0198174   0.3541601   0.0449733  -0.1706597   0.0003305   0.0000400
+                      -0.0000420   0.0001156
+ aaa b 0 0 0 0 a       0.1892679   0.3680495   0.0109170   0.0884323   0.3887369   0.0001554  -0.0000007
+                      -0.0000817  -0.0001900
+ aaa 0 b 0 0 a 0       0.2239008  -0.3514988  -0.1725650   0.3482143   0.0779575   0.0001810  -0.0000007
+                       0.0001361  -0.0001996
+ a0a 0 0 0 b a a       0.0139762  -0.3092651   0.1574210  -0.2275647   0.2657247   0.3489361   0.0000000
+                      -0.0001875  -0.0000074
+ ab0 a 0 a 0 a 0      -0.1178140   0.0901741   0.1045125   0.2345729  -0.0013916   0.2112750   0.0000034
+                       0.1608714   0.3269839
+ aaa 0 0 b a 0 0      -0.2550811  -0.0119660  -0.2414293  -0.0916218   0.0647672  -0.0004981  -0.0000396
+                      -0.0214430   0.3267244
+ aab 0 0 a a 0 0      -0.2554703  -0.0123042  -0.2130097   0.0339311   0.1543397   0.0000693  -0.0000395
+                       0.0215500  -0.3266769
+ baa a 0 0 0 0 a       0.1228389   0.2391712   0.0090535   0.0732808   0.3222052   0.0001680  -0.0000050
+                      -0.0000012   0.0000674
+ aba 0 a 0 0 a 0      -0.1223572   0.2016586   0.1061738  -0.2012906  -0.1112025  -0.0164447   0.0000034
+                      -0.0804541  -0.3212047
+ aa0 b 0 a 0 a 0       0.2160133  -0.1634674  -0.1386979  -0.3158464  -0.0254528  -0.3030909  -0.0000007
+                      -0.0000074  -0.0000173
+ aba a 0 0 0 0 a      -0.1026638  -0.2105234   0.0358847  -0.1023193  -0.2308025   0.0162171   0.0000034
+                       0.1219768  -0.3081863
+ ab0 0 a a 0 0 a       0.1097035   0.1020656  -0.1843131  -0.1224570  -0.1313482   0.2091105  -0.0000034
+                       0.2020791  -0.3032292
+ a20 0 0 a a 0 0       0.0002941  -0.0069170   0.0086893  -0.0123680   0.0146095  -0.0163318  -0.0000000
+                      -0.3026070  -0.0200739
+ aa0 0 b a 0 0 a      -0.2011978  -0.1850867   0.2316915   0.1864608   0.1787755  -0.3006077   0.0000006
+                      -0.0000075   0.0000263
+ aaa a 0 0 0 0 b      -0.1159964  -0.2256129  -0.0786006  -0.0248942  -0.2550432  -0.0002465  -0.0000050
+                      -0.2939270   0.1443417
+ baa 0 0 a a 0 0       0.2710724   0.0128794   0.2933930   0.0372837  -0.1416972   0.0003843   0.0000460
+                      -0.0001635  -0.0005067
+ baa 0 a 0 0 a 0       0.1453467  -0.2284322  -0.1427821   0.2885614   0.0647001   0.0002219  -0.0000050
+                       0.0000743  -0.0001148
+ b0a 0 0 0 a a a       0.0092028  -0.2049550   0.1303820  -0.1882032   0.2202120   0.2733948   0.0000000
+                       0.0000354   0.0001189
+ aaa 0 a 0 0 b 0      -0.1372231   0.2151808   0.0821561  -0.2527749   0.0168583  -0.0002548  -0.0000050
+                       0.2720263   0.1811755
+ ba0 a 0 a 0 a 0       0.1410194  -0.1134042  -0.1152022  -0.2623356  -0.0212204  -0.2383550  -0.0000050
+                       0.0000608   0.0002626
+ ba0 0 a a 0 0 a      -0.1305520  -0.1274506   0.1919519   0.1545706   0.1484382  -0.2357276   0.0000049
+                      -0.0001069  -0.0001267
+ a0a 0 b a 0 0 a       0.1739969   0.0152980  -0.2332002   0.0937179  -0.0579667   0.1737422  -0.0000122
+                       0.0000381  -0.0000555
+ aab a 0 0 0 0 a      -0.0934465  -0.1710843   0.0227455  -0.0344996  -0.2250964  -0.0162940   0.0000073
+                       0.1720331   0.1639672
+ a0a 0 0 0 a a b      -0.0324396   0.1714573  -0.0779137   0.0855403  -0.1772128  -0.1898815   0.0000053
+                      -0.2155728   0.0667777
+ a02 0 a 0 0 a 0      -0.0215351   0.0263476   0.0243301  -0.0002638  -0.0295926   0.0070137   0.0000027
+                      -0.2153763   0.0676445
+ a02 0 0 a a 0 0      -0.0001417   0.0045247  -0.0167131   0.0237877  -0.0281470   0.0213348   0.0000000
+                       0.2101848   0.0139584
+ a0a b 0 a 0 a 0       0.1731020   0.0004876  -0.0737702  -0.1315218   0.2089407  -0.1746785  -0.0000123
+                      -0.0000049  -0.0000575
+ a02 a 0 0 0 0 a       0.0191069   0.0282218  -0.0329312   0.0126004   0.0155151   0.0067983  -0.0000027
+                      -0.2049883  -0.0949382
+ a0a 0 0 0 a b a       0.0168271   0.1736186  -0.0908648   0.1584959  -0.1076227  -0.1898688  -0.0000053
+                      -0.2049588  -0.0947025
+ aba 0 0 a a 0 0      -0.1775670  -0.0084266  -0.1931142  -0.0245664   0.0932500  -0.0002860  -0.0000069
+                       0.0000985   0.0003435
+ b0a 0 a a 0 0 a       0.1204845   0.0021583  -0.1931105   0.0776082  -0.0481657   0.1362410  -0.0000130
+                       0.0000401   0.0001122
+ aab 0 a 0 0 a 0      -0.1096673   0.1630916   0.1270172  -0.1827102  -0.0483134   0.0162967   0.0000072
+                      -0.1917826   0.1403436
+ a0b a 0 a 0 a 0      -0.0952973  -0.0014799   0.0568684   0.1077818  -0.1218342   0.1217115   0.0000111
+                       0.0929326   0.1888794
+ aa0 a 0 a 0 b 0      -0.1313242   0.0749874   0.0356008   0.1882937   0.0361277   0.1668440  -0.0000050
+                      -0.1637621  -0.1757880
+ a0a a 0 b 0 a 0      -0.0958708   0.0087913   0.0579478   0.0490086  -0.1353889   0.0985493   0.0000111
+                      -0.0467244  -0.1855928
+ aa0 0 a a 0 0 b       0.1243599   0.0881749  -0.0949548  -0.1053974  -0.1342853   0.1654016   0.0000051
+                      -0.1851356   0.1528469
+ a0a 0 a b 0 0 a      -0.0954647  -0.0173077   0.1400745  -0.0669974   0.0021050  -0.0980615   0.0000111
+                       0.0703914  -0.1778426
+ a0b 0 a a 0 0 a      -0.0959208  -0.0073196   0.1601098  -0.0383317   0.0512744  -0.1207312   0.0000110
+                      -0.1167600   0.1751983
+ b0a a 0 a 0 a 0       0.1192487   0.0087300  -0.0612496  -0.1092048   0.1733692  -0.1373379  -0.0000131
+                       0.0000997   0.0002811
+ a20 a 0 0 0 0 a      -0.0169363  -0.0293246   0.0408427   0.0046525  -0.0197176  -0.0117135  -0.0000020
+                       0.1634373   0.0112413
+ aa0 a 0 b 0 a 0      -0.1078945   0.1117101   0.1137868   0.1553154   0.0119372   0.1633270   0.0000073
+                       0.0028373  -0.1514413
+ a20 0 a 0 0 a 0       0.0195037  -0.0275816  -0.0402535  -0.0054032   0.0201659  -0.0120375   0.0000020
+                       0.1631464   0.0101394
+ aa0 0 a b 0 0 a       0.0976865   0.1222968  -0.1443755  -0.1131771  -0.0615802   0.1618231  -0.0000072
+                      -0.0168291   0.1504827
+ a0a 0 a a 0 0 b      -0.1030959   0.0071710   0.1261263  -0.0659969   0.0527530  -0.0911905   0.0000032
+                       0.0462904   0.0025876
+ a0a a 0 a 0 b 0      -0.1011825  -0.0165291   0.0202036   0.0839362  -0.1250868   0.0917556   0.0000032
+                      -0.0463031  -0.0035101
+ a00 0 a 0 0 a 2       0.0056078  -0.0260108  -0.0022984  -0.0297979   0.0421773   0.0300357  -0.0000047
+                       0.0927301   0.0052837
+ a00 a 0 0 0 2 a      -0.0032813  -0.0264617   0.0400764  -0.0245666   0.0215196   0.0302803   0.0000047
+                       0.0925638   0.0066707
+ a00 0 0 a a 2 0       0.0252776  -0.0079355  -0.0194707  -0.0458561  -0.0132200  -0.0302857  -0.0000053
+                       0.0411868   0.0834318
+ a00 0 a 2 0 a 0      -0.0210392   0.0159671   0.0181573   0.0353740  -0.0329462   0.0301456   0.0000027
+                      -0.0409940  -0.0828343
+ a00 0 0 a a 0 2      -0.0245037  -0.0104748   0.0275647   0.0344831   0.0266723  -0.0297412   0.0000053
+                       0.0519071  -0.0773174
+ a00 a 0 2 0 0 a       0.0196606   0.0179497  -0.0481602   0.0072038  -0.0173035   0.0298460  -0.0000027
+                      -0.0515161   0.0767453
+ 20a 0 0 a a 0 0       0.0514739   0.0024018   0.0086489   0.0011418  -0.0039732  -0.0000365   0.0000003
+                      -0.0000300   0.0001118
+
+ TOTAL ENERGIES                      -948.08890464  -948.08888512  -948.08396936
+                                     -948.08394758  -948.08392491  -948.07814750
+                                     -948.05290259  -948.03880819  -948.03878747
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      24       80.71       500      610      700      900      950      970     1000      129      960     1700   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS    OPER   
+                                         1101     1401     1411     1412     1650     1100     1400     1410     1200     1210   
+                                          SR      EKINR    POTR     PVPR    MOLCAS      S      EKIN      POT      H0       H01  
+                                         1300     1080     1600     1380   
+                                         ERIS     AOSYM     SMH     JKOP   
+
+              2       6        7.94       200      700     1000      520     4202     5202   
+                                        OPTIONS   GEOM     BASIS   MCVARS     RHF     MCSCF   
+
+ PROGRAMS   *        TOTAL     MULTI       RHF       INT
+ CPU TIMES  *        19.90     10.70      0.64      8.43
+ REAL TIME  *        25.76 SEC
+ DISK USED  *       294.63 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="10:53:15" end="10:53:31" cpu="10.7" system="3.34" real="15.66"/>
+   <storage units="megabyte" memory="4097.84" sf="0.0" df="294.63" eaf="0.0"/>
+  </jobstep><!--
+ SETTING SCF(9)         =      -948.08889789  HARTREE                         
+ SETTING SCF(10)        =      -948.08396898  HARTREE                         
+ SETTING SCF(11)        =      -948.08394455  HARTREE                         
+ SETTING SCF(12)        =      -948.07816395  HARTREE                         
+ SETTING SCF(13)        =      -948.07814857  HARTREE                         
+ SETTING SCF(14)        =      -948.03881080  HARTREE                         
+ SETTING SCF(15)        =      -948.03879841  HARTREE                         
+ SETTING SCF(16)        =      -948.08889994  HARTREE                         
+ SETTING SCF(17)        =      -948.08396616  HARTREE                         
+ SETTING SCF(18)        =      -948.08392613  HARTREE                         
+ SETTING SCF(19)        =      -948.07816573  HARTREE                         
+ SETTING SCF(20)        =      -948.07810487  HARTREE                         
+ SETTING SCF(21)        =      -948.03881147  HARTREE                         
+ SETTING SCF(22)        =      -948.03879525  HARTREE                         
+ SETTING SCF(23)        =      -948.03876705  HARTREE                         
+ SETTING SCF(24)        =      -948.03489007  HARTREE                         
+ SETTING SCF(25)        =      -948.03487999  HARTREE                         
+ SETTING SCF(26)        =      -948.08891408  HARTREE                         
+ SETTING SCF(27)        =      -948.08396590  HARTREE                         
+ SETTING SCF(28)        =      -948.08393866  HARTREE                         
+ SETTING SCF(29)        =      -948.07815824  HARTREE                         
+ SETTING SCF(30)        =      -948.08890464  HARTREE                         
+ SETTING SCF(31)        =      -948.08888512  HARTREE                         
+ SETTING SCF(32)        =      -948.08396936  HARTREE                         
+ SETTING SCF(33)        =      -948.08394758  HARTREE                         
+ SETTING SCF(34)        =      -948.08392491  HARTREE                         
+ SETTING SCF(35)        =      -948.07814750  HARTREE                         
+ SETTING SCF(36)        =      -948.05290258  HARTREE                         
+ SETTING SCF(37)        =      -948.03880819  HARTREE                         
+ SETTING SCF(38)        =      -948.03878747  HARTREE                         
+ SETTING _CC_NORM_MAX   =         2.00000000                                  
+ Output type csv         
+                                                                                                                                                                                                                                                                
+
+ ERROR IN MAKETAB: STRING COLUMN "CCSD" SPECIFIED AFTER DATA COLUMN(S)
+
+        MULTI           RHF-SCF 
+   -948.03878747   -948.10157603
+ **********************************************************************************************************************************
+ Variable memory released
+  --><stm:metadataList>
+   <stm:metadata name="dc:date" content="2018-01-08T10:53:31-07:00"/>
+   <stm:metadata name="dc:creator" content="cmelton"/>
+   <stm:metadata name="dc:title" content="Calculation for Be atom, singlet and triplet"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList><!--
+  --><platform>
+   <version major="2012" minor="1" SHA="4c1979699e6aeda0524d0210415ba82a958648b0"
+     integer_bits="64" parallelism="serial">
+    2012.1
+    <date year="2018" month="1" day="8" hour="10" minute="53" second="6">
+     2018-01-08T10:53:06
+    </date>
+   </version>
+   <licence id="sandiacon"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
+   <machine hostname="doppio.sandia.gov" architecture="x86_64">
+    Linux-3.10.0-693.5.2.el7.x86_64/doppio.sandia.gov(x86_64) 64 bit serial version
+    <sysinfo name="cpu MHz" content="1499.941"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="cache size" content="22528 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform><!--
+  -->
+  <input>
+   <p> ***,Calculation for Be atom, singlet and triplet </p>
+   <p> memory,512,m </p>
+   <p> gthresh,twoint=1.e-12 </p>
+   <p> geometry={ </p>
+   <p> 1 </p>
+   <p> V </p>
+   <p> V  0.0 0.0 0.0 </p>
+   <p> } </p>
+   <p> basis={ </p>
+   <include file="/remote/cmelton/data/corrECP/V/ae/aug-cc-pwCVTZ-dk.basis"/>
+   <p> } </p>
+   <p> set,dkroll=1,dkho=10,dkhp=4 </p>
+   <include file="/remote/cmelton/data/corrECP/V/ae/states.proc"/>
+   <p> do i=9,9 </p>
+   <p>     if (i.eq.1) then </p>
+   <p>         Is2d3 </p>
+   <p>     else if (i.eq.2) then </p>
+   <p>         Is1d4 </p>
+   <p>     else if (i.eq.3) then </p>
+   <p>         Id5 </p>
+   <p>     else if (i.eq.4) then </p>
+   <p>         IIs1d3 </p>
+   <p>     else if (i.eq.5) then </p>
+   <p>         IId4 </p>
+   <p>     else if (i.eq.6) then </p>
+   <p>         VI </p>
+   <p>     else if (i.eq.7) then </p>
+   <p>         XII </p>
+   <p>     else if (i.eq.8) then </p>
+   <p>         As2d4 </p>
+   <p>     else if (i.eq.9) then </p>
+   <p>         Id3s1p1 </p>
+   <p>     endif </p>
+   <p>     scf(i)=energy </p>
+   <p>     _CC_NORM_MAX=2.0 </p>
+   <p>                                                                                 !    {rccsd(t),maxit=100;core} </p>
+   <p>                                                                                 !    ccsd(i)=energy </p>
+   <p> enddo </p>
+   <p> table,scf,ccsd </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

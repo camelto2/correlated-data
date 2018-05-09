@@ -1,0 +1,125 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Cu
+ Cu  0.0 0.0 0.0
+ }
+ 
+ basis={
+ 
+ ecp,Cu,10,2,0;
+ 3;1,6.25149628,19.00000000;3,6.72725326,118.77842940;2,6.61024592,-105.89982403;
+ 1;2,12.36568715,127.35069424;
+ 1;2,11.16072939,71.22984900;
+ }
+ 
+ Including file /remote/cmelton/data/corrECP/Cu/bfd/basis/states.proc
+ 
+ do i=1,16
+     if (i.eq.1) then
+         Is2d9
+     else if (i.eq.2) then
+         Is1dten
+     else if (i.eq.3) then
+         IIs1d9
+     else if (i.eq.4) then
+         IIdten
+     else if (i.eq.5) then
+         IIId9
+     else if (i.eq.6) then
+         IVd8
+     else if (i.eq.7) then
+         Vd7
+     else if (i.eq.8) then
+         VId6
+     else if (i.eq.9) then
+         VIId5
+     else if (i.eq.10) then
+         VIIId4
+     else if (i.eq.11) then
+         IXd3
+     else if (i.eq.12) then
+         Xd2
+     else if (i.eq.13) then
+         XId1
+     else if (i.eq.14) then
+         XII
+     else if (i.eq.15) then
+         XVIII
+     else if (i.eq.16) then
+         As2dten
+     endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.10 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.11.6.el7.x86_64/breve.sandia.gov(x86_64) 64 bit serial version         DATE: 25-Jan-18          TIME: 13:26:53  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+ DO I                   =         1.00000000   
+
+ Running procedure=IS2D9
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+ Cannot find default basis USERDEF for atom Cu
+
+ Please specify a default basis or define basis sets for all atoms!

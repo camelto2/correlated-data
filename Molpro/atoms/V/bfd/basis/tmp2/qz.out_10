@@ -1,0 +1,123 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ gthresh,twoint=1.e-12
+ geometry={
+ 1
+ V
+ V  0.0 0.0 0.0
+ }
+ 
+ basis={
+ ecp,V,10,2,0;
+ 3;1,2.16361754,13.00000000;3,4.07901780,28.12702797;2,3.21436396,-48.27656329;
+ 1;2,8.44326050,96.23226580;
+ 1;2,6.53136059,41.58043539;
+                                                    !s,V,18.360298,11.577461,6.390046,1.528787,0.728830,0.349741,0.084685,0.031952;
+                                                  !c,1.8,-0.023212,0.200288,-0.554320,0.565283,0.543474,0.134989,0.008039,0.002293;
+                                                !c,1.8,0.002873,-0.043911,0.144148,-0.165823,-0.313756,-0.055699,0.717312,0.416763;
+                                               !c,1.8,-0.031819,-0.046029,0.462693,-1.442433,-0.000277,1.287516,0.431527,-1.042715;
+                                                !c,1.8,0.122350,-0.172159,-0.404415,3.033929,-3.605592,0.680494,1.789742,-1.637100;
+                                                 !c,1.8,0.682255,-1.805171,1.265422,2.580047,-6.324731,5.377920,-2.862113,1.455052;
+                                                                                 !s,V,0.016000;
+                                                              !p,V,13.883264,6.174000,4.772897,2.182411,1.049492,0.492680,0.206309;
+                                                            !c,1.7,0.003648,-0.175046,0.155473,0.346594,0.443410,0.263803,0.042826;
+                                                         !c,1.7,-0.004258,0.186132,-0.192145,-0.384477,-0.232167,0.303537,0.264620;
+                                                         !c,1.7,0.007159,-0.382858,0.418004,0.934866,-0.287782,-0.927823,-0.149248;
+                                                        !c,1.7,-0.029428,1.279254,-1.988262,-0.569290,2.090593,-0.734301,-1.405388;
+                                                          !c,1.7,0.023729,1.948424,-4.240938,2.998392,-0.327057,-2.200438,2.902526;
+                                                                                 !p,V,0.100000;
+                                                                        !d,V,7.384196,3.350355,1.398721,0.571472,0.223722,0.081466;
+                                                                      !c,1.6,0.067593,0.246802,0.336404,0.349348,0.260107,0.096334;
+                                                                   !c,1.6,-0.063942,-0.348023,-0.366609,0.116939,0.488920,0.364762;
+                                                                 !c,1.6,-0.044709,-0.597343,-0.033960,0.882317,-0.129939,-0.587769;
+                                                                  !c,1.6,-0.232991,-0.893533,1.453019,-0.429664,-0.653894,0.637078;
+                                                                                 !d,V,0.040000;
+                                                                                 !f,V,0.609615;
+                                                                                 !f,V,2.266045;
+                                                                                 !f,V,4.034968;
+                                                                                 !g,V,1.862300;
+                                                                                 !g,V,4.493135;
+                                                                                 !h,V,2.943397;
+ s,V,18.360298,11.577461,6.390046,1.528787,0.728830,0.349741,0.084685,0.031952;
+ s,V,0.016000;
+ p,V,13.883264,6.174000,4.772897,2.182411,1.049492,0.492680,0.206309;
+ p,V,0.100000;
+ d,V,7.384196,3.350355,1.398721,0.571472,0.223722,0.081466;
+ d,V,0.040000;
+ f,V,0.609615;
+ f,V,2.266045;
+ f,V,4.034968;
+ g,V,1.862300;
+ g,V,4.493135;
+ h,V,2.943397;
+ }
+ 
+ 
+ Including file /remote/cmelton/data/corrECP/V/bfd/basis/tmp2/states.proc
+ dfunc,pbe0
+ do i=1,2
+     if (i.eq.1) then
+         IIs1d3
+     else if (i.eq.2) then
+         IId4
+     end if
+     scf(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.26 sec
+
+ Checking input...
+
+ Unknown directive START for command DFT
+
+ Unknown directive WF for command DFT
+
+ Unknown directive OCC for command DFT
+
+ Unknown directive OPEN for command DFT
+
+ Unknown directive SYM for command DFT
+
+ Unknown directive START for command DFT
+
+ Unknown directive WF for command DFT
+
+ Unknown directive OCC for command DFT
+
+ Unknown directive OPEN for command DFT
+
+ Unknown directive SYM for command DFT
+
+ Unknown directive ORBITAL for command DFT
+
+   11 input errors found
+
+ ? Error
+ ? Input errors!
+ ? The problem occurs in check_input

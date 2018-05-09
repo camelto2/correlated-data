@@ -1,0 +1,27 @@
+proc As2d4
+{rhf
+ start,atden
+ wf,24,4,4
+ occ,6,2,2,0,2,1,1,0
+ open,5.1,6.1,1.6,1.7
+ sym,1,1,1,1,1
+ orbital,4202.2
+}
+{multi
+ start,4202.2
+ occ,6,2,2,1,2,1,1,0
+ closed,4,2,2,0,2,0,0
+ wf,24,1,4;state,2
+ wf,24,4,4;state,1
+ wf,24,6,4;state,1
+ wf,24,7,4;state,1
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,24,4,4
+ occ,6,2,2,0,2,1,1,0
+ open,5.1,6.1,1.6,1.7
+}
+endproc

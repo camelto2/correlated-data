@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Fe
+ Fe  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /remote/cmelton/data/corrECP/Fe/ae/dkh/basis/aug-cc-pwCVTZ-dk.basis
+ }
+ 
+ set,dkroll=1,dkho=10,dkhp=4
+ 
+ Including file /remote/cmelton/data/corrECP/Fe/ae/dkh/basis/states.proc
+ Including file /remote/cmelton/data/corrECP/Fe/ae/dkh/basis/aug-cc-pwCVTZ-dk.basis
+ Including file /remote/cmelton/data/corrECP/Fe/ae/dkh/basis/aug-cc-pwCVQZ-dk.basis
+ 
+ do i=9,9
+ if (i.eq.1) then
+     Is2d6
+ else if (i.eq.2) then
+     Is1d7
+ else if (i.eq.3) then
+     Id8
+ else if (i.eq.4) then
+     IIs1d6
+ else if (i.eq.5) then
+     IId7
+ else if (i.eq.6) then
+     IX
+ else if (i.eq.7) then
+     XV
+ else if (i.eq.8) then
+     As2d7
+ else if (i.eq.9) then
+     Id6s1p1
+ endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.11 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.11.6.el7.x86_64/breve.sandia.gov(x86_64) 64 bit serial version         DATE: 09-Jan-18          TIME: 14:40:32  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING DKROLL         =         1.00000000                                  
+ SETTING DKHO           =        10.00000000                                  
+ SETTING DKHP           =         4.00000000                                  
+
+ DO I                   =         9.00000000   
+
+ Running procedure=ID6S1P1
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Atom
+ Symmetry elements: X,Y,Z
+ Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+   --><cml:symmetry pointGroup="D2h"/><!--
+   --><cml:atomArray>
+    <cml:atom id="a1" elementType="Fe" x3="0.0" y3="0.0" z3="0.0"/>
+   </cml:atomArray><!--
+   --><cml:bondArray>
+   </cml:bondArray><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  FE     26.00    0.000000000    0.000000000    0.000000000
+
+ NUCLEAR CHARGE:                   26
+ NUMBER OF PRIMITIVE AOS:         231
+ NUMBER OF SYMMETRY AOS:          190
+ NUMBER OF CONTRACTIONS:          190   (  54Ag  +  27B3u +  27B2u +  17B1g +  27B1u +  17B2g +  17B3g +   4Au  )
+ NUMBER OF CORE ORBITALS:           9   (   3Ag  +   2B3u +   2B2u +   0B1g +   2B1u +   0B2g +   0B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        6   (   3Ag  +   0B3u +   0B2u +   1B1g +   0B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY    0.00000000
+
+ One-electron integrals computed with SEWARD
+
+ 10nd-order Douglas-Kroll-Hess method activated. McWeeny DKH parametrization is used.
+
+ Computing Douglas-Kroll integrals
+
+   --><error/><!--
+  --></jobstep><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2018-01-09T14:40:33-07:00"/>
+   <stm:metadata name="dc:creator" content="cmelton"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <version major="2012" minor="1" SHA="4c1979699e6aeda0524d0210415ba82a958648b0"
+     integer_bits="64" parallelism="serial">
+    2012.1
+    <date year="2018" month="1" day="9" hour="14" minute="40" second="32">
+     2018-01-09T14:40:32
+    </date>
+   </version>
+   <licence id="sandiacon"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
+   <machine hostname="breve.sandia.gov" architecture="x86_64">
+    Linux-3.10.0-693.11.6.el7.x86_64/breve.sandia.gov(x86_64) 64 bit serial version
+    <sysinfo name="cpu MHz" content="1165.664"/>
+    <sysinfo name="MemTotal" content="394697952 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_pt spec_ctrl ibpb_support tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req"/>
+    <sysinfo name="MemTotal" content="394697952 kB"/>
+    <sysinfo name="cache size" content="22528 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for Be atom, singlet and triplet </p>
+   <p> memory,512,m </p>
+   <p> geometry={ </p>
+   <p> 1 </p>
+   <p> Fe </p>
+   <p> Fe  0.0 0.0 0.0 </p>
+   <p> } </p>
+   <p> basis={ </p>
+   <include file="/remote/cmelton/data/corrECP/Fe/ae/dkh/basis/aug-cc-pwCVTZ-dk.basis"/>
+   <p> } </p>
+   <p> set,dkroll=1,dkho=10,dkhp=4 </p>
+   <include file="/remote/cmelton/data/corrECP/Fe/ae/dkh/basis/states.proc"/>
+   <include file="/remote/cmelton/data/corrECP/Fe/ae/dkh/basis/aug-cc-pwCVTZ-dk.basis"/>
+   <include file="/remote/cmelton/data/corrECP/Fe/ae/dkh/basis/aug-cc-pwCVQZ-dk.basis"/>
+   <p> do i=9,9 </p>
+   <p> if (i.eq.1) then </p>
+   <p>     Is2d6 </p>
+   <p> else if (i.eq.2) then </p>
+   <p>     Is1d7 </p>
+   <p> else if (i.eq.3) then </p>
+   <p>     Id8 </p>
+   <p> else if (i.eq.4) then </p>
+   <p>     IIs1d6 </p>
+   <p> else if (i.eq.5) then </p>
+   <p>     IId7 </p>
+   <p> else if (i.eq.6) then </p>
+   <p>     IX </p>
+   <p> else if (i.eq.7) then </p>
+   <p>     XV </p>
+   <p> else if (i.eq.8) then </p>
+   <p>     As2d7 </p>
+   <p> else if (i.eq.9) then </p>
+   <p>     Id6s1p1 </p>
+   <p> endif </p>
+   <p>     scf(i)=energy </p>
+   <p>     _CC_NORM_MAX=2.0 </p>
+   <p>     {rccsd(t),maxit=100;core} </p>
+   <p>     ccsd(i)=energy </p>
+   <p> enddo </p>
+   <p> table,scf,ccsd </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

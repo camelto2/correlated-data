@@ -1,0 +1,179 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Cu
+ Cu  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /remote/cmelton/data/corrECP/Cu/ae/nr/basis/aug-cc-pwCV5Z-dk.basis
+ }
+ 
+ Including file /remote/cmelton/data/corrECP/Cu/ae/nr/basis/states.proc
+ 
+ do i=1,16
+     if (i.eq.1) then
+         Is2d9
+     else if (i.eq.2) then
+         Is1dten
+     else if (i.eq.3) then
+         IIs1d9
+     else if (i.eq.4) then
+         IIdten
+     else if (i.eq.5) then
+         IIId9
+     else if (i.eq.6) then
+         IVd8
+     else if (i.eq.7) then
+         Vd7
+     else if (i.eq.8) then
+         VId6
+     else if (i.eq.9) then
+         VIId5
+     else if (i.eq.10) then
+         VIIId4
+     else if (i.eq.11) then
+         IXd3
+     else if (i.eq.12) then
+         Xd2
+     else if (i.eq.13) then
+         XId1
+     else if (i.eq.14) then
+         XII
+     else if (i.eq.15) then
+         XVIII
+     else if (i.eq.16) then
+         As2dten
+     endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.20 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.11.6.el7.x86_64/breve.sandia.gov(x86_64) 64 bit serial version         DATE: 18-Jan-18          TIME: 15:14:54  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+ DO I                   =         1.00000000   
+
+ Running procedure=IS2D9
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Atom
+ Symmetry elements: X,Y,Z
+ Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  CU     29.00    0.000000000    0.000000000    0.000000000
+
+ NUCLEAR CHARGE:                   29
+ NUMBER OF PRIMITIVE AOS:         493
+ NUMBER OF SYMMETRY AOS:          345
+ NUMBER OF CONTRACTIONS:          345   (  88Ag  +  47B3u +  47B2u +  34B1g +  47B1u +  34B2g +  34B3g +  14Au  )
+ NUMBER OF CORE ORBITALS:           9   (   3Ag  +   2B3u +   2B2u +   0B1g +   2B1u +   0B2g +   0B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        6   (   3Ag  +   0B3u +   0B2u +   1B1g +   0B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY    0.00000000
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 2 3 2 3 2 3 2 3 2
+                                        3 2 3 2 3 2 3 2 3 2   3 2 3 2 3 2 3 2 3 2   3 4 5 6 4 5 6 4 5 6   4 5 6 4 5 6 7 8 910
+                                        7 8 910 7 8 910
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5
+                                        6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5
+                                        6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5   6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 5:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5
+                                        6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 6:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5   6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 7:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5   6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 8:   1 1 1 1 1 1 2 3 2 3   2 3 2 3
+
+ Eigenvalues of metric
+
+         1 0.123E-08 0.878E-06 0.542E-05 0.542E-05 0.322E-04 0.115E-03 0.293E-03 0.335E-03
+         2 0.524E-09 0.684E-06 0.204E-03 0.819E-03 0.235E-02 0.539E-02 0.121E-01 0.226E-01
+         3 0.524E-09 0.684E-06 0.204E-03 0.819E-03 0.235E-02 0.539E-02 0.121E-01 0.226E-01
+         4 0.542E-05 0.335E-03 0.510E-02 0.158E-01 0.410E-01 0.798E-01 0.798E-01 0.825E-01
+         5 0.524E-09 0.684E-06 0.204E-03 0.819E-03 0.235E-02 0.539E-02 0.121E-01 0.226E-01
+         6 0.542E-05 0.335E-03 0.510E-02 0.158E-01 0.410E-01 0.798E-01 0.798E-01 0.825E-01
+         7 0.542E-05 0.335E-03 0.510E-02 0.158E-01 0.410E-01 0.798E-01 0.798E-01 0.825E-01
+         8 0.637E-01 0.160E+00 0.160E+00 0.229E+00 0.491E+00 0.498E+00 0.498E+00 0.103E+01
+
+ ERROR: BASIS LINEARLY DEPENDENT OR WRONG S
+
+ The current threshold for the smallest tolerated eigenvalue of S is   1.0D-08
+
+ This threshold can be changed with  GTHRESH,THROVL=value, but values smaller than 1.d-8
+ are normally not recommended and can cause numerical problems.

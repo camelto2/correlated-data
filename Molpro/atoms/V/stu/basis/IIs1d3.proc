@@ -1,0 +1,30 @@
+proc IIs1d3
+{rhf
+ start,atden
+ print,orbitals=2
+ wf,22,6,4
+ occ,6,2,2,0,2,1,0,0
+ open,4.1,5.1,6.1,1.6
+ sym,1,1,1,1,1
+ orbital,4202.2
+}
+pop
+{multi
+ start,4202.2
+ occ,6,2,2,1,2,1,1,0
+ closed,3,2,2,0,2,0,0
+ wf,22,1,4;state,3;
+ wf,22,4,4;state,4;
+ wf,22,6,4;state,4;
+ wf,22,7,4;state,4;
+ natorb,ci,print
+ orbital,5202.2
+}
+{rhf,nitord=1,maxit=0
+ start,5202.2
+ wf,22,1,4
+ rotate,4.1,6.1
+ occ,4,2,2,1,2,1,1,0
+ open,4.1,1.4,1.6,1.7
+}
+endproc

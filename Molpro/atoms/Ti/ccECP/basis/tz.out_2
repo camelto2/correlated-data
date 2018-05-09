@@ -1,0 +1,95 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ gthresh,twoint=1.e-12
+ geometry={
+ 1
+ Ti
+ Ti  0.0 0.0 0.0
+ }
+ 
+ basis={
+ ecp,Ti,10,2,0
+ 4;
+ 1,18.4136620219015, 12.000;
+ 3,15.9229241431747, 220.963944262818;
+ 2,13.6500062313789,-94.2902582468396;
+ 2,5.09555210570440, 0.09791142482269;
+ 2;
+ 2,12.7058061392361, 173.946572359300;
+ 2,6.11178551988263, 18.8376833381235;
+ 2;
+ 2,12.6409192965191, 111.456728820122;
+ 2,5.35437415684267, 11.1770268268982;
+ Including file /remote/cmelton/data/corrECP/Ti/gani_cc45/basis/aug-cc-pwCV5Z-dk.basis
+ }
+ 
+ 
+ Including file /remote/cmelton/data/corrECP/Ti/gani_cc45/basis/states.proc
+ 
+ do i=11,11
+    if (i.eq.1) then
+       Is2d2
+    else if (i.eq.2) then
+       Is1d3
+    else if (i.eq.3) then
+       Id4
+    else if (i.eq.4) then
+       IIs1d2
+    else if (i.eq.5) then
+       IId3
+    else if (i.eq.6) then
+       IIId2
+    else if (i.eq.7) then
+       IVd1
+    else if (i.eq.8) then
+       V
+    else if (i.eq.9) then
+       XI
+    else if (i.eq.10) then
+       As2d3
+    else if (i.eq.11) then
+       VIp5
+    end if
+    scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.00 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.14 sec
+
+ Checking input...
+
+ Unknown command or directive VIP5
+
+    1 input errors found
+
+ ? Error
+ ? Input errors!
+ ? The problem occurs in check_input

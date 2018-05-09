@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+  GTHRESH,THROVL=1.d-10
+ gthresh,twoint=1.e-12
+ geometry={
+ 1
+ Mn
+ Mn  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /remote/cmelton/data/corrECP/Mn/ae/nr/basis/aug-cc-pwCV5Z-dk.basis
+ }
+ 
+ set,dkroll=1,dkho=10,dkhp=4
+ 
+ do i=1,13
+    if (i.eq.1) then
+       Is2d5
+    else if (i.eq.2) then
+       Is1d6
+    else if (i.eq.3) then
+       Id7
+    else if (i.eq.4) then
+       IIs1d5
+    else if (i.eq.5) then
+       IId6
+    else if (i.eq.6) then
+       IIId5
+    else if (i.eq.7) then
+       IVd4
+    else if (i.eq.8) then
+       Vd3
+    else if (i.eq.9) then
+       VId2
+    else if (i.eq.10) then
+       VIId1
+    else if (i.eq.11) then
+       VIII
+    else if (i.eq.12) then
+       XIV
+    else if (i.eq.13) then
+       As2d6
+    endif
+    scf=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.10 sec
+
+ Checking input...
+
+ Unknown command or directive IS2D5
+
+ Unknown command or directive IS1D6
+
+ Unknown command or directive ID7
+
+ Unknown command or directive IIS1D5
+
+ Unknown command or directive IID6
+
+ Unknown command or directive IIID5
+
+ Unknown command or directive IVD4
+
+ Unknown command or directive VD3
+
+ Unknown command or directive VID2
+
+ Unknown command or directive VIID1
+
+ Unknown command or directive VIII
+
+ Unknown command or directive XIV
+
+ Unknown command or directive AS2D6
+
+   13 input errors found
+
+ ? Error
+ ? Input errors!
+ ? The problem occurs in check_input
+  --><error type="Error" location="check_input" message="Input errors!"/><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2018-01-16T11:27:19-07:00"/>
+   <stm:metadata name="dc:creator" content="cmelton"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <licence id="sandiacon"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="0"/>
+   <machine hostname="" architecture="">
+    
+    <sysinfo name="cpu MHz" content="1499.941"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="cache size" content="22528 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for Be atom, singlet and triplet </p>
+   <p> memory,512,m </p>
+   <p>  GTHRESH,THROVL=1.d-10 </p>
+   <p> gthresh,twoint=1.e-12 </p>
+   <p> geometry={ </p>
+   <p> 1 </p>
+   <p> Mn </p>
+   <p> Mn  0.0 0.0 0.0 </p>
+   <p> } </p>
+   <p> basis={ </p>
+   <include file="/remote/cmelton/data/corrECP/Mn/ae/nr/basis/aug-cc-pwCV5Z-dk.basis"/>
+   <p> } </p>
+   <p> set,dkroll=1,dkho=10,dkhp=4 </p>
+   <p> do i=1,13 </p>
+   <p>    if (i.eq.1) then </p>
+   <p>       Is2d5 </p>
+   <p>    else if (i.eq.2) then </p>
+   <p>       Is1d6 </p>
+   <p>    else if (i.eq.3) then </p>
+   <p>       Id7 </p>
+   <p>    else if (i.eq.4) then </p>
+   <p>       IIs1d5 </p>
+   <p>    else if (i.eq.5) then </p>
+   <p>       IId6 </p>
+   <p>    else if (i.eq.6) then </p>
+   <p>       IIId5 </p>
+   <p>    else if (i.eq.7) then </p>
+   <p>       IVd4 </p>
+   <p>    else if (i.eq.8) then </p>
+   <p>       Vd3 </p>
+   <p>    else if (i.eq.9) then </p>
+   <p>       VId2 </p>
+   <p>    else if (i.eq.10) then </p>
+   <p>       VIId1 </p>
+   <p>    else if (i.eq.11) then </p>
+   <p>       VIII </p>
+   <p>    else if (i.eq.12) then </p>
+   <p>       XIV </p>
+   <p>    else if (i.eq.13) then </p>
+   <p>       As2d6 </p>
+   <p>    endif </p>
+   <p>    scf=energy </p>
+   <p>     _CC_NORM_MAX=2.0 </p>
+   <p>     {rccsd(t),maxit=100;core} </p>
+   <p>     ccsd(i)=energy </p>
+   <p> enddo </p>
+   <p> table,scf,ccsd </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

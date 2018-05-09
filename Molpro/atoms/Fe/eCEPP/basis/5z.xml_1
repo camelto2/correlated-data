@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Fe
+ Fe  0.0 0.0 0.0
+ }
+ 
+ basis={
+ ECP,Fe,10,3,0;
+ 1; 2,1.000000,0.000000;
+ 2; 2,20.930000,253.749588; 2,9.445000,37.922845;
+ 2; 2,21.760000,161.036812; 2,9.178000,27.651298;
+ 2; 2,25.900000,-24.431276; 2,8.835000,-1.434251;
+ Including file /remote/cmelton/data/corrECP/Fe/stu87/basis/aug-cc-pwCV5Z-dk.basis
+ }
+ 
+ Including file /remote/cmelton/data/corrECP/Fe/stu87/basis/states.proc
+ Including file /remote/cmelton/data/corrECP/Fe/stu87/basis/aug-cc-pwCVTZ-dk.basis
+ Including file /remote/cmelton/data/corrECP/Fe/stu87/basis/aug-cc-pwCVQZ-dk.basis
+ 
+ do i=1,14
+ if (i.eq.1) then
+     Is2d6
+ else if (i.eq.2) then
+     Is1d7
+ else if (i.eq.3) then
+     Id8
+ else if (i.eq.4) then
+     IIs1d6
+ else if (i.eq.5) then
+     IId7
+ else if (i.eq.6) then
+     IX
+ else if (i.eq.7) then
+     XV
+ else if (i.eq.8) then
+     As2d7
+ else if (i.eq.9) then
+     IIId6
+ else if (i.eq.10) then
+     IVd5
+ else if (i.eq.11) then
+     Vd4
+ else if (i.eq.12) then
+     VId3
+ else if (i.eq.13) then
+     VIId2
+ else if (i.eq.14) then
+     VIIId1
+ endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.12 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.11.6.el7.x86_64/breve.sandia.gov(x86_64) 64 bit serial version         DATE: 15-Jan-18          TIME: 12:25:00  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+ DO I                   =         1.00000000   
+
+ Running procedure=IS2D6
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Atom
+ Symmetry elements: X,Y,Z
+ Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+   --><cml:symmetry pointGroup="D2h"/><!--
+   --><cml:atomArray>
+    <cml:atom id="a1" elementType="Fe" x3="0.0" y3="0.0" z3="0.0"/>
+   </cml:atomArray><!--
+   --><cml:bondArray>
+   </cml:bondArray><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  FE     16.00    0.000000000    0.000000000    0.000000000
+
+ NUCLEAR CHARGE:                   16
+ NUMBER OF PRIMITIVE AOS:         464
+ NUMBER OF SYMMETRY AOS:          331
+ NUMBER OF CONTRACTIONS:          331   (  83Ag  +  47B3u +  47B2u +  31B1g +  47B1u +  31B2g +  31B3g +  14Au  )
+ NUMBER OF CORE ORBITALS:           4   (   1Ag  +   1B3u +   1B2u +   0B1g +   1B1u +   0B2g +   0B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        6   (   3Ag  +   0B3u +   0B2u +   1B1g +   0B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY    0.00000000
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   2 3 2 3 2 3 2 3 2 3
+                                        2 3 2 3 2 3 2 3 2 3   2 3 2 3 2 3 2 3 2 3   4 5 6 4 5 6 4 5 6 4   5 6 4 5 6 7 8 910 7
+                                        8 910
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5
+                                        6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5
+                                        6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5   6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 5:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 2 3 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5
+                                        6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 6:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5   6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 7:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 4 5 6 4 5   6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 8:   1 1 1 1 1 1 2 3 2 3   2 3 2 3
+
+ Eigenvalues of metric
+
+         1 0.306E-06 0.642E-05 0.642E-05 0.350E-04 0.111E-03 0.278E-03 0.471E-03 0.471E-03
+         2 0.608E-07 0.929E-06 0.225E-03 0.817E-03 0.228E-02 0.521E-02 0.118E-01 0.197E-01
+         3 0.608E-07 0.929E-06 0.225E-03 0.817E-03 0.228E-02 0.521E-02 0.118E-01 0.197E-01
+         4 0.642E-05 0.471E-03 0.669E-02 0.209E-01 0.496E-01 0.914E-01 0.914E-01 0.971E-01
+         5 0.608E-07 0.929E-06 0.225E-03 0.817E-03 0.228E-02 0.521E-02 0.118E-01 0.197E-01
+         6 0.642E-05 0.471E-03 0.669E-02 0.209E-01 0.496E-01 0.914E-01 0.914E-01 0.971E-01
+         7 0.642E-05 0.471E-03 0.669E-02 0.209E-01 0.496E-01 0.914E-01 0.914E-01 0.971E-01
+         8 0.685E-01 0.198E+00 0.198E+00 0.243E+00 0.507E+00 0.543E+00 0.543E+00 0.104E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-13
+ AO integral compression algorithm  1   Integral accuracy      1.0D-13

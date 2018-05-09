@@ -1,0 +1,111 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ gthresh,twoint=1.e-12
+ geometry={
+ 1
+ V
+ V  0.0 0.0 0.0
+ }
+ 
+ basis={
+ ecp,V,10,2,0;
+ 3;1,2.16361754,13.00000000;3,4.07901780,28.12702797;2,3.21436396,-48.27656329;
+ 1;2,8.44326050,96.23226580;
+ 1;2,6.53136059,41.58043539;
+ s,V,18.360298,11.577461,6.390046,1.528787,0.728830,0.349741,0.084685,0.031952;
+ s,V,0.016000;
+ p,V,13.883264,6.174000,4.772897,2.182411,1.049492,0.492680,0.206309;
+ p,V,0.100000;
+ d,V,7.384196,3.350355,1.398721,0.571472,0.223722,0.081466;
+ d,V,0.040000;
+ f,V,0.609615;
+ f,V,2.266045;
+ f,V,4.034968;
+ g,V,1.862300;
+ g,V,4.493135;
+ h,V,2.943397;
+ }
+ 
+ 
+ Including file /remote/cmelton/data/corrECP/V/bfd/basis/tmp2/states.proc
+ 
+ do i=4,5
+     if (i.eq.1) then
+         Is2d3
+     else if (i.eq.2) then
+         Is1d4
+     else if (i.eq.3) then
+         Id5
+     else if (i.eq.4) then
+         IIs1d3
+     else if (i.eq.5) then
+         IId4
+     else if (i.eq.6) then
+         VI
+     else if (i.eq.7) then
+         XII
+     else if (i.eq.8) then
+         As2d4
+     else if (i.eq.9) then
+         IIId3
+     else if (i.eq.10) then
+         IVd2
+     else if (i.eq.11) then
+         Vd1
+     endif
+     scf(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.11 sec
+
+ Checking input...
+
+ Unknown command or directive IS2D3
+
+ Unknown command or directive IS1D4
+
+ Unknown command or directive ID5
+
+ Unknown command or directive VI
+
+ Unknown command or directive XII
+
+ Unknown command or directive AS2D4
+
+ Unknown command or directive IIID3
+
+ Unknown command or directive IVD2
+
+ Unknown command or directive VD1
+
+    9 input errors found
+
+ ? Error
+ ? Input errors!
+ ? The problem occurs in check_input

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ s, ZN , 1.87413E+08, 3.35127E+07, 7.50475E+06, 2.01787E+06, 628578.0000000, 220163.0000000, 84595.2000000, 34955.5000000, 15290.3000000, 6994.9300000, 3316.5900000, 1619.2400000, 810.3430000, 414.3930000, 216.0580000, 114.6350000, 61.7623000, 33.6924000, 18.5315000, 10.2144000, 5.5942800, 3.0096800, 1.5668400, 0.7814370, 0.2581180, 0.1385560, 0.0661710, 0.0309860, 3.9705000, 0.0145100
+ p, ZN , 110349.0000000, 26971.3000000, 8560.0700000, 3248.8000000, 1389.4100000, 643.0430000, 314.0050000, 159.4890000, 83.6662000, 45.1574000, 24.9630000, 14.0043000, 7.8326700, 4.2841000, 2.2890100, 1.1943600, 0.5942580, 0.2272730, 0.0901660, 0.0356510, 15.0735000, 4.7557000, 0.0141000
+ d, ZN , 926.9627000, 270.1065000, 102.9159000, 44.8868000, 21.0709200, 10.4233800, 5.3068920, 2.7032700, 1.3536570, 0.6588680, 0.3075040, 0.1332210, 11.6620000, 7.2916000, 0.0577200
+ f, ZN , 17.7978000, 7.9981000, 3.5942000, 1.6152000, 0.5673000, 0.1992500
+ g, ZN , 12.8657000, 6.4248000, 3.2084000, 1.2524000, 0.4888700
+ h, ZN , 11.1996000, 5.4804000, 2.3903000, 1.0425400
+ i, ZN , 11.0549000, 5.6334000, 2.8706900
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.09 sec
+
+ Checking input...
+
+ Unknown command or directive S
+
+ Unknown command or directive P
+
+ Unknown command or directive D
+
+ Unknown command or directive F
+
+ Unknown command or directive G
+
+ Unknown command or directive H
+
+ Unknown command or directive I
+
+    7 input errors found
+
+ ? Error
+ ? Input errors!
+ ? The problem occurs in check_input
+  --><error type="Error" location="check_input" message="Input errors!"/><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2018-01-19T10:48:49-07:00"/>
+   <stm:metadata name="dc:creator" content="cmelton"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <licence id="sandiacon"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="0"/>
+   <machine hostname="" architecture="">
+    
+    <sysinfo name="cpu MHz" content="1499.941"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="cache size" content="22528 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> s, ZN , 1.87413E+08, 3.35127E+07, 7.50475E+06, 2.01787E+06, 628578.0000000, 220163.0000000, 84595.2000000, 34955.5000000, 15290.3000000, 6994.9300000, 3316.5900000, 1619.2400000, 810.3430000, 414.3930000, 216.0580000, 114.6350000, 61.7623000, 33.6924000, 18.5315000, 10.2144000, 5.5942800, 3.0096800, 1.5668400, 0.7814370, 0.2581180, 0.1385560, 0.0661710, 0.0309860, 3.9705000, 0.0145100 </p>
+   <p> p, ZN , 110349.0000000, 26971.3000000, 8560.0700000, 3248.8000000, 1389.4100000, 643.0430000, 314.0050000, 159.4890000, 83.6662000, 45.1574000, 24.9630000, 14.0043000, 7.8326700, 4.2841000, 2.2890100, 1.1943600, 0.5942580, 0.2272730, 0.0901660, 0.0356510, 15.0735000, 4.7557000, 0.0141000 </p>
+   <p> d, ZN , 926.9627000, 270.1065000, 102.9159000, 44.8868000, 21.0709200, 10.4233800, 5.3068920, 2.7032700, 1.3536570, 0.6588680, 0.3075040, 0.1332210, 11.6620000, 7.2916000, 0.0577200 </p>
+   <p> f, ZN , 17.7978000, 7.9981000, 3.5942000, 1.6152000, 0.5673000, 0.1992500 </p>
+   <p> g, ZN , 12.8657000, 6.4248000, 3.2084000, 1.2524000, 0.4888700 </p>
+   <p> h, ZN , 11.1996000, 5.4804000, 2.3903000, 1.0425400 </p>
+   <p> i, ZN , 11.0549000, 5.6334000, 2.8706900 </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

@@ -1,0 +1,227 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes           nprocs
+ breve.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Ni
+ Ni  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /remote/cmelton/data/corrECP/Ni/ae/nr/basis/aug-cc-pwCVQZ-dk.basis
+ }
+ 
+ Including file /remote/cmelton/data/corrECP/Ni/ae/nr/basis/states.proc
+ 
+ do i=1,16
+     if (i.eq.1) then
+         Is2d8
+     else if (i.eq.2) then
+         Is1d9
+     else if (i.eq.3) then
+         Idten
+     else if (i.eq.4) then
+         IIs1d8
+     else if (i.eq.5) then
+         IId9
+     else if (i.eq.6) then
+         IIId8
+     else if (i.eq.7) then
+         IVd7
+     else if (i.eq.8) then
+         Vd6
+     else if (i.eq.9) then
+         VId5
+     else if (i.eq.10) then
+         VIId4
+     else if (i.eq.11) then
+         VIIId3
+     else if (i.eq.12) then
+         IXd2
+     else if (i.eq.13) then
+         Xd1
+     else if (i.eq.14) then
+         XI
+     else if (i.eq.15) then
+         XVII
+     else if (i.eq.16) then
+         As2d9
+     endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t),maxit=100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.06 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.11.6.el7.x86_64/breve.sandia.gov(x86_64) 64 bit serial version         DATE: 17-Jan-18          TIME: 12:19:17  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+ DO I                   =         1.00000000   
+
+ Running procedure=IS2D8
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Atom
+ Symmetry elements: X,Y,Z
+ Rotational constants:       0.0000000      0.0000000      0.0000000 GHz  (calculated with average atomic masses)
+
+ Point group  D2h 
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  NI     28.00    0.000000000    0.000000000    0.000000000
+
+ NUCLEAR CHARGE:                   28
+ NUMBER OF PRIMITIVE AOS:         345
+ NUMBER OF SYMMETRY AOS:          262
+ NUMBER OF CONTRACTIONS:          262   (  65Ag  +  40B3u +  40B2u +  22B1g +  40B1u +  22B2g +  22B3g +  11Au  )
+ NUMBER OF CORE ORBITALS:           9   (   3Ag  +   2B3u +   2B2u +   0B1g +   2B1u +   0B2g +   0B3g +   0Au  )
+ NUMBER OF VALENCE ORBITALS:        6   (   3Ag  +   0B3u +   0B2u +   1B1g +   0B1u +   1B2g +   1B3g +   0Au  )
+
+
+ NUCLEAR REPULSION ENERGY    0.00000000
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 3 2 3 2   3 2 3 2 3 2 3 2 3 2
+                                        3 2 3 2 3 2 3 2 3 2   3 2 3 4 5 6 4 5 6 4   5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 2 3 2 3 2 3 2 3 2   3 4 5 6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 2 3 2 3 2 3 2 3 2   3 4 5 6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 2 3 2 3 2 3   2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 5:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 2 3 2 3 2 3 2 3 2   3 4 5 6 4 5 6 4 5 6
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 6:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 2 3 2 3 2 3   2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 7:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 2 3 2 3 2 3   2 3
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 8:   1 1 1 1 1 2 3 2 3 2   3
+
+ Eigenvalues of metric
+
+         1 0.635E-06 0.898E-05 0.207E-04 0.207E-04 0.283E-03 0.747E-03 0.747E-03 0.824E-03
+         2 0.922E-06 0.107E-04 0.484E-03 0.198E-02 0.535E-02 0.126E-01 0.235E-01 0.411E-01
+         3 0.922E-06 0.107E-04 0.484E-03 0.198E-02 0.535E-02 0.126E-01 0.235E-01 0.411E-01
+         4 0.207E-04 0.747E-03 0.976E-02 0.354E-01 0.721E-01 0.148E+00 0.158E+00 0.158E+00
+         5 0.922E-06 0.107E-04 0.484E-03 0.198E-02 0.535E-02 0.126E-01 0.235E-01 0.411E-01
+         6 0.207E-04 0.747E-03 0.976E-02 0.354E-01 0.721E-01 0.148E+00 0.158E+00 0.158E+00
+         7 0.207E-04 0.747E-03 0.976E-02 0.354E-01 0.721E-01 0.148E+00 0.158E+00 0.158E+00
+         8 0.111E+00 0.271E+00 0.271E+00 0.349E+00 0.777E+00 0.887E+00 0.887E+00 0.149E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-13
+ AO integral compression algorithm  1   Integral accuracy      1.0D-13
+
+     468.976 MB (compressed) written to integral file ( 48.1%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:   76744857.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   5  SEGMENT LENGTH:   15998535      RECORD LENGTH: 524288
+
+ Memory used in sort:      16.56 MW
+
+ SORT1 READ   121794176. AND WROTE    46352598. INTEGRALS IN    135 RECORDS. CPU TIME:     2.39 SEC, REAL TIME:     2.82 SEC
+ SORT2 READ    46352598. AND WROTE    76744857. INTEGRALS IN   1789 RECORDS. CPU TIME:     1.02 SEC, REAL TIME:     1.33 SEC
+
+ FILE SIZES:   FILE 1:   478.1 MBYTE,  FILE 4:   566.3 MBYTE,   TOTAL:   1044.4 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19      274.94       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *        28.91     28.76
+ REAL TIME  *        30.73 SEC
+ DISK USED  *         1.05 GB      
+ **********************************************************************************************************************************
+
+1PROGRAM * RHF-SCF (OPEN SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      15+   13-    SPACE SYMMETRY=6    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-05 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                 -0.30 (CLOSED)  0.00 (OPEN) 
+
+
+ Singly occupied orbitals:      1.4       1.7
+ 
+ Extra symmetries of mos in symmetry 1:   1   1   1   1   3   2
+ Orbital guess generated from atomic densities. Full valence occupancy:    6   2   2   1   2   1   1   0
+
+
+ Molecular orbital dump at record        4202.2
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00     -1506.61053251   1140.428009    0.00000    0.00000    0.00000    0    start
+    2      0.000D+00      0.278D-01     -1506.74446363   1190.826542    0.00000    0.00000    0.00000    1    diag,B
+    3      0.201D-01      0.279D-01     -1506.85175325   1173.956008    0.00000    0.00000    0.00000    2    diag,B
+    4      0.859D-02      0.398D-02     -1506.85640205   1172.240291    0.00000    0.00000    0.00000    3    diag,B
+    5      0.438D-02      0.669D-03     -1506.85741183   1172.510311    0.00000    0.00000    0.00000    4    diag,B

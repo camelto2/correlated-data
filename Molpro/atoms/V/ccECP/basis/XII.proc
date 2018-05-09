@@ -1,0 +1,6 @@
+proc XII
+{rhf
+ start,atden
+ wf,12,1,0
+}
+endproc

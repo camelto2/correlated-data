@@ -1,0 +1,29 @@
+
+proc IIs1d3
+{uks
+ start,atden
+ print,orbitals=2
+ wf,12,1,4
+ occ,2,1,1,1,1,1,1,0
+ open,2.1,1.4,1.6,1.7
+ sym,1,1,1
+}
+pop
+individual
+endproc
+
+
+
+proc IId4
+{uks
+ start,atden
+ print,orbitals=2
+ wf,12,4,4
+ occ,3,1,1,0,1,1,1,0
+ open,2.1,3.1,1.6,1.7
+ sym,1,1,2,3
+ orbital,4202.2
+}
+pop
+individual
+endproc

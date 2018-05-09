@@ -1,0 +1,133 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ geometry={
+ 1
+ Zn
+ Zn  0.0 0.0 0.0
+ }
+ 
+ basis={
+ Including file /remote/cmelton/data/corrECP/Zn/ae/nr/basis/aug-cc-pwCVTZ-dk.basis
+ }
+ 
+ Including file /remote/cmelton/data/corrECP/Zn/ae/nr/basis/states.proc
+ 
+ do i=1,15
+     if (i.eq.1) then
+         Is2dten
+     else if (i.eq.2) then
+         IIs1dten
+     else if (i.eq.3) then
+         IIs2d9
+     else if (i.eq.4) then
+         IIIdten
+     else if (i.eq.5) then
+         IVd9
+     else if (i.eq.6) then
+         Vd8
+     else if (i.eq.7) then
+         VId7
+     else if (i.eq.8) then
+         VIId6
+     else if (i.eq.9) then
+         VIIId5
+     else if (i.eq.10) then
+         IXd4
+     else if (i.eq.11) then
+         Xd3
+     else if (i.eq.12) then
+         XId2
+     else if (i.eq.13) then
+         XIId1
+     else if (i.eq.14) then
+         XIII
+     else if (i.eq.15) then
+         XIX
+     endif
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+                                                                                 !    {rccsd(t),maxit=100;core}
+                                                                                 !    ccsd(i)=energy
+ enddo
+ 
+ table,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.00 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.12 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.5.2.el7.x86_64/doppio.sandia.gov(x86_64) 64 bit serial version         DATE: 19-Jan-18          TIME: 10:36:28  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+
+Geometry recognized as XYZ
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+
+ DO I                   =         1.00000000   
+
+ Running procedure=IS2DTEN
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+ trouble with default basis file; current line:
+ V1.2.2,
+ complete basis file:
+ SET,'ORBITAL',
+ V1.2.2,
+ S,ZN,5820021.0000000,871523.4000000,198335.0000000,56176.3100000,18325.8200000,
+ 6614.9550000,2579.1990000,1068.8490000,465.1045000,210.4130000,97.6162900,44.38
+ 02000,21.4230800,10.3089100,4.5536450,2.1328210,0.9296970,0.1921470,0.0875950,0
+ .0377020,7.1556000,1.8229000,0.0162300,
+ P,ZN,24411.9800000,5778.5180000,1876.8620000,718.2361000,304.8327000,139.045300
+ 0,66.8041700,33.2069900,16.9281600,8.6962290,4.3505100,2.1165230,0.9953870,0.37
+ 56390,0.1338850,0.0460230,10.2625000,2.3538000,0.0158200,
+ D,ZN,210.9473000,62.3915100,23.2648200,9.6233420,4.1394180,1.7440790,0.6953250,
+ 0.2487240,7.7475000,3.9438000,0.0889700,
+ F,ZN,10.2593000,3.9810000,1.4615000,0.5365400,
+ G,ZN,9.2476000,4.0243000,1.7512600,
+ END,

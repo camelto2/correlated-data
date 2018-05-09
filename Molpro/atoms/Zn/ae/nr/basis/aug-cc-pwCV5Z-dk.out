@@ -1,0 +1,53 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ s, ZN , 1.87413E+08, 3.35127E+07, 7.50475E+06, 2.01787E+06, 628578.0000000, 220163.0000000, 84595.2000000, 34955.5000000, 15290.3000000, 6994.9300000, 3316.5900000, 1619.2400000, 810.3430000, 414.3930000, 216.0580000, 114.6350000, 61.7623000, 33.6924000, 18.5315000, 10.2144000, 5.5942800, 3.0096800, 1.5668400, 0.7814370, 0.2581180, 0.1385560, 0.0661710, 0.0309860, 3.9705000, 0.0145100
+ p, ZN , 110349.0000000, 26971.3000000, 8560.0700000, 3248.8000000, 1389.4100000, 643.0430000, 314.0050000, 159.4890000, 83.6662000, 45.1574000, 24.9630000, 14.0043000, 7.8326700, 4.2841000, 2.2890100, 1.1943600, 0.5942580, 0.2272730, 0.0901660, 0.0356510, 15.0735000, 4.7557000, 0.0141000
+ d, ZN , 926.9627000, 270.1065000, 102.9159000, 44.8868000, 21.0709200, 10.4233800, 5.3068920, 2.7032700, 1.3536570, 0.6588680, 0.3075040, 0.1332210, 11.6620000, 7.2916000, 0.0577200
+ f, ZN , 17.7978000, 7.9981000, 3.5942000, 1.6152000, 0.5673000, 0.1992500
+ g, ZN , 12.8657000, 6.4248000, 3.2084000, 1.2524000, 0.4888700
+ h, ZN , 11.1996000, 5.4804000, 2.3903000, 1.0425400
+ i, ZN , 11.0549000, 5.6334000, 2.8706900
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.09 sec
+
+ Checking input...
+
+ Unknown command or directive S
+
+ Unknown command or directive P
+
+ Unknown command or directive D
+
+ Unknown command or directive F
+
+ Unknown command or directive G
+
+ Unknown command or directive H
+
+ Unknown command or directive I
+
+    7 input errors found
+
+ ? Error
+ ? Input errors!
+ ? The problem occurs in check_input
