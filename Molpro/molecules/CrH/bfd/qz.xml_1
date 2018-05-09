@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ gthresh,twoint=1.0E-12
+ gthresh,throvl=1.0E-09
+ 
+ basis={
+ ecp,Cr,10,2,0;
+ 3;1,2.94337662,14.00000000;3,3.40750349,41.20727267;2,3.33587110,-55.51413840;
+ 1;2,9.14231779,103.26274052;
+ 1;2,7.21220771,45.80124572;
+ s, CR , 11016640, 1649423, 375358.9, 106323.6, 34689.76, 12524.83, 4885.752, 2026.918, 884.3645, 402.317, 189.5271, 91.86095, 45.12476, 20.62512, 10.31973, 5.157723, 2.312628, 1.103079, 0.498042, 0.118247, 0.057356, 0.02576, 4.7991, 1.4287, 0.0115700
+ p, CR , 31539.89, 7460.234, 2422.622, 927.7547, 394.8041, 180.8027, 87.42393, 44.03427, 22.77704, 12.01547, 6.411751, 3.381136, 1.747054, 0.885004, 0.433028, 0.173962, 0.072823, 0.029952, 6.4552, 1.6531, 0.0123200
+ d, CR , 281.312, 83.1885, 31.8396, 13.6026, 6.18298, 2.92270, 1.38216, 0.639460, 0.284898, 0.120045, 0.046229, 4.0848, 2.1405, 0.0178000
+ f, CR , 5.6633, 2.3365, 0.9639, 0.3142, 0.1024200
+ g, CR , 4.6690, 1.9538, 0.6848, 0.2400200
+ h, CR , 4.4133, 1.6472, 0.6147900
+ ECP,H,0,1,0
+ 3;
+ 2,   21.77696655044365 ,     -10.85192405303825 ;
+  1,   21.24359508259891 ,       1.00000000000000;
+  3,   21.24359508259891 ,      21.24359508259891;
+ 1; 2,                   1.,                      0.;
+ s, H , 82.64, 12.41, 2.824, 0.7977, 0.2581, 0.08989, 0.0236300
+ p, H , 2.292, 0.838, 0.292, 0.0848000
+ d, H , 2.062, 0.662, 0.1900000
+ f, H , 1.397, 0.3600000
+ }
+ 
+ ne    =15
+ symm  =1
+ ss    =5
+ 
+ A1=5
+ B1=2
+ B2=2
+ A2=1
+ 
+ do i=1,21
+     z(i) = 1.0 + 0.05*(i-1)
+     geometry={
+         2
+         Oxygen
+         Cr  0.0 0.0 0.0
+         H  0.0 0.0 z(i)
+     }
+     {rhf
+      wf,ne,symm,ss
+      occ,A1,B1,B2,A2
+      open,4.1,5.1,2.2,2.3,1.4
+      print,orbitals=3
+     }
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t);maxit,100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ geometry={
+    1
+    Vanadium
+    Cr 0.0 0.0 0.0
+ }
+ {rhf;
+  start,atden
+  wf,14,1,6;
+  occ,4,1,1,1,1,1,1,0;
+  open,2.1,3.1,4.1,1.4,1.6,1.7;
+  sym,1,1,1,3,2
+ }
+ Cr_scf=energy
+ _CC_NORM_MAX=2.0
+ {rccsd(t);maxit,100;core}
+ Cr_ccsd=energy
+ 
+ geometry={
+    1
+    Oxygen
+    H 0.0 0.0 0.0
+ }
+ {rhf;
+  wf,1,1,1;
+  occ,1,0,0,0,0,0,0,0;
+  open,1.1;
+ }
+ H_scf=energy
+ 
+ table,z,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.08 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.5.2.el7.x86_64/doppio.sandia.gov(x86_64) 64 bit serial version         DATE: 04-Apr-18          TIME: 17:01:56  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+  -->
+  <!--
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-12  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-12  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-09
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING NE             =        15.00000000                                  
+ SETTING SYMM           =         1.00000000                                  
+ SETTING SS             =         5.00000000                                  
+ SETTING A1             =         5.00000000                                  
+ SETTING B1             =         2.00000000                                  
+ SETTING B2             =         2.00000000                                  
+ SETTING A2             =         1.00000000                                  
+
+ DO I                   =         1.00000000   
+ SETTING Z(1)           =         1.00000000                                  
+
+Geometry recognized as XYZ
+
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+
+ Point group  C2v 
+
+
+   --><cml:symmetry pointGroup="C2v"/><!--
+   --><cml:atomArray>
+    <cml:atom id="a1" elementType="Cr" x3="0.0" y3="0.0" z3="0.0"/>
+    <cml:atom id="a2" elementType="H" x3="0.0" y3="0.0" z3="1.0"/>
+   </cml:atomArray><!--
+   --><cml:bondArray>
+    <cml:bond atomRefs2="a1 a2"/>
+   </cml:bondArray><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  CR     14.00    0.000000000    0.000000000    0.000000000
+   2  H       1.00    0.000000000    0.000000000    1.889726131
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  1.889726131
+     ( 1.000000000)
+
+ NUCLEAR CHARGE:                   15
+ NUMBER OF PRIMITIVE AOS:         402
+ NUMBER OF SYMMETRY AOS:          310
+ NUMBER OF CONTRACTIONS:          310   ( 126A1  +  73B1  +  73B2  +  38A2  )
+ NUMBER OF CORE ORBITALS:           4   (   2A1  +   1B1  +   1B2  +   0A2  )
+ NUMBER OF VALENCE ORBITALS:        7   (   4A1  +   1B1  +   1B2  +   1A2  )
+
+
+ NUCLEAR REPULSION ENERGY    7.40848093
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+                                        1 1 1 1 1 1 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2
+                                        1 2 1 2 1 3 2 1 3 2   1 3 2 1 3 2 2 3 1 2   3 1 2 3 1 1 1 1 1 1   1 1 1 1 1 1 1 2 1 2
+                                        1 2 1 2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 2 1 2 1
+                                        2 1 2 1 2 1 2 1 2 1   2 1 2 1 2 3 1 2 3 1   2 3 1 1 1 1 1 1 1 1   2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 2 1 2 1
+                                        2 1 2 1 2 1 2 1 2 1   2 1 2 1 2 3 1 2 3 1   2 3 1 1 1 1 1 1 1 1   2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   2 1 2 1 2 1 2 2 1 2   1 2 1 1 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.530E-08 0.313E-06 0.117E-05 0.953E-05 0.189E-04 0.204E-04 0.234E-04 0.816E-04
+         2 0.557E-08 0.160E-05 0.223E-04 0.385E-03 0.568E-03 0.814E-03 0.181E-02 0.194E-02
+         3 0.557E-08 0.160E-05 0.223E-04 0.385E-03 0.568E-03 0.814E-03 0.181E-02 0.194E-02
+         4 0.234E-04 0.885E-03 0.614E-02 0.101E-01 0.321E-01 0.365E-01 0.734E-01 0.120E+00
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-13
+ AO integral compression algorithm  1   Integral accuracy      1.0D-13
+   --><error/><!--
+  --></jobstep><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2018-04-04T17:02:15-06:00"/>
+   <stm:metadata name="dc:creator" content="cmelton"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <version major="2012" minor="1" SHA="4c1979699e6aeda0524d0210415ba82a958648b0"
+     integer_bits="64" parallelism="serial">
+    2012.1
+    <date year="2018" month="4" day="4" hour="17" minute="1" second="56">
+     2018-04-04T17:01:56
+    </date>
+   </version>
+   <licence id="sandiacon"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
+   <machine hostname="doppio.sandia.gov" architecture="x86_64">
+    Linux-3.10.0-693.5.2.el7.x86_64/doppio.sandia.gov(x86_64) 64 bit serial version
+    <sysinfo name="cpu MHz" content="2799.972"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req"/>
+    <sysinfo name="MemTotal" content="394701572 kB"/>
+    <sysinfo name="cache size" content="22528 KB"/>
+    <sysinfo name="ncpu" content="64"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for Be atom, singlet and triplet </p>
+   <p> memory,512,m </p>
+   <p> gthresh,twoint=1.0E-12 </p>
+   <p> gthresh,throvl=1.0E-09 </p>
+   <p> basis={ </p>
+   <p> ecp,Cr,10,2,0; </p>
+   <p> 3;1,2.94337662,14.00000000;3,3.40750349,41.20727267;2,3.33587110,-55.51413840; </p>
+   <p> 1;2,9.14231779,103.26274052; </p>
+   <p> 1;2,7.21220771,45.80124572; </p>
+   <p> s, CR , 11016640, 1649423, 375358.9, 106323.6, 34689.76, 12524.83, 4885.752, 2026.918, 884.3645, 402.317, 189.5271, 91.86095, 45.12476, 20.62512, 10.31973, 5.157723, 2.312628, 1.103079, 0.498042, 0.118247, 0.057356, 0.02576, 4.7991, 1.4287, 0.0115700 </p>
+   <p> p, CR , 31539.89, 7460.234, 2422.622, 927.7547, 394.8041, 180.8027, 87.42393, 44.03427, 22.77704, 12.01547, 6.411751, 3.381136, 1.747054, 0.885004, 0.433028, 0.173962, 0.072823, 0.029952, 6.4552, 1.6531, 0.0123200 </p>
+   <p> d, CR , 281.312, 83.1885, 31.8396, 13.6026, 6.18298, 2.92270, 1.38216, 0.639460, 0.284898, 0.120045, 0.046229, 4.0848, 2.1405, 0.0178000 </p>
+   <p> f, CR , 5.6633, 2.3365, 0.9639, 0.3142, 0.1024200 </p>
+   <p> g, CR , 4.6690, 1.9538, 0.6848, 0.2400200 </p>
+   <p> h, CR , 4.4133, 1.6472, 0.6147900 </p>
+   <p> ECP,H,0,1,0 </p>
+   <p> 3; </p>
+   <p> 2,   21.77696655044365 ,     -10.85192405303825 ; </p>
+   <p>  1,   21.24359508259891 ,       1.00000000000000; </p>
+   <p>  3,   21.24359508259891 ,      21.24359508259891; </p>
+   <p> 1; 2,                   1.,                      0.; </p>
+   <p> s, H , 82.64, 12.41, 2.824, 0.7977, 0.2581, 0.08989, 0.0236300 </p>
+   <p> p, H , 2.292, 0.838, 0.292, 0.0848000 </p>
+   <p> d, H , 2.062, 0.662, 0.1900000 </p>
+   <p> f, H , 1.397, 0.3600000 </p>
+   <p> } </p>
+   <p> ne    =15 </p>
+   <p> symm  =1 </p>
+   <p> ss    =5 </p>
+   <p> A1=5 </p>
+   <p> B1=2 </p>
+   <p> B2=2 </p>
+   <p> A2=1 </p>
+   <p> do i=1,21 </p>
+   <p>     z(i) = 1.0 + 0.05*(i-1) </p>
+   <p>     geometry={ </p>
+   <p>         2 </p>
+   <p>         Oxygen </p>
+   <p>         Cr  0.0 0.0 0.0 </p>
+   <p>         H  0.0 0.0 z(i) </p>
+   <p>     } </p>
+   <p>     {rhf </p>
+   <p>      wf,ne,symm,ss </p>
+   <p>      occ,A1,B1,B2,A2 </p>
+   <p>      open,4.1,5.1,2.2,2.3,1.4 </p>
+   <p>      print,orbitals=3 </p>
+   <p>     } </p>
+   <p>     scf(i)=energy </p>
+   <p>     _CC_NORM_MAX=2.0 </p>
+   <p>     {rccsd(t);maxit,100;core} </p>
+   <p>     ccsd(i)=energy </p>
+   <p> enddo </p>
+   <p> geometry={ </p>
+   <p>    1 </p>
+   <p>    Vanadium </p>
+   <p>    Cr 0.0 0.0 0.0 </p>
+   <p> } </p>
+   <p> {rhf; </p>
+   <p>  start,atden </p>
+   <p>  wf,14,1,6; </p>
+   <p>  occ,4,1,1,1,1,1,1,0; </p>
+   <p>  open,2.1,3.1,4.1,1.4,1.6,1.7; </p>
+   <p>  sym,1,1,1,3,2 </p>
+   <p> } </p>
+   <p> Cr_scf=energy </p>
+   <p> _CC_NORM_MAX=2.0 </p>
+   <p> {rccsd(t);maxit,100;core} </p>
+   <p> Cr_ccsd=energy </p>
+   <p> geometry={ </p>
+   <p>    1 </p>
+   <p>    Oxygen </p>
+   <p>    H 0.0 0.0 0.0 </p>
+   <p> } </p>
+   <p> {rhf; </p>
+   <p>  wf,1,1,1; </p>
+   <p>  occ,1,0,0,0,0,0,0,0; </p>
+   <p>  open,1.1; </p>
+   <p> } </p>
+   <p> H_scf=energy </p>
+   <p> table,z,scf,ccsd </p>
+   <p> save </p>
+   <p> type,csv </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

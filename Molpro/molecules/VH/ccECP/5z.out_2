@@ -1,0 +1,236 @@
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes            nprocs
+ doppio.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ gthresh,twoint=1.0E-12
+ 
+ basis={
+ ecp,V,10,2,0;
+ 4;
+ 1,20.32168914264005, 13.000;
+ 3,19.59698040116814, 264.18195885432065;
+ 2,17.33147348169929,-115.29293208303302;
+ 2,5.123206579292210,-0.6628872600572900;
+ 2;
+ 2,15.12502150536263, 195.56713891052664;
+ 2,6.298989144695830, 22.886428347605640;
+ 2;
+ 2,15.93855113266013, 126.42119500787415;
+ 2,5.740062668659290, 16.035971276624900;
+ s, V , 1.28349E+08, 2.29044E+07, 5.10777E+06, 1.36528E+06, 422228.0000000, 146685.0000000, 55872.3000000, 22881.3000000, 9920.4500000, 4499.9200000, 2116.7500000, 1026.0600000, 510.2570000, 259.5320000, 134.7090000, 71.2104000, 38.2496000, 20.8102000, 11.4158000, 6.2730200, 3.4217700, 1.8304400, 0.9452350, 0.4759280, 0.1863810, 0.1067680, 0.0499790, 0.0235010, 4.6742000, 1.4892000, 0.0110500
+ p, V , 67602.1000000, 16330.1000000, 5149.5900000, 1950.0300000, 834.4630000, 386.9900000, 189.3720000, 96.2845000, 50.4640000, 27.1483000, 14.9256000, 8.3161700, 4.6208600, 2.5113800, 1.3309100, 0.6904150, 0.3432070, 0.1459030, 0.0629230, 0.0268830, 6.7472000, 1.9539000, 0.0114900
+ d, V , 315.8080000, 93.6334000, 36.0393000, 15.6258000, 7.2005900, 3.4805900, 1.7098600, 0.8329620, 0.3976410, 0.1841450, 0.0821190, 0.0344420, 4.2941000, 2.5036000, 0.0144500
+ f, V , 6.6514000, 2.8885000, 1.2544000, 0.5447000, 0.1769000, 0.0574500
+ g, V , 4.8058000, 2.2562000, 1.0592000, 0.3521000, 0.1170500
+ h, V , 4.3898000, 1.9449000, 0.6908000, 0.2453600
+ i, V , 4.1690000, 1.5368000, 0.5665000
+ ECP,H,0,1,0
+ 3;
+ 2,   21.77696655044365 ,     -10.85192405303825 ;
+  1,   21.24359508259891 ,       1.00000000000000;
+  3,   21.24359508259891 ,      21.24359508259891;
+ 1; 2,                   1.,                      0.;
+ s, H , 402.0000000, 60.2400000, 13.7300000, 3.9050000, 1.2830000, 0.4655000, 0.1811000, 0.0727900, 0.0207000
+ p, H , 4.5160000, 1.7120000, 0.6490000, 0.2460000, 0.0744000
+ d, H , 2.9500000, 1.2060000, 0.4930000, 0.1560000
+ f, H , 2.5060000, 0.8750000, 0.2740000
+ g, H , 2.3580000, 0.5430000
+ }
+ 
+ ne    =14
+ symm  =1
+ ss    =4
+ 
+ A1=4
+ B1=2
+ B2=2
+ A2=1
+ 
+ do i=1,4
+     z(i) = 1.1 + 0.05*(i-1)
+     geometry={
+         2
+         Oxygen
+         V  0.0 0.0 0.0
+         H  0.0 0.0 z(i)
+     }
+     {rhf
+      wf,ne,symm,ss
+      occ,A1,B1,B2,A2
+      open,4.1,2.2,2.3,1.4
+      print,orbitals=3
+     }
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t);maxit,100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ geometry={
+    1
+    Vanadium
+    V 0.0 0.0 0.0
+ }
+ {rhf;
+  start,atden
+  wf,13,6,3;
+  occ,4,1,1,0,1,1,0,0;
+  open,3.1,4.1,1.6;
+  sym,1,1,1,3,2
+ }
+ V_scf=energy
+ _CC_NORM_MAX=2.0
+ {rccsd(t);maxit,100;core}
+ V_ccsd=energy
+ 
+ geometry={
+    1
+    Oxygen
+    H 0.0 0.0 0.0
+ }
+ {rhf;
+  wf,1,1,1;
+  occ,1,0,0,0,0,0,0,0;
+  open,1.1;
+ }
+ H_scf=energy
+ 
+ table,z,scf,ccsd
+ save
+ type,csv
+
+ Variables initialized (782), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.09 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.5.2.el7.x86_64/doppio.sandia.gov(x86_64) 64 bit serial version         DATE: 12-Mar-18          TIME: 12:27:32  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+
+ THRESHOLDS:
+
+ ZERO    =  1.00D-12  ONEINT  =  1.00D-12  TWOINT  =  1.00D-12  PREFAC  =  1.00D-14  LOCALI  =  1.00D-09  EORDER  =  1.00D-04
+ ENERGY  =  0.00D+00  ETEST   =  0.00D+00  EDENS   =  0.00D+00  THRDEDEF=  1.00D-06  GRADIENT=  1.00D-02  STEP    =  1.00D-03
+ ORBITAL =  1.00D-05  CIVEC   =  1.00D-05  COEFF   =  1.00D-04  PRINTCI =  5.00D-02  PUNCHCI =  9.90D+01  OPTGRAD =  3.00D-04
+ OPTENERG=  1.00D-06  OPTSTEP =  3.00D-04  THRGRAD =  1.00D-10  COMPRESS=  1.00D-11  VARMIN  =  1.00D-07  VARMAX  =  1.00D-03
+ THRDOUB =  0.00D+00  THRDIV  =  1.00D-05  THRRED  =  1.00D-07  THRPSP  =  1.00D+00  THRDC   =  1.00D-10  THRCS   =  1.00D-10
+ THRNRM  =  1.00D-08  THREQ   =  0.00D+00  THRDE   =  1.00D+00  THRREF  =  1.00D-05  SPARFAC =  1.00D+00  THRDLP  =  1.00D-07
+ THRDIA  =  1.00D-10  THRDLS  =  1.00D-07  THRGPS  =  0.00D+00  THRKEX  =  0.00D+00  THRDIS  =  2.00D-01  THRVAR  =  1.00D-10
+ THRLOC  =  1.00D-06  THRGAP  =  1.00D-06  THRLOCT = -1.00D+00  THRGAPT = -1.00D+00  THRORB  =  1.00D-06  THRMLTP =  0.00D+00
+ THRCPQCI=  1.00D-10  KEXTA   =  0.00D+00  THRCOARS=  0.00D+00  SYMTOL  =  1.00D-06  GRADTOL =  1.00D-06  THROVL  =  1.00D-08
+ THRORTH =  1.00D-08  GRID    =  1.00D-06  GRIDMAX =  1.00D-03  DTMAX   =  0.00D+00  THROCCDE=  1.00D-01  THROCCDE=  1.00D-01
+
+
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING NE             =        14.00000000                                  
+ SETTING SYMM           =         1.00000000                                  
+ SETTING SS             =         4.00000000                                  
+ SETTING A1             =         4.00000000                                  
+ SETTING B1             =         2.00000000                                  
+ SETTING B2             =         2.00000000                                  
+ SETTING A2             =         1.00000000                                  
+
+ DO I                   =         1.00000000   
+ SETTING Z(1)           =         1.10000000                                  
+
+Geometry recognized as XYZ
+
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+
+ Point group  C2v 
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  V      13.00    0.000000000    0.000000000    0.000000000
+   2  H       1.00    0.000000000    0.000000000    2.078698745
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.078698745
+     ( 1.100000000)
+
+ NUCLEAR CHARGE:                   14
+ NUMBER OF PRIMITIVE AOS:         601
+ NUMBER OF SYMMETRY AOS:          428
+ NUMBER OF CONTRACTIONS:          428   ( 169A1  + 100B1  + 100B2  +  59A2  )
+ NUMBER OF CORE ORBITALS:           4   (   2A1  +   1B1  +   1B2  +   0A2  )
+ NUMBER OF VALENCE ORBITALS:        7   (   4A1  +   1B1  +   1B2  +   1A2  )
+
+
+ NUCLEAR REPULSION ENERGY    6.25391247
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+                                        1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2
+                                        1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 3 2 1   3 2 1 3 2 1 3 2 1 3   2 2 3 1 2 3 1 2 3 1
+                                        2 3 1 4 3 2 1 4 3 2   1 4 3 2 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   2 1 2 1 2 1 2 1 2 1
+                                        2 1 2 1 3 2 1 3 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 2:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 2
+                                        1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 3 1 2 3 1 2 3 1   2 3 3 2 1 3 2 1 3 2
+                                        1 1 1 1 1 1 1 1 1 1   1 2 1 2 1 2 1 2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 3:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 2
+                                        1 2 1 2 1 2 1 2 1 2   1 2 1 2 1 2 1 2 1 2   1 2 3 1 2 3 1 2 3 1   2 3 3 2 1 3 2 1 3 2
+                                        1 1 1 1 1 1 1 1 1 1   1 2 1 2 1 2 1 2 1 2
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 4:   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 2 1 2 1 2 1 2 1   2 2 1 2 1 2 1 2 1 1
+                                        3 2 1 3 2 1 3 2 1 1   1 1 1 1 1 1 2 1 2
+
+ Eigenvalues of metric
+
+         1 0.150E-06 0.834E-06 0.194E-05 0.467E-05 0.618E-05 0.772E-05 0.910E-05 0.139E-04
+         2 0.101E-05 0.745E-05 0.119E-04 0.219E-03 0.228E-03 0.391E-03 0.657E-03 0.770E-03
+         3 0.101E-05 0.745E-05 0.119E-04 0.219E-03 0.228E-03 0.391E-03 0.657E-03 0.770E-03
+         4 0.772E-05 0.468E-03 0.154E-02 0.628E-02 0.831E-02 0.192E-01 0.260E-01 0.362E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-13
+ AO integral compression algorithm  1   Integral accuracy      1.0D-13

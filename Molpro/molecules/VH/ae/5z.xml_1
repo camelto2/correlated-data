@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/cmelton
+ Secondary working directories  : /tmp/cmelton
+ Wavefunction directory         : /remote/cmelton/wfu/
+ Main file repository           : /tmp/cmelton/
+
+ SHA1      : 4c1979699e6aeda0524d0210415ba82a958648b0
+ NAME      : 2012.1.39
+ ARCHNAME  : Linux/x86_64
+ FC        : /projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/bin/ifort
+ FCVERSION : 16.0.1
+ BLASLIB   : -L/projects/sems/install/rhel6-x86_64/sems/compiler/intel/16.0.1/base/compilers_and_libraries_2016.1.150/linux/mkl/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core
+ id        : sandiacon
+
+ Nodes             nprocs
+ s989256.sandia.gov    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=16; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,Calculation for Be atom, singlet and triplet
+ memory,512,m
+ 
+ set,dkroll=1,dkho=10,dkhp=4
+ basis={
+ Including file /remote/cmelton/data/corrECP/VH/ae/aug-cc-pwCV5Z-dk.basis
+ }
+ 
+ ne    =24
+ symm  =1
+ ss    =4
+ 
+ A1=7
+ B1=3
+ B2=3
+ A2=1
+ 
+ do i=1,16
+     z = 1.3 + 0.05*(i-1)
+     geometry={
+         2
+         Oxygen
+         V  0.0 0.0 0.0
+         H  0.0 0.0 z(i)
+     }
+     {rhf
+      wf,ne,symm,ss
+      occ,A1,B1,B2,A2
+      open,7.1,3.2,3.3,1.4
+      print,orbitals=3
+     }
+     scf(i)=energy
+     _CC_NORM_MAX=2.0
+     {rccsd(t);maxit,100;core}
+     ccsd(i)=energy
+ enddo
+ 
+ table,z,scf,ccsd
+ 
+
+ Variables initialized (782), CPU time= 0.01 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 517 directives.
+ Default parameters read. Elapsed time= 0.15 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Aug  2 2016 14:07:26
+
+
+ **********************************************************************************************************************************
+ LABEL *   Calculation for Be atom, singlet and triplet                                  
+ Linux-3.10.0-693.2.2.el7.x86_64/s989256.sandia.gov(x86_64) 64 bit serial version        DATE: 24-Jan-18          TIME: 10:23:06  
+ **********************************************************************************************************************************
+
+ SHA1:             4c1979699e6aeda0524d0210415ba82a958648b0
+ **********************************************************************************************************************************
+  -->
+  <!--
+ SETTING DKROLL         =         1.00000000                                  
+ SETTING DKHO           =        10.00000000                                  
+ SETTING DKHP           =         4.00000000                                  
+
+ Variable memory set to  512000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    USERDEF
+ SETTING NE             =        24.00000000                                  
+ SETTING SYMM           =         1.00000000                                  
+ SETTING SS             =         4.00000000                                  
+ SETTING A1             =         7.00000000                                  
+ SETTING B1             =         3.00000000                                  
+ SETTING B2             =         3.00000000                                  
+ SETTING A2             =         1.00000000                                  
+
+ DO I                   =         1.00000000   
+ SETTING Z              =         1.30000000                                  
+
+Geometry recognized as XYZ
+
+  --><jobstep command="RHF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+
+ Point group  C2v 
+
+
+   --><cml:symmetry pointGroup="C2v"/><!--
+   --><cml:atomArray>
+    <cml:atom id="a1" elementType="V" x3="0.0" y3="0.0" z3="0.0"/>
+    <cml:atom id="a2" elementType="H" x3="0.0" y3="0.0" z3="1.3"/>
+   </cml:atomArray><!--
+   --><cml:bondArray>
+    <cml:bond atomRefs2="a1 a2"/>
+   </cml:bondArray><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  V      23.00    0.000000000    0.000000000    0.000000000
+   2  H       1.00    0.000000000    0.000000000    2.456643971
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.456643971
+     ( 1.300000000)
+
+ NUCLEAR CHARGE:                   24
+ NUMBER OF PRIMITIVE AOS:         601
+ NUMBER OF SYMMETRY AOS:          428
+ NUMBER OF CONTRACTIONS:          428   ( 169A1  + 100B1  + 100B2  +  59A2  )
+ NUMBER OF CORE ORBITALS:           9   (   5A1  +   2B1  +   2B2  +   0A2  )
+ NUMBER OF VALENCE ORBITALS:        7   (   4A1  +   1B1  +   1B2  +   1A2  )
+
+
+ NUCLEAR REPULSION ENERGY    9.36236601
+
+ One-electron integrals computed with SEWARD
+
+ 10nd-order Douglas-Kroll-Hess method activated. McWeeny DKH parametrization is used.
+
+ Computing Douglas-Kroll integrals
+
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+   --><error/><!--
+  --></jobstep><!--
+  -->
+  <stm:metadataList>
+   <stm:metadata name="dc:date" content="2018-01-24T10:26:18-07:00"/>
+   <stm:metadata name="dc:creator" content="cmelton"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList>
+  <platform>
+   <version major="2012" minor="1" SHA="4c1979699e6aeda0524d0210415ba82a958648b0"
+     integer_bits="64" parallelism="serial">
+    2012.1
+    <date year="2018" month="1" day="24" hour="10" minute="23" second="6">
+     2018-01-24T10:23:06
+    </date>
+   </version>
+   <licence id="sandiacon"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
+   <machine hostname="s989256.sandia.gov" architecture="x86_64">
+    Linux-3.10.0-693.2.2.el7.x86_64/s989256.sandia.gov(x86_64) 64 bit serial version
+    <sysinfo name="cpu MHz" content="1299.492"/>
+    <sysinfo name="MemTotal" content="263897096 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts"/>
+    <sysinfo name="MemTotal" content="263897096 kB"/>
+    <sysinfo name="cache size" content="35840 KB"/>
+    <sysinfo name="ncpu" content="28"/>
+   </machine>
+  </platform>
+  <input>
+   <p> ***,Calculation for Be atom, singlet and triplet </p>
+   <p> memory,512,m </p>
+   <p> set,dkroll=1,dkho=10,dkhp=4 </p>
+   <p> basis={ </p>
+   <include file="/remote/cmelton/data/corrECP/VH/ae/aug-cc-pwCV5Z-dk.basis"/>
+   <p> } </p>
+   <p> ne    =24 </p>
+   <p> symm  =1 </p>
+   <p> ss    =4 </p>
+   <p> A1=7 </p>
+   <p> B1=3 </p>
+   <p> B2=3 </p>
+   <p> A2=1 </p>
+   <p> do i=1,16 </p>
+   <p>     z = 1.3 + 0.05*(i-1) </p>
+   <p>     geometry={ </p>
+   <p>         2 </p>
+   <p>         Oxygen </p>
+   <p>         V  0.0 0.0 0.0 </p>
+   <p>         H  0.0 0.0 z(i) </p>
+   <p>     } </p>
+   <p>     {rhf </p>
+   <p>      wf,ne,symm,ss </p>
+   <p>      occ,A1,B1,B2,A2 </p>
+   <p>      open,7.1,3.2,3.3,1.4 </p>
+   <p>      print,orbitals=3 </p>
+   <p>     } </p>
+   <p>     scf(i)=energy </p>
+   <p>     _CC_NORM_MAX=2.0 </p>
+   <p>     {rccsd(t);maxit,100;core} </p>
+   <p>     ccsd(i)=energy </p>
+   <p> enddo </p>
+   <p> table,z,scf,ccsd </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>
