@@ -122,4 +122,4 @@ def plot(mol):
    plt.show()
 
 
-plot('NiH')
+plot('NiO')
