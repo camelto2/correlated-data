@@ -1,4 +1,4 @@
-***,Calculation for Be atom, singlet and triplet
+***,Calculation of states
 memory,512,m
 gthresh,twoint=1.0E-12
 geometry={
@@ -8,18 +8,7 @@ Ni  0.0 0.0 0.0
 }
 
 basis={
-ecp,Ni,10,2,0
-4
-1,37.92402538406299, 18.0
-3,23.91559743951350, 682.6324569131338200
-2,19.97959496598729, -173.86371303207716
-2,3.59972497574288 ,0.36627055523555
-2
-2,13.55641859374987, 92.06283029831025
-2,27.83578932583988, 332.58121624323661
-2
-2,6.49273676990515 ,7.52030073420510
-2,23.68135451618073, 266.09985511247788
+include,Ni.pp
 include,aug-cc-pwCVQZ-dk.basis
 }
 
@@ -66,5 +55,4 @@ do i=1,16
 enddo
 
 table,scf,ccsd
-save
-type,csv
+save,qz.csv,new

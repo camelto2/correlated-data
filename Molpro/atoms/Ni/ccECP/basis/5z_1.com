@@ -1,6 +1,7 @@
-***,Calculation for Be atom, singlet and triplet
+***,Calculation of states
 memory,512,m
-gthresh,twoint=1.0E-12
+gthresh,twoint=1.0E-15
+gthresh,oneint=1.0E-15
 geometry={
 1
 Ni
@@ -8,24 +9,13 @@ Ni  0.0 0.0 0.0
 }
 
 basis={
-ecp,Ni,10,2,0
-4
-1,37.92402538406299, 18.0
-3,23.91559743951350, 682.6324569131338200
-2,19.97959496598729, -173.86371303207716
-2,3.59972497574288 ,0.36627055523555
-2
-2,13.55641859374987, 92.06283029831025
-2,27.83578932583988, 332.58121624323661
-2
-2,6.49273676990515 ,7.52030073420510
-2,23.68135451618073, 266.09985511247788
+include,Ni.pp
 include,aug-cc-pwCV5Z-dk.basis
 }
 
 include,states.proc
 
-do i=1,16
+do i=1,6
     if (i.eq.1) then
         Is2d8
     else if (i.eq.2) then
@@ -61,10 +51,9 @@ do i=1,16
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),maxit=100;core}
+    {rccsd(t),shifts=0.4,shiftp=0.4,maxit=150;core}
     ccsd(i)=energy
 enddo
 
 table,scf,ccsd
-save
-type,csv
+save,5z_1.csv,new

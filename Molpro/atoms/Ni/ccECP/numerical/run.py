@@ -5,7 +5,7 @@ import subprocess
 import numpy as np
 from scipy.optimize import minimize
 import pickle
-from pyECP import ecp
+import ecp
 
 def plot_ecps(ecps,rmax):
 	import matplotlib.pyplot as plt

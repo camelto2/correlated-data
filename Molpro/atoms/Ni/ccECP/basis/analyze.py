@@ -17,7 +17,7 @@ def corr_fit3(x,*parms):
 
 df=pd.DataFrame()
 for bas in ['tz','qz','5z']:
-	x = pd.read_csv(bas+'.table1.txt',skip_blank_lines=True,skipinitialspace=True)
+	x = pd.read_csv(bas+'.csv',skip_blank_lines=True,skipinitialspace=True)
 	df[bas+'_scf'] = x['SCF']
 	df[bas+'_ccsd'] = x['CCSD']
 
@@ -25,30 +25,39 @@ scf = df.filter(regex='scf')
 cc = df.filter(regex='ccsd')
 
 n = [3,4,5]
-x = np.linspace(2,10,50)
+x = np.linspace(3,5,50)
 
 scf_extrap = []
 corr_extrap = []
 for i in df.index:
 	print(i)
 	y = scf.ix[i].values
-	p0 = [-150,1.0,1.0]
+	p0 = [min(y),1.0,1.0]
+	limit=([-np.inf, -np.inf, -np.inf], [min(y), np.inf, np.inf] )
 	try:
-		popt,pcov = curve_fit(exp_fit,xdata=n,ydata=y,p0=p0)
+		popt,pcov = curve_fit(exp_fit,xdata=n,ydata=y,p0=p0,bounds=limit)
 		scf_extrap.append(popt[0])
 	except:
 		scf_extrap.append(y[2])
-#	plt.scatter(n,y)
-#	plt.plot(x,exp_fit(x,*popt))
-#	plt.show()
+		print('Extrapolation unsuccesful!')
+	plt.plot(n,y,'o')
+	plt.plot(x,exp_fit(x,*popt), '--')
+	plt.axhline(y=popt[0], ls='dashed', color='red')
+	plt.show()
 
 	y = cc.ix[i].values-scf.ix[i].values
-	p0 = [-1.0,0,0]
+	p0 = [min(y),0,0]
 	popt,pcov = curve_fit(corr_fit3,xdata=n,ydata=y,p0=p0)
 	corr_extrap.append(popt[0])
 
+        plt.plot(n,y,'o')
+        plt.plot(x,corr_fit3(x,*popt), '--')
+        plt.axhline(y=popt[0], ls='dashed', color='red')
+        plt.show()
+
+
 scf['extrap'] = scf_extrap
-scf['numerical'] = [-168.410808, -168.352142, -168.19121, -168.150877, -168.113962, -167.55873, -166.357611, -164.409995, -161.696036, -157.761943, -152.887501, -146.93515, -139.837286, -131.612297, -42.720299, -168.349647]
+scf['numerical'] = [-168.474947, -168.416604, -168.255921, -168.214758, -168.178142, -167.621886, -166.419637, -164.470962, -161.755701, -157.822771, -152.949193, -146.997103, -139.897826, -131.667882, -42.732722, -168.414103] 
 scf['diffs'] = scf['extrap'] - scf['numerical']
 scf['extrap_gaps'] = scf['extrap'].values - scf['extrap'].values[0]
 scf['numerical_gaps'] = scf['numerical'].values - scf['numerical'].values[0]
@@ -71,4 +80,4 @@ gaps = pd.DataFrame()
 gaps['extrapolated gaps'] = scf['extrap_gaps'] + corr['Extrap. Gaps']
 gaps.drop(gaps.index[0],inplace=True)
 with open('gaps.p','wb') as f:
-	pickle.dump(gaps,f)
+	pickle.dump(gaps,f,protocol=2)

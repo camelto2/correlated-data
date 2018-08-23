@@ -1,6 +1,7 @@
 ***,Calculation of states
 memory,512,m
-gthresh,twoint=1.0E-12
+gthresh,twoint=1.0E-15
+gthresh,oneint=1.0E-15
 geometry={
 1
 Ni
@@ -9,12 +10,12 @@ Ni  0.0 0.0 0.0
 
 basis={
 include,Ni.pp
-include,aug-cc-pwCVTZ-dk.basis
+include,aug-cc-pwCV5Z-dk.basis
 }
 
 include,states.proc
 
-do i=1,16
+do i=7,16
     if (i.eq.1) then
         Is2d8
     else if (i.eq.2) then
@@ -50,9 +51,10 @@ do i=1,16
     endif
     scf(i)=energy
     _CC_NORM_MAX=2.0
-    {rccsd(t),maxit=100;core}
+    {rccsd(t),shifts=0.4,shiftp=0.4,maxit=150;core}
     ccsd(i)=energy
 enddo
 
 table,scf,ccsd
-save,tz.csv,new
+!save,5z_2.csv,new
+save,5z_2.csv
